@@ -9,7 +9,6 @@ import {
 } from '../components/culture/CultureSections'
 import type { Culture } from '../types/culture'
 import { useEffect, useState } from 'react'
-import type { Lang } from '../types/culture'
 
 // Dynamic culture loader
 async function loadCulture(id: string): Promise<Culture | null> {

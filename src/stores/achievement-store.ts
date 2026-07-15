@@ -16,7 +16,7 @@ interface AchievementStore extends AchievementState {
 
 export const useAchievementStore = create<AchievementStore>()(
   persist(
-    (set, get) => ({
+    (set, _get) => ({
       ...initialAchievementState,
 
       unlock: (id) =>

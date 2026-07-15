@@ -1,7 +1,6 @@
 import { useI18n } from '../i18n/context'
 import { useAchievementStore } from '../stores/achievement-store'
 import { ACHIEVEMENT_DEFS } from '../data/achievements'
-import type { Lang } from '../types/culture'
 
 export function AchievementsScreen() {
   const { t, lang } = useI18n()

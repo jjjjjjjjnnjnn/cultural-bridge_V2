@@ -5,7 +5,7 @@ import en from './translations/en'
 import zh from './translations/zh'
 import de from './translations/de'
 
-const translations: Record<Lang, TranslationKeys> = { en, zh, de }
+const translations: Partial<Record<Lang, TranslationKeys>> = { en, zh, de }
 // fr, es, tr, ar, pt, ja — to be added as translation files are completed
 
 interface I18nContextValue {
@@ -41,7 +41,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   const t = useCallback(
     (key: keyof TranslationKeys, replacements?: Record<string, string | number>): string => {
       const trans = translations[lang]
-      let text = trans?.[key] ?? translations.en[key] ?? key
+      let text = trans?.[key] ?? translations.en?.[key] ?? key
       if (replacements) {
         Object.entries(replacements).forEach(([k, v]) => {
           text = text.replace(`{{${k}}}`, String(v))
@@ -66,7 +66,7 @@ export function useI18n(): I18nContextValue {
 }
 
 // Utility: get localized text from a LocalizedText object
-export function getLocalized<T extends Record<string, unknown>>(
+export function getLocalized<T>(
   obj: Partial<Record<string, T>> & { en: T },
   lang: Lang,
 ): T {

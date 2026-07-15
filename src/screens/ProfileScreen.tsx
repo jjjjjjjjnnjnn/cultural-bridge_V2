@@ -3,10 +3,10 @@ import { useProgressStore, getLevel, getLevelProgress, RANK_NAMES } from '../sto
 import { useAchievementStore } from '../stores/achievement-store'
 import { ACHIEVEMENT_DEFS } from '../data/achievements'
 import { useSettingsStore } from '../stores/settings-store'
-import type { Lang } from '../types/culture'
+
 
 export function ProfileScreen() {
-  const { t, lang } = useI18n()
+  const { t } = useI18n()
   const xp = useProgressStore((s) => s.xp)
   const totalGamesPlayed = useProgressStore((s) => s.totalGamesPlayed)
   const culturesVisited = useProgressStore((s) => s.culturesVisited)
@@ -58,7 +58,7 @@ export function ProfileScreen() {
             <span className="text-[10px] text-gray-400">LVL</span>
           </div>
         </div>
-        <p className="mt-2 font-semibold text-gray-700 dark:text-gray-200">{t(rankKey)}</p>
+        <p className="mt-2 font-semibold text-gray-700 dark:text-gray-200">{(t as any)(rankKey)}</p>
         <p className="text-xs text-gray-400">{xp} XP</p>
       </div>
 

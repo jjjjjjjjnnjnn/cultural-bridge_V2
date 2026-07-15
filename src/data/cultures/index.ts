@@ -1,4 +1,4 @@
-import type { Culture } from '../types/culture'
+
 
 // All cultures are lazy-loaded in CultureDetailScreen.
 // This barrel file re-exports individual culture files for bulk imports.

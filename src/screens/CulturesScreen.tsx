@@ -3,7 +3,7 @@ import { useI18n } from '../i18n/context'
 import { CULTURE_META, CULTURES_BY_REGION } from '../data/cultures/index'
 import { REGIONS } from '../data/regions'
 import { CultureCard } from '../components/culture/CultureCard'
-import type { Lang, RegionId } from '../types/culture'
+import type { RegionId } from '../types/culture'
 
 export function CulturesScreen() {
   const { t, lang } = useI18n()
@@ -19,7 +19,7 @@ export function CulturesScreen() {
     if (search.trim()) {
       const q = search.toLowerCase()
       list = list.filter((c) =>
-        Object.values(c.name).some((n) => n.toLowerCase().includes(q)) ||
+        Object.values(c.name).some((n: string) => n.toLowerCase().includes(q)) ||
         c.id.toLowerCase().includes(q)
       )
     }
@@ -75,7 +75,7 @@ export function CulturesScreen() {
             culture={{
               id: c.id,
               flag: c.flag,
-              names: c.name,
+              names: c.name as unknown as { en: string } & Record<string, string>,
               region: c.region as RegionId,
               langCode: c.langCode,
               greetings: [], commonPhrases: [], food: [], festivals: [],

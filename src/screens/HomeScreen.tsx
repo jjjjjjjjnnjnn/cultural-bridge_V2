@@ -4,7 +4,6 @@ import { GAME_DEFS } from '../data/games'
 import { Link } from 'react-router-dom'
 import { CultureCard } from '../components/culture/CultureCard'
 import type { RegionId } from '../types/culture'
-import type { Lang } from '../types/culture'
 
 export function HomeScreen() {
   const { t, lang } = useI18n()
@@ -52,7 +51,7 @@ export function HomeScreen() {
             <CultureCard
               key={c.id}
               culture={{
-                id: c.id, flag: c.flag, names: c.name, region: c.region as RegionId,
+                id: c.id, flag: c.flag, names: c.name as Record<string,string> & {en:string}, region: c.region as RegionId,
                 langCode: c.langCode, greetings: [], commonPhrases: [], food: [],
                 festivals: [], landmarks: [], etiquette: [], funFacts: [], biases: [],
                 quickStats: [], musicOrArt: [],
