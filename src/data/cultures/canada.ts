@@ -19,8 +19,8 @@ export const canada: Culture = {
     { native: 'Thank you', meaning: { en: 'Thank you', zh: '谢谢' } },
   ],
   food: [
-    { name: { en: 'Poutine', zh: '肉汁奶酪薯条' }, desc: { en: 'Fries topped with cheese curds and gravy', de: 'Pommes mit Kasebrockchen und Sosse', zh: '薯条配奶酪块和肉汁' }, emoji: '🍟', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Poutine.jpg/320px-Poutine.jpg' },
-    { name: { en: 'Maple Syrup', zh: '枫糖浆' }, desc: { en: 'Sweet syrup tapped from maple trees', de: 'Susser Sirup aus Ahornbaumen', zh: '从枫树采集的甜糖浆' }, emoji: '🍁', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Maple_syrup.jpg/320px-Maple_syrup.jpg' },
+    { name: { en: 'Poutine', zh: '肉汁奶酪薯条' }, desc: { en: 'Fries topped with cheese curds and gravy', de: 'Pommes mit Kasebrockchen und Sosse', zh: '薯条配奶酪块和肉汁' }, emoji: '🍟', img: '/images/canada/food-poutine.jpg' },
+    { name: { en: 'Maple Syrup', zh: '枫糖浆' }, desc: { en: 'Sweet syrup tapped from maple trees', de: 'Susser Sirup aus Ahornbaumen', zh: '从枫树采集的甜糖浆' }, emoji: '🍁', img: '/images/canada/food-maple-syrup.jpg' },
     { name: { en: 'Butter Tarts', zh: '黄油挞' }, desc: { en: 'Small pastry tarts with buttery filling', de: 'Kleine Butterteigteilchen mit butteriger Fullung', zh: '小型黄油馅酥皮挞' }, emoji: '🥧', img: '' },
   ],
   festivals: [
@@ -28,8 +28,8 @@ export const canada: Culture = {
     { name: { en: 'Calgary Stampede', zh: '卡尔加里牛仔节' }, desc: { en: 'Annual rodeo and exhibition in Alberta', de: 'Jahrliche Rodeo- und Ausstellungsveranstaltung in Alberta', zh: '阿尔伯塔省年度牛仔竞技和展览' }, emoji: '🤠', img: '' },
   ],
   landmarks: [
-    { name: { en: 'Niagara Falls', zh: '尼亚加拉大瀑布' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Niagara_Falls.jpg/320px-Niagara_Falls.jpg' },
-    { name: { en: 'CN Tower', zh: '加拿大国家电视塔' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/CN_Tower.jpg/320px-CN_Tower.jpg' },
+    { name: { en: 'Niagara Falls', zh: '尼亚加拉大瀑布' }, img: '/images/canada/landmark-niagara-falls.jpg' },
+    { name: { en: 'CN Tower', zh: '加拿大国家电视塔' }, img: '/images/canada/landmark-cn-tower.jpg' },
     { name: { en: 'Banff National Park', zh: '班夫国家公园' }, img: '' },
   ],
   etiquette: [

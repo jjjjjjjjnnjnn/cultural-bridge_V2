@@ -20,18 +20,18 @@ export const usa: Culture = {
     { native: 'Excuse me', meaning: { en: 'Excuse me', zh: '打扰一下' } },
   ],
   food: [
-    { name: { en: 'Hamburger', zh: '汉堡包' }, desc: { en: 'Grilled meat patty in a bun with toppings', de: 'Gegrilltes Fleischpatty im Brotchen mit Belag', zh: '烤肉饼夹面包配配料' }, emoji: '🍔', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Hamburger.jpg/320px-Hamburger.jpg' },
-    { name: { en: 'Hot Dog', zh: '热狗' }, desc: { en: 'Sausage served in a sliced bun', de: 'Wurst im aufgeschnittenen Brotchen', zh: '香肠夹在切开的面包里' }, emoji: '🌭', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Hot_dog.jpg/320px-Hot_dog.jpg' },
-    { name: { en: 'Apple Pie', zh: '苹果派' }, desc: { en: 'American classic dessert with baked apples', de: 'Amerikanischer klassischer Nachtisch mit gebackenen Apfeln', zh: '烤苹果制作的美国经典甜点' }, emoji: '🥧', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Apple_pie.jpg/320px-Apple_pie.jpg' },
+    { name: { en: 'Hamburger', zh: '汉堡包' }, desc: { en: 'Grilled meat patty in a bun with toppings', de: 'Gegrilltes Fleischpatty im Brotchen mit Belag', zh: '烤肉饼夹面包配配料' }, emoji: '🍔', img: '/images/usa/food-hamburger.jpg' },
+    { name: { en: 'Hot Dog', zh: '热狗' }, desc: { en: 'Sausage served in a sliced bun', de: 'Wurst im aufgeschnittenen Brotchen', zh: '香肠夹在切开的面包里' }, emoji: '🌭', img: '/images/usa/food-hot-dog.jpg' },
+    { name: { en: 'Apple Pie', zh: '苹果派' }, desc: { en: 'American classic dessert with baked apples', de: 'Amerikanischer klassischer Nachtisch mit gebackenen Apfeln', zh: '烤苹果制作的美国经典甜点' }, emoji: '🥧', img: '/images/usa/food-apple-pie.jpg' },
   ],
   festivals: [
-    { name: { en: 'Thanksgiving', zh: '感恩节' }, desc: { en: 'Harvest festival celebrated in November with turkey', de: 'Erntedankfest im November mit Truthahn', zh: '十一月庆祝丰收的节日，吃火鸡' }, emoji: '🦃', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Thanksgiving_dinner.jpg/320px-Thanksgiving_dinner.jpg' },
-    { name: { en: 'Independence Day', zh: '独立日' }, desc: { en: 'July 4th celebration with fireworks and parades', de: 'Feier am 4. Juli mit Feuerwerk und Paraden', zh: '七月四日烟花和游行庆祝' }, emoji: '🎆', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Independence_Day_USA.jpg/320px-Independence_Day_USA.jpg' },
+    { name: { en: 'Thanksgiving', zh: '感恩节' }, desc: { en: 'Harvest festival celebrated in November with turkey', de: 'Erntedankfest im November mit Truthahn', zh: '十一月庆祝丰收的节日，吃火鸡' }, emoji: '🦃', img: '/images/usa/festival-thanksgiving.jpg' },
+    { name: { en: 'Independence Day', zh: '独立日' }, desc: { en: 'July 4th celebration with fireworks and parades', de: 'Feier am 4. Juli mit Feuerwerk und Paraden', zh: '七月四日烟花和游行庆祝' }, emoji: '🎆', img: '/images/usa/festival-independence-day.jpg' },
   ],
   landmarks: [
-    { name: { en: 'Statue of Liberty', zh: '自由女神像' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Statue_of_Liberty_7.jpg/320px-Statue_of_Liberty_7.jpg' },
-    { name: { en: 'Golden Gate Bridge', zh: '金门大桥' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Golden_Gate_Bridge.jpg/320px-Golden_Gate_Bridge.jpg' },
-    { name: { en: 'Grand Canyon', zh: '大峡谷' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Grand_Canyon.jpg/320px-Grand_Canyon.jpg' },
+    { name: { en: 'Statue of Liberty', zh: '自由女神像' }, img: '/images/usa/landmark-statue-of-liberty.jpg' },
+    { name: { en: 'Golden Gate Bridge', zh: '金门大桥' }, img: '/images/usa/landmark-golden-gate-bridge.jpg' },
+    { name: { en: 'Grand Canyon', zh: '大峡谷' }, img: '/images/usa/landmark-grand-canyon.jpg' },
   ],
   etiquette: [
     { emoji: '😊', tip: { en: 'Smile and maintain eye contact when greeting', zh: '打招呼时微笑并保持眼神接触' } },

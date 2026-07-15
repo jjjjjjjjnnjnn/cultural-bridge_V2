@@ -19,17 +19,17 @@ export const russia: Culture = {
     { native: 'Как дела?', romanization: 'Kak dela?', meaning: { en: 'How are you?', zh: '你好吗？' } },
   ],
   food: [
-    { name: { en: 'Borscht', zh: '罗宋汤' }, desc: { en: 'Beetroot soup', zh: '甜菜汤' }, emoji: '🍲', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Borscht.jpg/320px-Borscht.jpg' },
-    { name: { en: 'Pelmeni', zh: '俄式饺子' }, desc: { en: 'Russian dumplings', zh: '俄罗斯饺子' }, emoji: '🥟', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Pelmeni.jpg/320px-Pelmeni.jpg' },
-    { name: { en: 'Blini', zh: '俄式薄饼' }, desc: { en: 'Russian pancakes', zh: '俄罗斯薄饼' }, emoji: '🥞', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Blini.jpg/320px-Blini.jpg' },
+    { name: { en: 'Borscht', zh: '罗宋汤' }, desc: { en: 'Beetroot soup', zh: '甜菜汤' }, emoji: '🍲', img: '/images/russia/food-borscht.jpg' },
+    { name: { en: 'Pelmeni', zh: '俄式饺子' }, desc: { en: 'Russian dumplings', zh: '俄罗斯饺子' }, emoji: '🥟', img: '/images/russia/food-pelmeni.jpg' },
+    { name: { en: 'Blini', zh: '俄式薄饼' }, desc: { en: 'Russian pancakes', zh: '俄罗斯薄饼' }, emoji: '🥞', img: '/images/russia/food-blini.jpg' },
   ],
   festivals: [
     { name: { en: 'Maslenitsa', zh: '谢肉节' }, desc: { en: 'Pancake week before Lent', zh: '大斋前的薄饼周' }, emoji: '🥞', img: '' },
   ],
   landmarks: [
-    { name: { en: 'Red Square', zh: '红场' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Red_Square_Moscow.jpg/320px-Red_Square_Moscow.jpg' },
-    { name: { en: 'Saint Basils Cathedral', zh: '圣瓦西里大教堂' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Saint_Basils_Cathedral.jpg/320px-Saint_Basils_Cathedral.jpg' },
-    { name: { en: 'Hermitage Museum', zh: '冬宫博物馆' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Hermitage_Museum.jpg/320px-Hermitage_Museum.jpg' },
+    { name: { en: 'Red Square', zh: '红场' }, img: '/images/russia/landmark-red-square.jpg' },
+    { name: { en: 'Saint Basils Cathedral', zh: '圣瓦西里大教堂' }, img: '/images/russia/landmark-saint-basils-cathedral.jpg' },
+    { name: { en: 'Hermitage Museum', zh: '冬宫博物馆' }, img: '/images/russia/landmark-hermitage-museum.jpg' },
   ],
   etiquette: [
     { emoji: '🌹', tip: { en: 'Give odd number of flowers (even is for funerals)', zh: '送奇数花（偶数是葬礼用）' } },

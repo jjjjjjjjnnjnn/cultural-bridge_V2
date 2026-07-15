@@ -20,7 +20,7 @@ export const newzealand: Culture = {
   ],
   food: [
     { name: { en: 'Hangi', zh: '杭伊地下窑烤' }, desc: { en: 'Maori underground oven cooking using heated stones', de: 'Maori-Erdofen-Kochen mit erhitzten Steinen', zh: '使用加热石头的毛利地下窑烤烹饪' }, emoji: '🍖', img: '' },
-    { name: { en: 'Pavlova', zh: '帕夫洛娃蛋糕' }, desc: { en: 'Meringue dessert topped with fruit and cream', de: 'Baiser-Dessert mit Obst und Sahne', zh: '配水果和奶油的蛋白甜饼甜点' }, emoji: '🍰', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Pavlova.jpg/320px-Pavlova.jpg' },
+    { name: { en: 'Pavlova', zh: '帕夫洛娃蛋糕' }, desc: { en: 'Meringue dessert topped with fruit and cream', de: 'Baiser-Dessert mit Obst und Sahne', zh: '配水果和奶油的蛋白甜饼甜点' }, emoji: '🍰', img: '/images/newzealand/food-pavlova.jpg' },
     { name: { en: 'Meat Pie', zh: '肉派' }, desc: { en: 'Popular savory pastry snack', de: 'Beliebter herzhafter Geback-Snack', zh: '受欢迎的咸味酥皮馅饼小吃' }, emoji: '🥧', img: '' },
   ],
   festivals: [
@@ -28,8 +28,8 @@ export const newzealand: Culture = {
     { name: { en: 'Matariki', zh: '毛利新年' }, desc: { en: 'Maori New Year based on the Pleiades star cluster rising', de: 'Maori-Neujahr basierend auf dem Aufgang des Plejaden-Sternhaufens', zh: '基于昂宿星团升起的毛利新年' }, emoji: '✨', img: '' },
   ],
   landmarks: [
-    { name: { en: 'Hobbiton', zh: '霍比特人村' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Hobbiton.jpg/320px-Hobbiton.jpg' },
-    { name: { en: 'Milford Sound', zh: '米尔福德峡湾' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Milford_Sound.jpg/320px-Milford_Sound.jpg' },
+    { name: { en: 'Hobbiton', zh: '霍比特人村' }, img: '/images/newzealand/landmark-hobbiton.jpg' },
+    { name: { en: 'Milford Sound', zh: '米尔福德峡湾' }, img: '/images/newzealand/landmark-milford-sound.jpg' },
     { name: { en: 'Tongariro National Park', zh: '汤加里罗国家公园' }, img: '' },
   ],
   etiquette: [

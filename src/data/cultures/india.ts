@@ -19,18 +19,18 @@ export const india: Culture = {
     { native: 'आप कैसे हैं?', romanization: 'Aap kaise hain?', meaning: { en: 'How are you?', zh: '你好吗？' } },
   ],
   food: [
-    { name: { en: 'Curry', zh: '咖喱' }, desc: { en: 'Spiced sauce with meat/vegetables', de: 'Gewurzte Sosse mit Fleisch/Gemuse', zh: '配香料酱汁的肉/蔬菜' }, emoji: '🍛', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Chicken_curry.jpg/320px-Chicken_curry.jpg' },
-    { name: { en: 'Naan', zh: '馕' }, desc: { en: 'Indian flatbread', de: 'Indisches Fladenbrot', zh: '印度扁面包' }, emoji: '🫓', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Naan.jpg/320px-Naan.jpg' },
-    { name: { en: 'Biryani', zh: '印度香饭' }, desc: { en: 'Spiced rice with meat', de: 'Gewurzter Reis mit Fleisch', zh: '配香料的肉饭' }, emoji: '🍚', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Biryani.jpg/320px-Biryani.jpg' },
+    { name: { en: 'Curry', zh: '咖喱' }, desc: { en: 'Spiced sauce with meat/vegetables', de: 'Gewurzte Sosse mit Fleisch/Gemuse', zh: '配香料酱汁的肉/蔬菜' }, emoji: '🍛', img: '/images/india/food-curry.jpg' },
+    { name: { en: 'Naan', zh: '馕' }, desc: { en: 'Indian flatbread', de: 'Indisches Fladenbrot', zh: '印度扁面包' }, emoji: '🫓', img: '/images/india/food-naan.jpg' },
+    { name: { en: 'Biryani', zh: '印度香饭' }, desc: { en: 'Spiced rice with meat', de: 'Gewurzter Reis mit Fleisch', zh: '配香料的肉饭' }, emoji: '🍚', img: '/images/india/food-biryani.jpg' },
   ],
   festivals: [
-    { name: { en: 'Diwali', zh: '排灯节' }, desc: { en: 'Festival of lights', de: 'Lichterfest', zh: '光之节' }, emoji: '🪔', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Diwali.jpg/320px-Diwali.jpg' },
-    { name: { en: 'Holi', zh: '洒红节' }, desc: { en: 'Festival of colors', de: 'Farbenfest', zh: '色彩节' }, emoji: '🎨', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Holi_festival.jpg/320px-Holi_festival.jpg' },
+    { name: { en: 'Diwali', zh: '排灯节' }, desc: { en: 'Festival of lights', de: 'Lichterfest', zh: '光之节' }, emoji: '🪔', img: '/images/india/festival-diwali.jpg' },
+    { name: { en: 'Holi', zh: '洒红节' }, desc: { en: 'Festival of colors', de: 'Farbenfest', zh: '色彩节' }, emoji: '🎨', img: '/images/india/festival-holi.jpg' },
   ],
   landmarks: [
-    { name: { en: 'Taj Mahal', zh: '泰姬陵' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal.jpg/320px-Taj_Mahal.jpg' },
-    { name: { en: 'Red Fort', zh: '红堡' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Red_Fort_Delhi.jpg/320px-Red_Fort_Delhi.jpg' },
-    { name: { en: 'Gateway of India', zh: '印度门' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Gateway_of_India.jpg/320px-Gateway_of_India.jpg' },
+    { name: { en: 'Taj Mahal', zh: '泰姬陵' }, img: '/images/india/landmark-taj-mahal.jpg' },
+    { name: { en: 'Red Fort', zh: '红堡' }, img: '/images/india/landmark-red-fort.jpg' },
+    { name: { en: 'Gateway of India', zh: '印度门' }, img: '/images/india/landmark-gateway-of-india.jpg' },
   ],
   etiquette: [
     { emoji: '🍽️', tip: { en: 'Eat with right hand (left is considered unclean)', zh: '用右手吃饭（左手被认为不洁净）' } },

@@ -20,18 +20,18 @@ export const turkey: Culture = {
     { native: 'Nasılsın?', meaning: { en: 'How are you?', zh: '你好吗？' } },
   ],
   food: [
-    { name: { en: 'Kebab', zh: '烤肉串' }, desc: { en: 'Grilled meat on skewer', de: 'Gegrilltes Fleisch am Spiess', zh: '烤制的肉串' }, emoji: '🥙', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Adana_kebap.jpg/320px-Adana_kebap.jpg' },
-    { name: { en: 'Baklava', zh: '果仁蜜饼' }, desc: { en: 'Sweet pastry with nuts', de: 'Susses Geback mit Nussen', zh: '配坚果的甜酥皮点心' }, emoji: '🍯', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Baklava.jpg/320px-Baklava.jpg' },
-    { name: { en: 'Turkish Delight', zh: '土耳其软糖' }, desc: { en: 'Gelatinous sweet confection', de: 'Gelatineartige Sussigkeit', zh: '胶状甜点' }, emoji: '🍬', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Turkish_delight.jpg/320px-Turkish_delight.jpg' },
+    { name: { en: 'Kebab', zh: '烤肉串' }, desc: { en: 'Grilled meat on skewer', de: 'Gegrilltes Fleisch am Spiess', zh: '烤制的肉串' }, emoji: '🥙', img: '/images/turkey/food-kebab.jpg' },
+    { name: { en: 'Baklava', zh: '果仁蜜饼' }, desc: { en: 'Sweet pastry with nuts', de: 'Susses Geback mit Nussen', zh: '配坚果的甜酥皮点心' }, emoji: '🍯', img: '/images/turkey/food-baklava.jpg' },
+    { name: { en: 'Turkish Delight', zh: '土耳其软糖' }, desc: { en: 'Gelatinous sweet confection', de: 'Gelatineartige Sussigkeit', zh: '胶状甜点' }, emoji: '🍬', img: '/images/turkey/food-turkish-delight.jpg' },
   ],
   festivals: [
-    { name: { en: 'Ramadan Bayram', zh: '开斋节' }, desc: { en: 'Festival ending Ramadan', de: 'Fest zum Ende des Ramadan', zh: '斋月结束的节日' }, emoji: '🎉', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ramadan_Bayram.jpg/320px-Ramadan_Bayram.jpg' },
-    { name: { en: 'Republic Day', zh: '共和国日' }, desc: { en: 'Turkish Republic founding', de: 'Grundung der Turkischen Republik', zh: '土耳其共和国成立日' }, emoji: '🇹🇷', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Turkey_Republic_Day.jpg/320px-Turkey_Republic_Day.jpg' },
+    { name: { en: 'Ramadan Bayram', zh: '开斋节' }, desc: { en: 'Festival ending Ramadan', de: 'Fest zum Ende des Ramadan', zh: '斋月结束的节日' }, emoji: '🎉', img: '/images/turkey/festival-ramadan-bayram.jpg' },
+    { name: { en: 'Republic Day', zh: '共和国日' }, desc: { en: 'Turkish Republic founding', de: 'Grundung der Turkischen Republik', zh: '土耳其共和国成立日' }, emoji: '🇹🇷', img: '/images/turkey/festival-republic-day.jpg' },
   ],
   landmarks: [
-    { name: { en: 'Hagia Sophia', zh: '圣索菲亚大教堂' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Hagia_Sophia_Mars_2013.jpg/320px-Hagia_Sophia_Mars_2013.jpg' },
-    { name: { en: 'Cappadocia', zh: '卡帕多西亚' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Cappadocia.jpg/320px-Cappadocia.jpg' },
-    { name: { en: 'Blue Mosque', zh: '蓝色清真寺' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Blue_Mosque.jpg/320px-Blue_Mosque.jpg' },
+    { name: { en: 'Hagia Sophia', zh: '圣索菲亚大教堂' }, img: '/images/turkey/landmark-hagia-sophia.jpg' },
+    { name: { en: 'Cappadocia', zh: '卡帕多西亚' }, img: '/images/turkey/landmark-cappadocia.jpg' },
+    { name: { en: 'Blue Mosque', zh: '蓝色清真寺' }, img: '/images/turkey/landmark-blue-mosque.jpg' },
   ],
   etiquette: [
     { emoji: '☕', tip: { en: 'Offer tea to guests', zh: '给客人奉茶' } },

@@ -20,18 +20,18 @@ export const korea: Culture = {
     { native: '아니요', romanization: 'Aniyo', meaning: { en: 'No', zh: '不是', de: 'Nein' } },
   ],
   food: [
-    { name: { en: 'Kimchi', zh: '泡菜', de: 'Kimchi' }, desc: { en: 'Fermented spicy vegetables, Korea national side dish', zh: '发酵的辣味蔬菜，韩国的国菜', de: 'Fermentiertes scharfes Gemuese, koreanische Nationalbeilage' }, emoji: '🥬', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Kimchi.jpg/320px-Kimchi.jpg' },
-    { name: { en: 'Bibimbap', zh: '石锅拌饭', de: 'Bibimbap' }, desc: { en: 'Rice mixed with vegetables, meat, and a fried egg', zh: '米饭配蔬菜、肉和煎蛋', de: 'Reis gemischt mit Gemuese, Fleisch und einem Spiegelei' }, emoji: '🍚', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Bibimbap.jpg/320px-Bibimbap.jpg' },
-    { name: { en: 'Korean BBQ', zh: '韩式烤肉', de: 'Koreanisches BBQ' }, desc: { en: 'Grilled meat cooked at the table, wrapped in lettuce', zh: '在桌上烤制的肉，用生菜包裹食用', de: 'Am Tisch gegrilltes Fleisch, in Salatblaetter gewickelt' }, emoji: '🥩', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Korean_BBQ.jpg/320px-Korean_BBQ.jpg' },
+    { name: { en: 'Kimchi', zh: '泡菜', de: 'Kimchi' }, desc: { en: 'Fermented spicy vegetables, Korea national side dish', zh: '发酵的辣味蔬菜，韩国的国菜', de: 'Fermentiertes scharfes Gemuese, koreanische Nationalbeilage' }, emoji: '🥬', img: '/images/korea/food-kimchi.jpg' },
+    { name: { en: 'Bibimbap', zh: '石锅拌饭', de: 'Bibimbap' }, desc: { en: 'Rice mixed with vegetables, meat, and a fried egg', zh: '米饭配蔬菜、肉和煎蛋', de: 'Reis gemischt mit Gemuese, Fleisch und einem Spiegelei' }, emoji: '🍚', img: '/images/korea/food-bibimbap.jpg' },
+    { name: { en: 'Korean BBQ', zh: '韩式烤肉', de: 'Koreanisches BBQ' }, desc: { en: 'Grilled meat cooked at the table, wrapped in lettuce', zh: '在桌上烤制的肉，用生菜包裹食用', de: 'Am Tisch gegrilltes Fleisch, in Salatblaetter gewickelt' }, emoji: '🥩', img: '/images/korea/food-korean-bbq.jpg' },
   ],
   festivals: [
-    { name: { en: 'Chuseok', zh: '秋夕', de: 'Chuseok' }, desc: { en: 'Korean harvest festival, families honor ancestors', zh: '韩国丰收节，家人祭祖团聚', de: 'Koreanisches Erntedankfest, Familien ehren ihre Vorfahren' }, emoji: '🎑', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Chuseok.jpg/320px-Chuseok.jpg' },
-    { name: { en: 'Seollal', zh: '春节', de: 'Seollal' }, desc: { en: 'Korean Lunar New Year with family and traditional food', zh: '韩国农历新年，家人团聚享用传统美食', de: 'Koreanisches Neujahrsfest mit Familie und traditionellem Essen' }, emoji: '🧧', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Seollal.jpg/320px-Seollal.jpg' },
+    { name: { en: 'Chuseok', zh: '秋夕', de: 'Chuseok' }, desc: { en: 'Korean harvest festival, families honor ancestors', zh: '韩国丰收节，家人祭祖团聚', de: 'Koreanisches Erntedankfest, Familien ehren ihre Vorfahren' }, emoji: '🎑', img: '/images/korea/festival-chuseok.jpg' },
+    { name: { en: 'Seollal', zh: '春节', de: 'Seollal' }, desc: { en: 'Korean Lunar New Year with family and traditional food', zh: '韩国农历新年，家人团聚享用传统美食', de: 'Koreanisches Neujahrsfest mit Familie und traditionellem Essen' }, emoji: '🧧', img: '/images/korea/festival-seollal.jpg' },
   ],
   landmarks: [
-    { name: { en: 'Gyeongbokgung Palace', zh: '景福宫' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Gyeongbokgung_Palace.jpg/320px-Gyeongbokgung_Palace.jpg' },
-    { name: { en: 'N Seoul Tower', zh: '首尔塔' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/N_Seoul_Tower.jpg/320px-N_Seoul_Tower.jpg' },
-    { name: { en: 'Jeju Island', zh: '济州岛' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Jeju_Island.jpg/320px-Jeju_Island.jpg' },
+    { name: { en: 'Gyeongbokgung Palace', zh: '景福宫' }, img: '/images/korea/landmark-gyeongbokgung-palace.jpg' },
+    { name: { en: 'N Seoul Tower', zh: '首尔塔' }, img: '/images/korea/landmark-n-seoul-tower.jpg' },
+    { name: { en: 'Jeju Island', zh: '济州岛' }, img: '/images/korea/landmark-jeju-island.jpg' },
   ],
   etiquette: [
     { emoji: '🍴', tip: { en: 'Wait for the eldest to start eating before you begin', zh: '等长辈先开始吃' } },

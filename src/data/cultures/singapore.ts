@@ -18,15 +18,15 @@ export const singapore: Culture = {
     { native: 'How are you?', meaning: { en: 'How are you?', zh: '你好吗？', de: 'Wie geht es Ihnen?' } },
   ],
   food: [
-    { name: { en: 'Hainanese Chicken Rice', zh: '海南鸡饭', de: 'Hainan-Chicken-Rice' }, desc: { en: 'Poached chicken with rice', zh: '白切鸡配米饭', de: 'Poeliertes Hähnchen mit Reis' }, emoji: '🍗', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Hainanese_Chicken_Rice.jpg/320px-Hainanese_Chicken_Rice.jpg' },
-    { name: { en: 'Chili Crab', zh: '辣椒螃蟹', de: 'Chili-Krabbe' }, desc: { en: 'Singapore signature dish', zh: '新加坡招牌菜', de: 'Singapurs Signature-Gericht' }, emoji: '🦀', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Chili_crab.jpg/320px-Chili_crab.jpg' },
+    { name: { en: 'Hainanese Chicken Rice', zh: '海南鸡饭', de: 'Hainan-Chicken-Rice' }, desc: { en: 'Poached chicken with rice', zh: '白切鸡配米饭', de: 'Poeliertes Hähnchen mit Reis' }, emoji: '🍗', img: '/images/singapore/food-hainanese-chicken-rice.jpg' },
+    { name: { en: 'Chili Crab', zh: '辣椒螃蟹', de: 'Chili-Krabbe' }, desc: { en: 'Singapore signature dish', zh: '新加坡招牌菜', de: 'Singapurs Signature-Gericht' }, emoji: '🦀', img: '/images/singapore/food-chili-crab.jpg' },
   ],
   festivals: [
-    { name: { en: 'National Day', zh: '国庆节', de: 'Nationalfeiertag' }, desc: { en: 'Singapore independence day', zh: '新加坡独立日', de: 'Singapurs Unabhängigkeitstag' }, emoji: '🇸🇬', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Singapore_National_Day.jpg/320px-Singapore_National_Day.jpg' },
+    { name: { en: 'National Day', zh: '国庆节', de: 'Nationalfeiertag' }, desc: { en: 'Singapore independence day', zh: '新加坡独立日', de: 'Singapurs Unabhängigkeitstag' }, emoji: '🇸🇬', img: '/images/singapore/festival-national-day.jpg' },
   ],
   landmarks: [
-    { name: { en: 'Marina Bay Sands', zh: '滨海湾金沙', de: 'Marina Bay Sands' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Marina_Bay_Sands.jpg/320px-Marina_Bay_Sands.jpg' },
-    { name: { en: 'Merlion Park', zh: '鱼尾狮公园', de: 'Merlion-Park' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Merlion_Park.jpg/320px-Merlion_Park.jpg' },
+    { name: { en: 'Marina Bay Sands', zh: '滨海湾金沙', de: 'Marina Bay Sands' }, img: '/images/singapore/landmark-marina-bay-sands.jpg' },
+    { name: { en: 'Merlion Park', zh: '鱼尾狮公园', de: 'Merlion-Park' }, img: '/images/singapore/landmark-merlion-park.jpg' },
   ],
   etiquette: [
     { emoji: '🚽', tip: { en: 'Flush toilet after use (common courtesy)', zh: '用完厕所要冲水', de: 'Toilette nach Benutzung spülen (allgemeine Höflichkeit)' } },

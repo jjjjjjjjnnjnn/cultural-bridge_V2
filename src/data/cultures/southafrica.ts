@@ -28,8 +28,8 @@ export const southafrica: Culture = {
     { name: { en: 'Freedom Day', de: 'Freiheitstag', zh: '自由日' }, desc: { en: 'Commemorating the first democratic elections in 1994', zh: '纪念1994年首次民主选举' }, emoji: '🕊️', img: '' },
   ],
   landmarks: [
-    { name: { en: 'Table Mountain', zh: '桌山' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Table_Mountain.jpg/320px-Table_Mountain.jpg' },
-    { name: { en: 'Robben Island', zh: '罗本岛' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Robben_Island.jpg/320px-Robben_Island.jpg' },
+    { name: { en: 'Table Mountain', zh: '桌山' }, img: '/images/southafrica/landmark-table-mountain.jpg' },
+    { name: { en: 'Robben Island', zh: '罗本岛' }, img: '/images/southafrica/landmark-robben-island.jpg' },
     { name: { en: 'Kruger National Park', zh: '克鲁格国家公园' }, img: '' },
   ],
   etiquette: [

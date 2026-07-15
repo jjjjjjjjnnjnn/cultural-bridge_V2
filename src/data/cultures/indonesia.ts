@@ -19,15 +19,15 @@ export const indonesia: Culture = {
     { native: 'Apa kabar?', meaning: { en: 'How are you?', zh: '你好吗？', de: 'Wie geht es Ihnen?' } },
   ],
   food: [
-    { name: { en: 'Nasi Goreng', zh: '印尼炒饭', de: 'Nasi Goreng' }, desc: { en: 'Indonesian fried rice', zh: '印尼炒饭', de: 'Indonesischer gebratener Reis' }, emoji: '🍚', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Nasi_goreng.jpg/320px-Nasi_goreng.jpg' },
-    { name: { en: 'Satay', zh: '沙爹', de: 'Satay' }, desc: { en: 'Grilled skewered meat', zh: '烤串肉', de: 'Gegrilltes Fleisch am Spieß' }, emoji: '🍢', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Satay.jpg/320px-Satay.jpg' },
+    { name: { en: 'Nasi Goreng', zh: '印尼炒饭', de: 'Nasi Goreng' }, desc: { en: 'Indonesian fried rice', zh: '印尼炒饭', de: 'Indonesischer gebratener Reis' }, emoji: '🍚', img: '/images/indonesia/food-nasi-goreng.jpg' },
+    { name: { en: 'Satay', zh: '沙爹', de: 'Satay' }, desc: { en: 'Grilled skewered meat', zh: '烤串肉', de: 'Gegrilltes Fleisch am Spieß' }, emoji: '🍢', img: '/images/indonesia/food-satay.jpg' },
   ],
   festivals: [
     { name: { en: 'Independence Day', zh: '独立日', de: 'Unabhängigkeitstag' }, desc: { en: 'August 17th celebration', zh: '八月十七日庆祝', de: 'Feier am 17. August' }, emoji: '🇮🇩', img: '' },
   ],
   landmarks: [
-    { name: { en: 'Borobudur Temple', zh: '婆罗浮屠', de: 'Borobudur-Tempel' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Borobudur.jpg/320px-Borobudur.jpg' },
-    { name: { en: 'Bali Rice Terraces', zh: '巴厘岛梯田', de: 'Bali-Reisterrassen' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Bali_rice_terraces.jpg/320px-Bali_rice_terraces.jpg' },
+    { name: { en: 'Borobudur Temple', zh: '婆罗浮屠', de: 'Borobudur-Tempel' }, img: '/images/indonesia/landmark-borobudur-temple.jpg' },
+    { name: { en: 'Bali Rice Terraces', zh: '巴厘岛梯田', de: 'Bali-Reisterrassen' }, img: '/images/indonesia/landmark-bali-rice-terraces.jpg' },
   ],
   etiquette: [
     { emoji: '🤲', tip: { en: 'Use right hand for eating and greeting', zh: '用右手吃饭和打招呼', de: 'Die rechte Hand zum Essen und Begrüßen benutzen' } },

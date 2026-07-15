@@ -19,17 +19,17 @@ export const mexico: Culture = {
     { native: 'Perdón', meaning: { en: 'Excuse me / Sorry', zh: '打扰一下 / 对不起' } },
   ],
   food: [
-    { name: { en: 'Tacos', zh: '塔可' }, desc: { en: 'Corn tortilla with various fillings like meat and salsa', de: 'Maistortilla mit verschiedenen Fullungen wie Fleisch und Salsa', zh: '玉米卷配各种馅料，如肉和莎莎酱' }, emoji: '🌮', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Tacos.jpg/320px-Tacos.jpg' },
-    { name: { en: 'Guacamole', zh: '鳄梨酱' }, desc: { en: 'Avocado dip with lime, onion, and cilantro', de: 'Avocado-Dip mit Limette, Zwiebel und Koriander', zh: '牛油果配青柠、洋葱和香菜制成的蘸酱' }, emoji: '🥑', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Guacamole.jpg/320px-Guacamole.jpg' },
+    { name: { en: 'Tacos', zh: '塔可' }, desc: { en: 'Corn tortilla with various fillings like meat and salsa', de: 'Maistortilla mit verschiedenen Fullungen wie Fleisch und Salsa', zh: '玉米卷配各种馅料，如肉和莎莎酱' }, emoji: '🌮', img: '/images/mexico/food-tacos.jpg' },
+    { name: { en: 'Guacamole', zh: '鳄梨酱' }, desc: { en: 'Avocado dip with lime, onion, and cilantro', de: 'Avocado-Dip mit Limette, Zwiebel und Koriander', zh: '牛油果配青柠、洋葱和香菜制成的蘸酱' }, emoji: '🥑', img: '/images/mexico/food-guacamole.jpg' },
     { name: { en: 'Mole', zh: '莫莱酱' }, desc: { en: 'Complex sauce made with chili and chocolate', de: 'Komplexe Sosse aus Chili und Schokolade', zh: '用辣椒和巧克力制作的复杂酱料' }, emoji: '🍫', img: '' },
   ],
   festivals: [
-    { name: { en: 'Day of the Dead', zh: '亡灵节' }, desc: { en: 'Celebration honoring deceased loved ones with altars and marigolds', de: 'Feier zu Ehren verstorbener Angehoriger mit Altaren und Ringelblumen', zh: '用祭坛和万寿菊纪念已故亲人的庆祝活动' }, emoji: '💀', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Day_of_the_Dead.jpg/320px-Day_of_the_Dead.jpg' },
+    { name: { en: 'Day of the Dead', zh: '亡灵节' }, desc: { en: 'Celebration honoring deceased loved ones with altars and marigolds', de: 'Feier zu Ehren verstorbener Angehoriger mit Altaren und Ringelblumen', zh: '用祭坛和万寿菊纪念已故亲人的庆祝活动' }, emoji: '💀', img: '/images/mexico/festival-day-of-the-dead.jpg' },
     { name: { en: 'Cinco de Mayo', zh: '五月五日节' }, desc: { en: 'Commemorating the Mexican victory at the Battle of Puebla', de: 'Gedenken an den mexikanischen Sieg in der Schlacht von Puebla', zh: '纪念墨西哥在普埃布拉战役中的胜利' }, emoji: '🎉', img: '' },
   ],
   landmarks: [
-    { name: { en: 'Chichen Itza', zh: '奇琴伊察' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Chichen_Itza.jpg/320px-Chichen_Itza.jpg' },
-    { name: { en: 'Teotihuacan', zh: '特奥蒂瓦坎' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Teotihuacan.jpg/320px-Teotihuacan.jpg' },
+    { name: { en: 'Chichen Itza', zh: '奇琴伊察' }, img: '/images/mexico/landmark-chichen-itza.jpg' },
+    { name: { en: 'Teotihuacan', zh: '特奥蒂瓦坎' }, img: '/images/mexico/landmark-teotihuacan.jpg' },
     { name: { en: 'Frida Kahlo Museum', zh: '弗里达·卡罗博物馆' }, img: '' },
   ],
   etiquette: [

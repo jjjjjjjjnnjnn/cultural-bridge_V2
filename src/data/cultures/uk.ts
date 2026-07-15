@@ -19,18 +19,18 @@ export const uk: Culture = {
     { native: 'How are you?', meaning: { en: 'How are you?', zh: '你好吗？' } },
   ],
   food: [
-    { name: { en: 'Fish and Chips', zh: '炸鱼薯条' }, desc: { en: 'Fried fish with french fries', zh: '炸鱼配薯条' }, emoji: '🐟', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Fish_and_chips.jpg/320px-Fish_and_chips.jpg' },
-    { name: { en: 'Afternoon Tea', zh: '下午茶' }, desc: { en: 'Tea with sandwiches and cakes', zh: '茶配三明治和蛋糕' }, emoji: '🫖', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Afternoon_tea.jpg/320px-Afternoon_tea.jpg' },
-    { name: { en: 'Full Breakfast', zh: '全套早餐' }, desc: { en: 'Eggs, bacon, sausages, beans', zh: '鸡蛋、培根、香肠、豆子' }, emoji: '🍳', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Full_breakfast.jpg/320px-Full_breakfast.jpg' },
+    { name: { en: 'Fish and Chips', zh: '炸鱼薯条' }, desc: { en: 'Fried fish with french fries', zh: '炸鱼配薯条' }, emoji: '🐟', img: '/images/uk/food-fish-and-chips.jpg' },
+    { name: { en: 'Afternoon Tea', zh: '下午茶' }, desc: { en: 'Tea with sandwiches and cakes', zh: '茶配三明治和蛋糕' }, emoji: '🫖', img: '/images/uk/food-afternoon-tea.jpg' },
+    { name: { en: 'Full Breakfast', zh: '全套早餐' }, desc: { en: 'Eggs, bacon, sausages, beans', zh: '鸡蛋、培根、香肠、豆子' }, emoji: '🍳', img: '/images/uk/food-full-breakfast.jpg' },
   ],
   festivals: [
     { name: { en: 'Guy Fawkes Night', zh: '盖伊·福克斯之夜' }, desc: { en: 'Bonfire and fireworks night', zh: '篝火和烟花之夜' }, emoji: '🎆', img: '' },
     { name: { en: 'Notting Hill Carnival', zh: '诺丁山嘉年华' }, desc: { en: 'Caribbean carnival in London', zh: '伦敦的加勒比嘉年华' }, emoji: '🎭', img: '' },
   ],
   landmarks: [
-    { name: { en: 'Big Ben', zh: '大本钟' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Big_Ben.jpg/320px-Big_Ben.jpg' },
-    { name: { en: 'Stonehenge', zh: '巨石阵' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Stonehenge.jpg/320px-Stonehenge.jpg' },
-    { name: { en: 'Tower Bridge', zh: '塔桥' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tower_Bridge_London.jpg/320px-Tower_Bridge_London.jpg' },
+    { name: { en: 'Big Ben', zh: '大本钟' }, img: '/images/uk/landmark-big-ben.jpg' },
+    { name: { en: 'Stonehenge', zh: '巨石阵' }, img: '/images/uk/landmark-stonehenge.jpg' },
+    { name: { en: 'Tower Bridge', zh: '塔桥' }, img: '/images/uk/landmark-tower-bridge.jpg' },
   ],
   etiquette: [
     { emoji: '🙏', tip: { en: 'Queue properly (don’t cut in line)', zh: '好好排队（不要插队）' } },

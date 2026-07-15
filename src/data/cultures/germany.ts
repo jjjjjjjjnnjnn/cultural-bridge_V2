@@ -20,18 +20,18 @@ export const germany: Culture = {
     { native: 'Wie geht es Ihnen?', meaning: { en: 'How are you?', zh: '你好吗？' } },
   ],
   food: [
-    { name: { en: 'Bratwurst', zh: '德国香肠' }, desc: { en: 'Grilled sausage', zh: '烤香肠' }, emoji: '🌭', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Bratwurst.jpg/320px-Bratwurst.jpg' },
-    { name: { en: 'Pretzel', zh: '椒盐卷饼' }, desc: { en: 'Twisted baked bread', zh: '扭结状烤面包' }, emoji: '🥨', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Pretzel.jpg/320px-Pretzel.jpg' },
-    { name: { en: 'Sauerkraut', zh: '酸菜' }, desc: { en: 'Fermented cabbage', zh: '发酵卷心菜' }, emoji: '🥬', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Sauerkraut.jpg/320px-Sauerkraut.jpg' },
+    { name: { en: 'Bratwurst', zh: '德国香肠' }, desc: { en: 'Grilled sausage', zh: '烤香肠' }, emoji: '🌭', img: '/images/germany/food-bratwurst.jpg' },
+    { name: { en: 'Pretzel', zh: '椒盐卷饼' }, desc: { en: 'Twisted baked bread', zh: '扭结状烤面包' }, emoji: '🥨', img: '/images/germany/food-pretzel.jpg' },
+    { name: { en: 'Sauerkraut', zh: '酸菜' }, desc: { en: 'Fermented cabbage', zh: '发酵卷心菜' }, emoji: '🥬', img: '/images/germany/food-sauerkraut.jpg' },
   ],
   festivals: [
-    { name: { en: 'Oktoberfest', zh: '慕尼黑啤酒节' }, desc: { en: 'Famous beer festival in Munich', zh: '慕尼黑著名的啤酒节' }, emoji: '🍺', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Oktoberfest_Munich.jpg/320px-Oktoberfest_Munich.jpg' },
-    { name: { en: 'Christmas Market', zh: '圣诞市场' }, desc: { en: 'Traditional Christmas market', zh: '传统圣诞市场' }, emoji: '🎄', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Christmas_market_Germany.jpg/320px-Christmas_market_Germany.jpg' },
+    { name: { en: 'Oktoberfest', zh: '慕尼黑啤酒节' }, desc: { en: 'Famous beer festival in Munich', zh: '慕尼黑著名的啤酒节' }, emoji: '🍺', img: '/images/germany/festival-oktoberfest.jpg' },
+    { name: { en: 'Christmas Market', zh: '圣诞市场' }, desc: { en: 'Traditional Christmas market', zh: '传统圣诞市场' }, emoji: '🎄', img: '/images/germany/festival-christmas-market.jpg' },
   ],
   landmarks: [
-    { name: { en: 'Brandenburg Gate', zh: '勃兰登堡门' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Brandenburger_Tor_abends.jpg/320px-Brandenburger_Tor_abends.jpg' },
-    { name: { en: 'Neuschwanstein Castle', zh: '新天鹅堡' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Neuschwanstein_Castle.jpg/320px-Neuschwanstein_Castle.jpg' },
-    { name: { en: 'Cologne Cathedral', zh: '科隆大教堂' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Cologne_Cathedral.jpg/320px-Cologne_Cathedral.jpg' },
+    { name: { en: 'Brandenburg Gate', zh: '勃兰登堡门' }, img: '/images/germany/landmark-brandenburg-gate.jpg' },
+    { name: { en: 'Neuschwanstein Castle', zh: '新天鹅堡' }, img: '/images/germany/landmark-neuschwanstein-castle.jpg' },
+    { name: { en: 'Cologne Cathedral', zh: '科隆大教堂' }, img: '/images/germany/landmark-cologne-cathedral.jpg' },
   ],
   etiquette: [
     { emoji: '🤝', tip: { en: 'Handshakes are firm and once', zh: '握手要用力且只握一次' } },

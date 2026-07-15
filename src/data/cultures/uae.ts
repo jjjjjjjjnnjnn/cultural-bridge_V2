@@ -19,8 +19,8 @@ export const uae: Culture = {
     { native: 'نعم', romanization: "Na’am", meaning: { en: 'Yes', zh: '是的' } },
   ],
   food: [
-    { name: { en: 'Machboos', zh: '香料肉饭' }, desc: { en: 'Spiced rice with meat, a UAE national dish', de: 'Gewürzter Reis mit Fleisch, ein Nationalgericht der VAE', zh: '香料肉饭，阿联酋国菜' }, emoji: '🍚', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Machboos.jpg/320px-Machboos.jpg' },
-    { name: { en: 'Luqaimat', zh: '炸蜜球' }, desc: { en: 'Sweet fried dumplings drizzled with date syrup', de: 'Süße frittierte Teigbällchen mit Dattelsirup', zh: '淋上枣糖浆的甜炸面团' }, emoji: '🍩', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Luqaimat.jpg/320px-Luqaimat.jpg' },
+    { name: { en: 'Machboos', zh: '香料肉饭' }, desc: { en: 'Spiced rice with meat, a UAE national dish', de: 'Gewürzter Reis mit Fleisch, ein Nationalgericht der VAE', zh: '香料肉饭，阿联酋国菜' }, emoji: '🍚', img: '/images/uae/food-machboos.jpg' },
+    { name: { en: 'Luqaimat', zh: '炸蜜球' }, desc: { en: 'Sweet fried dumplings drizzled with date syrup', de: 'Süße frittierte Teigbällchen mit Dattelsirup', zh: '淋上枣糖浆的甜炸面团' }, emoji: '🍩', img: '/images/uae/food-luqaimat.jpg' },
     { name: { en: 'Shawarma', zh: '沙威玛' }, desc: { en: 'Spiced meat wrapped in flatbread, popular street food', de: 'Gewürztes Fleisch in Fladenbrot, beliebtes Straßengericht', zh: '香料肉包裹在扁面包中，受欢迎的街头小吃' }, emoji: '🌯', img: '' },
   ],
   festivals: [
@@ -28,8 +28,8 @@ export const uae: Culture = {
     { name: { en: 'Dubai Shopping Festival', zh: '迪拜购物节' }, desc: { en: 'Major annual shopping event with discounts and entertainment', de: 'Grosses jahrliches Shopping-Event mit Rabatten und Unterhaltung', zh: '大型年度购物活动，有折扣和娱乐表演' }, emoji: '🛍️', img: '' },
   ],
   landmarks: [
-    { name: { en: 'Burj Khalifa', zh: '哈利法塔' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Burj_Khalifa.jpg/320px-Burj_Khalifa.jpg' },
-    { name: { en: 'Sheikh Zayed Mosque', zh: '谢赫扎耶德清真寺' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Sheikh_Zayed_Mosque.jpg/320px-Sheikh_Zayed_Mosque.jpg' },
+    { name: { en: 'Burj Khalifa', zh: '哈利法塔' }, img: '/images/uae/landmark-burj-khalifa.jpg' },
+    { name: { en: 'Sheikh Zayed Mosque', zh: '谢赫扎耶德清真寺' }, img: '/images/uae/landmark-sheikh-zayed-mosque.jpg' },
     { name: { en: 'Palm Jumeirah', zh: '朱美拉棕榈岛' }, img: '' },
   ],
   etiquette: [

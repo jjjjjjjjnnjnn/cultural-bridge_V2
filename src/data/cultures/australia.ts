@@ -19,8 +19,8 @@ export const australia: Culture = {
     { native: 'Cheers', meaning: { en: 'Thanks / Goodbye', zh: '谢谢 / 再见' } },
   ],
   food: [
-    { name: { en: 'Vegemite on Toast', zh: '酵母酱吐司' }, desc: { en: 'Australian yeast spread on buttered toast', de: 'Australischer Hefeaufstrich auf Buttertoast', zh: '涂在黄油吐司上的澳大利亚酵母酱' }, emoji: '🍞', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Vegemite.jpg/320px-Vegemite.jpg' },
-    { name: { en: 'Meat Pie', zh: '肉派' }, desc: { en: 'Australian classic savory pastry with minced meat', de: 'Australische klassische herzhafte Pastete mit Hackfleisch', zh: '澳大利亚经典咸味肉馅酥皮派' }, emoji: '🥧', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Meat_pie_Australia.jpg/320px-Meat_pie_Australia.jpg' },
+    { name: { en: 'Vegemite on Toast', zh: '酵母酱吐司' }, desc: { en: 'Australian yeast spread on buttered toast', de: 'Australischer Hefeaufstrich auf Buttertoast', zh: '涂在黄油吐司上的澳大利亚酵母酱' }, emoji: '🍞', img: '/images/australia/food-vegemite-on-toast.jpg' },
+    { name: { en: 'Meat Pie', zh: '肉派' }, desc: { en: 'Australian classic savory pastry with minced meat', de: 'Australische klassische herzhafte Pastete mit Hackfleisch', zh: '澳大利亚经典咸味肉馅酥皮派' }, emoji: '🥧', img: '/images/australia/food-meat-pie.jpg' },
     { name: { en: 'Lamington', zh: '拉明顿蛋糕' }, desc: { en: 'Sponge cake coated in chocolate and coconut', de: 'Biskuitkuchen mit Schokoladen- und Kokosuberzug', zh: '裹巧克力和椰蓉的海绵蛋糕' }, emoji: '🍰', img: '' },
   ],
   festivals: [
@@ -28,9 +28,9 @@ export const australia: Culture = {
     { name: { en: 'NAIDOC Week', zh: 'NAIDOC周' }, desc: { en: 'Celebrating Aboriginal and Torres Strait Islander culture', de: 'Feier der Kultur der Aborigines und Torres-Strait-Insulaner', zh: '庆祝原住民和托雷斯海峡岛民文化' }, emoji: '🖤', img: '' },
   ],
   landmarks: [
-    { name: { en: 'Sydney Opera House', zh: '悉尼歌剧院' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Sydney_Opera_House.jpg/320px-Sydney_Opera_House.jpg' },
-    { name: { en: 'Uluru (Ayers Rock)', zh: '乌鲁鲁（艾尔斯岩）' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Uluru.jpg/320px-Uluru.jpg' },
-    { name: { en: 'Great Barrier Reef', zh: '大堡礁' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Great_Barrier_Reef.jpg/320px-Great_Barrier_Reef.jpg' },
+    { name: { en: 'Sydney Opera House', zh: '悉尼歌剧院' }, img: '/images/australia/landmark-sydney-opera-house.jpg' },
+    { name: { en: 'Uluru (Ayers Rock)', zh: '乌鲁鲁（艾尔斯岩）' }, img: '/images/australia/landmark-uluru.jpg' },
+    { name: { en: 'Great Barrier Reef', zh: '大堡礁' }, img: '/images/australia/landmark-great-barrier-reef.jpg' },
   ],
   etiquette: [
     { emoji: '🦘', tip: { en: 'Australians are very laid-back and casual in conversation', zh: '澳大利亚人非常随和，交谈很随意' } },

@@ -19,15 +19,15 @@ export const philippines: Culture = {
     { native: 'Kamusta ka?', meaning: { en: 'How are you? (detailed)', zh: '你好吗？（详细）', de: 'Wie geht es Ihnen? (ausführlich)' } },
   ],
   food: [
-    { name: { en: 'Adobo', zh: '阿多波', de: 'Adobo' }, desc: { en: 'Meat stewed in vinegar and soy', zh: '醋和酱油炖肉', de: 'In Essig und Sojasoße geschmortes Fleisch' }, emoji: '🍖', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Adobo.jpg/320px-Adobo.jpg' },
-    { name: { en: 'Lechon', zh: '烤乳猪', de: 'Lechon' }, desc: { en: 'Roasted whole pig', zh: '烤全猪', de: 'Ganzes Spanferkel am Spieß' }, emoji: '🐷', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Lechon.jpg/320px-Lechon.jpg' },
+    { name: { en: 'Adobo', zh: '阿多波', de: 'Adobo' }, desc: { en: 'Meat stewed in vinegar and soy', zh: '醋和酱油炖肉', de: 'In Essig und Sojasoße geschmortes Fleisch' }, emoji: '🍖', img: '/images/philippines/food-adobo.jpg' },
+    { name: { en: 'Lechon', zh: '烤乳猪', de: 'Lechon' }, desc: { en: 'Roasted whole pig', zh: '烤全猪', de: 'Ganzes Spanferkel am Spieß' }, emoji: '🐷', img: '/images/philippines/food-lechon.jpg' },
   ],
   festivals: [
     { name: { en: 'Sinulog Festival', zh: '辛努洛节', de: 'Sinulog-Fest' }, desc: { en: 'Cultural dance festival', zh: '文化舞蹈节', de: 'Kulturelles Tanzfestival' }, emoji: '💃', img: '' },
   ],
   landmarks: [
-    { name: { en: 'Chocolate Hills', zh: '巧克力山', de: 'Schokoladenhügel' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Chocolate_Hills.jpg/320px-Chocolate_Hills.jpg' },
-    { name: { en: 'Banaue Rice Terraces', zh: '巴纳韦梯田', de: 'Banaue-Reisterrassen' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Banaue_rice_terraces.jpg/320px-Banaue_rice_terraces.jpg' },
+    { name: { en: 'Chocolate Hills', zh: '巧克力山', de: 'Schokoladenhügel' }, img: '/images/philippines/landmark-chocolate-hills.jpg' },
+    { name: { en: 'Banaue Rice Terraces', zh: '巴纳韦梯田', de: 'Banaue-Reisterrassen' }, img: '/images/philippines/landmark-banaue-rice-terraces.jpg' },
   ],
   etiquette: [
     { emoji: '😊', tip: { en: 'Filipinos are very hospitable', zh: '菲律宾人非常好客', de: 'Filipinos sind sehr gastfreundlich' } },

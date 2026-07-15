@@ -19,17 +19,17 @@ export const thailand: Culture = {
     { native: 'สบายดีไหม', romanization: 'Sà-baai dee măi?', meaning: { en: 'How are you?', zh: '你好吗？', de: 'Wie geht es Ihnen?' } },
   ],
   food: [
-    { name: { en: 'Pad Thai', zh: '泰式炒河粉', de: 'Pad Thai' }, desc: { en: 'Stir-fried rice noodles', zh: '炒米粉', de: 'Gebratene Reisnudeln' }, emoji: '🍜', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Pad_Thai.jpg/320px-Pad_Thai.jpg' },
-    { name: { en: 'Tom Yum Goong', zh: '冬阴功汤', de: 'Tom Yum Goong' }, desc: { en: 'Spicy and sour shrimp soup', zh: '酸辣虾汤', de: 'Scharf-saure Garnelensuppe' }, emoji: '🍲', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Tom_Yum_Goong.jpg/320px-Tom_Yum_Goong.jpg' },
-    { name: { en: 'Mango Sticky Rice', zh: '芒果糯米饭', de: 'Mango-Klebreis' }, desc: { en: 'Sweet dessert with mango', zh: '芒果甜糯米', de: 'Süßes Dessert mit Mango' }, emoji: '🥭', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Mango_sticky_rice.jpg/320px-Mango_sticky_rice.jpg' },
+    { name: { en: 'Pad Thai', zh: '泰式炒河粉', de: 'Pad Thai' }, desc: { en: 'Stir-fried rice noodles', zh: '炒米粉', de: 'Gebratene Reisnudeln' }, emoji: '🍜', img: '/images/thailand/food-pad-thai.jpg' },
+    { name: { en: 'Tom Yum Goong', zh: '冬阴功汤', de: 'Tom Yum Goong' }, desc: { en: 'Spicy and sour shrimp soup', zh: '酸辣虾汤', de: 'Scharf-saure Garnelensuppe' }, emoji: '🍲', img: '/images/thailand/food-tom-yum-goong.jpg' },
+    { name: { en: 'Mango Sticky Rice', zh: '芒果糯米饭', de: 'Mango-Klebreis' }, desc: { en: 'Sweet dessert with mango', zh: '芒果甜糯米', de: 'Süßes Dessert mit Mango' }, emoji: '🥭', img: '/images/thailand/food-mango-sticky-rice.jpg' },
   ],
   festivals: [
-    { name: { en: 'Songkran', zh: '宋干节（水节）', de: 'Songkran' }, desc: { en: 'Thai New Year water festival', zh: '泰国新年泼水节', de: 'Thailändisches Neujahrs-Wasserfest' }, emoji: '💦', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Songkran_Festival.jpg/320px-Songkran_Festival.jpg' },
-    { name: { en: 'Loy Krathong', zh: '水灯节', de: 'Loy Krathong' }, desc: { en: 'Festival of floating offerings', zh: '放水灯的节日', de: 'Fest der schwimmenden Opfergaben' }, emoji: '🎊', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Loy_Krathong.jpg/320px-Loy_Krathong.jpg' },
+    { name: { en: 'Songkran', zh: '宋干节（水节）', de: 'Songkran' }, desc: { en: 'Thai New Year water festival', zh: '泰国新年泼水节', de: 'Thailändisches Neujahrs-Wasserfest' }, emoji: '💦', img: '/images/thailand/festival-songkran.jpg' },
+    { name: { en: 'Loy Krathong', zh: '水灯节', de: 'Loy Krathong' }, desc: { en: 'Festival of floating offerings', zh: '放水灯的节日', de: 'Fest der schwimmenden Opfergaben' }, emoji: '🎊', img: '/images/thailand/festival-loy-krathong.jpg' },
   ],
   landmarks: [
-    { name: { en: 'Grand Palace', zh: '大皇宫', de: 'Großer Palast' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Grand_Palace_Bangkok.jpg/320px-Grand_Palace_Bangkok.jpg' },
-    { name: { en: 'Wat Arun', zh: '郑王庙', de: 'Wat Arun' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Wat_Arun_Bangkok.jpg/320px-Wat_Arun_Bangkok.jpg' },
+    { name: { en: 'Grand Palace', zh: '大皇宫', de: 'Großer Palast' }, img: '/images/thailand/landmark-grand-palace.jpg' },
+    { name: { en: 'Wat Arun', zh: '郑王庙', de: 'Wat Arun' }, img: '/images/thailand/landmark-wat-arun.jpg' },
   ],
   etiquette: [
     { emoji: '🙏', tip: { en: 'Wai greeting with palms together', zh: '合十礼问候', de: 'Wai-Gruß mit zusammengelegten Handflächen' } },

@@ -19,17 +19,17 @@ export const spain: Culture = {
     { native: '¿Cómo estás?', meaning: { en: 'How are you?', zh: '你好吗？' } },
   ],
   food: [
-    { name: { en: 'Paella', zh: '西班牙海鲜饭' }, desc: { en: 'Saffron rice with seafood', zh: '藏红花配海鲜饭' }, emoji: '🥘', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Paella.jpg/320px-Paella.jpg' },
-    { name: { en: 'Tapas', zh: '西班牙小食' }, desc: { en: 'Small savory dishes', zh: '小型咸味菜肴' }, emoji: '🍢', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tapas.jpg/320px-Tapas.jpg' },
-    { name: { en: 'Churros', zh: '吉事果' }, desc: { en: 'Fried dough pastry', zh: '炸面团糕点' }, emoji: '🍩', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Churros.jpg/320px-Churros.jpg' },
+    { name: { en: 'Paella', zh: '西班牙海鲜饭' }, desc: { en: 'Saffron rice with seafood', zh: '藏红花配海鲜饭' }, emoji: '🥘', img: '/images/spain/food-paella.jpg' },
+    { name: { en: 'Tapas', zh: '西班牙小食' }, desc: { en: 'Small savory dishes', zh: '小型咸味菜肴' }, emoji: '🍢', img: '/images/spain/food-tapas.jpg' },
+    { name: { en: 'Churros', zh: '吉事果' }, desc: { en: 'Fried dough pastry', zh: '炸面团糕点' }, emoji: '🍩', img: '/images/spain/food-churros.jpg' },
   ],
   festivals: [
-    { name: { en: 'La Tomatina', zh: '番茄大战' }, desc: { en: 'World’s biggest food fight', zh: '世界上最大的食物大战' }, emoji: '🍅', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/La_Tomatina.jpg/320px-La_Tomatina.jpg' },
-    { name: { en: 'Running of the Bulls', zh: '奔牛节' }, desc: { en: 'Festival with bull running', zh: '奔牛节' }, emoji: '🐂', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Running_of_the_Bulls.jpg/320px-Running_of_the_Bulls.jpg' },
+    { name: { en: 'La Tomatina', zh: '番茄大战' }, desc: { en: 'World’s biggest food fight', zh: '世界上最大的食物大战' }, emoji: '🍅', img: '/images/spain/festival-la-tomatina.jpg' },
+    { name: { en: 'Running of the Bulls', zh: '奔牛节' }, desc: { en: 'Festival with bull running', zh: '奔牛节' }, emoji: '🐂', img: '/images/spain/festival-running-of-the-bulls.jpg' },
   ],
   landmarks: [
-    { name: { en: 'Sagrada Familia', zh: '圣家族大教堂' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Sagrada_Familia.jpg/320px-Sagrada_Familia.jpg' },
-    { name: { en: 'Alhambra', zh: '阿尔罕布拉宫' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Alhambra.jpg/320px-Alhambra.jpg' },
+    { name: { en: 'Sagrada Familia', zh: '圣家族大教堂' }, img: '/images/spain/landmark-sagrada-familia.jpg' },
+    { name: { en: 'Alhambra', zh: '阿尔罕布拉宫' }, img: '/images/spain/landmark-alhambra.jpg' },
   ],
   etiquette: [
     { emoji: '😴', tip: { en: 'Siesta time (2-5pm) is sacred', zh: '午休时间（下午2-5点）是神圣的' } },

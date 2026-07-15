@@ -20,19 +20,19 @@ export const china: Culture = {
     { native: '你好吗？', romanization: 'Nǐ hǎo ma?', meaning: { en: 'How are you?', zh: '你好吗？' } },
   ],
   food: [
-    { name: { en: 'Dumplings', zh: '饺子' }, desc: { en: 'Boiled or fried dough with filling', zh: '煮或煎的面食' }, emoji: '🥟', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Jiaozi.jpg/320px-Jiaozi.jpg' },
-    { name: { en: 'Fried Rice', zh: '炒饭' }, desc: { en: 'Stir-fried rice with vegetables', zh: '配蔬菜炒制的米饭' }, emoji: '🍚', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Fried_rice_with_egg.jpg/320px-Fried_rice_with_egg.jpg' },
-    { name: { en: 'Peking Duck', zh: '北京烤鸭' }, desc: { en: 'Roasted duck dish', zh: '烤鸭料理' }, emoji: '🦆', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Beijing_kao_ya.jpg/320px-Beijing_kao_ya.jpg' },
+    { name: { en: 'Dumplings', zh: '饺子' }, desc: { en: 'Boiled or fried dough with filling', zh: '煮或煎的面食' }, emoji: '🥟', img: '/images/china/food-dumplings.jpg' },
+    { name: { en: 'Fried Rice', zh: '炒饭' }, desc: { en: 'Stir-fried rice with vegetables', zh: '配蔬菜炒制的米饭' }, emoji: '🍚', img: '/images/china/food-fried-rice.jpg' },
+    { name: { en: 'Peking Duck', zh: '北京烤鸭' }, desc: { en: 'Roasted duck dish', zh: '烤鸭料理' }, emoji: '🦆', img: '/images/china/food-peking-duck.jpg' },
   ],
   festivals: [
-    { name: { en: 'Chinese New Year', zh: '春节' }, desc: { en: 'Lunar New Year celebration', zh: '农历新年庆祝' }, emoji: '🧧', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Chinese_New_Year_Firecrackers.jpg/320px-Chinese_New_Year_Firecrackers.jpg' },
-    { name: { en: 'Mid-Autumn Festival', zh: '中秋节' }, desc: { en: 'Moon festival with mooncakes', zh: '赏月吃月饼的节日' }, emoji: '🥮', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Mid-Autumn_Festival_2014.jpg/320px-Mid-Autumn_Festival_2014.jpg' },
-    { name: { en: 'Dragon Boat Festival', zh: '端午节' }, desc: { en: 'Festival with dragon boat races', zh: '赛龙舟的节日' }, emoji: '🐉', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Dragon_boat_race.jpg/320px-Dragon_boat_race.jpg' },
+    { name: { en: 'Chinese New Year', zh: '春节' }, desc: { en: 'Lunar New Year celebration', zh: '农历新年庆祝' }, emoji: '🧧', img: '/images/china/festival-chinese-new-year.jpg' },
+    { name: { en: 'Mid-Autumn Festival', zh: '中秋节' }, desc: { en: 'Moon festival with mooncakes', zh: '赏月吃月饼的节日' }, emoji: '🥮', img: '/images/china/festival-mid-autumn-festival.jpg' },
+    { name: { en: 'Dragon Boat Festival', zh: '端午节' }, desc: { en: 'Festival with dragon boat races', zh: '赛龙舟的节日' }, emoji: '🐉', img: '/images/china/festival-dragon-boat-festival.jpg' },
   ],
   landmarks: [
-    { name: { en: 'Great Wall', zh: '长城' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Great_Wall_of_China_July_2006.JPG/320px-Great_Wall_of_China_July_2006.JPG' },
-    { name: { en: 'Forbidden City', zh: '故宫' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Forbidden_City_cropped.jpg/320px-Forbidden_City_cropped.jpg' },
-    { name: { en: 'Terracotta Army', zh: '兵马俑' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Terracotta_soldiers.jpg/320px-Terracotta_soldiers.jpg' },
+    { name: { en: 'Great Wall', zh: '长城' }, img: '/images/china/landmark-great-wall.jpg' },
+    { name: { en: 'Forbidden City', zh: '故宫' }, img: '/images/china/landmark-forbidden-city.jpg' },
+    { name: { en: 'Terracotta Army', zh: '兵马俑' }, img: '/images/china/landmark-terracotta-army.jpg' },
   ],
   etiquette: [
     { emoji: '🥢', tip: { en: 'Wait for the eldest to start eating', zh: '等长辈先动筷' } },

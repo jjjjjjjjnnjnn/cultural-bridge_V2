@@ -19,17 +19,17 @@ export const brazil: Culture = {
     { native: 'Desculpe', meaning: { en: 'Excuse me / Sorry', zh: '打扰一下 / 对不起' } },
   ],
   food: [
-    { name: { en: 'Feijoada', zh: '黑豆炖肉' }, desc: { en: 'Black bean stew with pork, Brazils national dish', de: 'Bohneneintopf mit Schweinefleisch, Brasiliens Nationalgericht', zh: '黑豆炖猪肉，巴西国菜' }, emoji: '🍲', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Feijoada.jpg/320px-Feijoada.jpg' },
-    { name: { en: 'Açaí Bowl', zh: '阿萨伊果碗' }, desc: { en: 'Frozen açaí berry pulp blended and served as a bowl', zh: '冷冻阿萨伊浆果打成泥装碗食用' }, emoji: '🍇', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Acai_bowl.jpg/320px-Acai_bowl.jpg' },
+    { name: { en: 'Feijoada', zh: '黑豆炖肉' }, desc: { en: 'Black bean stew with pork, Brazils national dish', de: 'Bohneneintopf mit Schweinefleisch, Brasiliens Nationalgericht', zh: '黑豆炖猪肉，巴西国菜' }, emoji: '🍲', img: '/images/brazil/food-feijoada.jpg' },
+    { name: { en: 'Açaí Bowl', zh: '阿萨伊果碗' }, desc: { en: 'Frozen açaí berry pulp blended and served as a bowl', zh: '冷冻阿萨伊浆果打成泥装碗食用' }, emoji: '🍇', img: '/images/brazil/food-acai-bowl.jpg' },
     { name: { en: 'Pão de Queijo', zh: '巴西奶酪面包' }, desc: { en: 'Cheese bread rolls made from cassava flour', de: 'Kasebrottchen aus Maniokmehl', zh: '用木薯粉制作的奶酪面包球' }, emoji: '🧀', img: '' },
   ],
   festivals: [
-    { name: { en: 'Carnival', zh: '狂欢节' }, desc: { en: 'Worlds biggest carnival with samba parades in Rio', de: 'Der grosste Karneval der Welt mit Samba-Paraden in Rio', zh: '世界上最大的狂欢节，里约热内卢的桑巴游行' }, emoji: '🎭', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Carnival_Rio.jpg/320px-Carnival_Rio.jpg' },
+    { name: { en: 'Carnival', zh: '狂欢节' }, desc: { en: 'Worlds biggest carnival with samba parades in Rio', de: 'Der grosste Karneval der Welt mit Samba-Paraden in Rio', zh: '世界上最大的狂欢节，里约热内卢的桑巴游行' }, emoji: '🎭', img: '/images/brazil/festival-carnival.jpg' },
     { name: { en: 'Festa Junina', zh: '六月节' }, desc: { en: 'Traditional June festival with music and dancing', de: 'Traditionelles Juni-Fest mit Musik und Tanz', zh: '传统六月节，有音乐和舞蹈' }, emoji: '🎪', img: '' },
   ],
   landmarks: [
-    { name: { en: 'Christ the Redeemer', zh: '基督像' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Christ_the_Redeemer.jpg/320px-Christ_the_Redeemer.jpg' },
-    { name: { en: 'Iguazu Falls', zh: '伊瓜苏大瀑布' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Iguazu_Falls.jpg/320px-Iguazu_Falls.jpg' },
+    { name: { en: 'Christ the Redeemer', zh: '基督像' }, img: '/images/brazil/landmark-christ-the-redeemer.jpg' },
+    { name: { en: 'Iguazu Falls', zh: '伊瓜苏大瀑布' }, img: '/images/brazil/landmark-iguazu-falls.jpg' },
     { name: { en: 'Amazon Rainforest', zh: '亚马逊雨林' }, img: '' },
   ],
   etiquette: [

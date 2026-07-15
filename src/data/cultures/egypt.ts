@@ -19,8 +19,8 @@ export const egypt: Culture = {
     { native: 'نعم', romanization: "Na’am", meaning: { en: 'Yes', zh: '是的' } },
   ],
   food: [
-    { name: { en: 'Koshari', zh: '埃及杂烩饭' }, desc: { en: 'Lentils, rice, and pasta mix with tomato sauce', de: 'Linsen, Reis und Nudeln mit Tomatensosse', zh: '扁豆、米饭、意面混合配番茄酱' }, emoji: '🍚', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Koshari.jpg/320px-Koshari.jpg' },
-    { name: { en: 'Ful Medames', zh: '炖蚕豆' }, desc: { en: 'Stewed fava beans with olive oil and herbs', de: 'Geschmorte Saubohnen mit Olivenol und Krautern', zh: '橄榄油香草炖蚕豆' }, emoji: '🫘', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Ful_medames.jpg/320px-Ful_medames.jpg' },
+    { name: { en: 'Koshari', zh: '埃及杂烩饭' }, desc: { en: 'Lentils, rice, and pasta mix with tomato sauce', de: 'Linsen, Reis und Nudeln mit Tomatensosse', zh: '扁豆、米饭、意面混合配番茄酱' }, emoji: '🍚', img: '/images/egypt/food-koshari.jpg' },
+    { name: { en: 'Ful Medames', zh: '炖蚕豆' }, desc: { en: 'Stewed fava beans with olive oil and herbs', de: 'Geschmorte Saubohnen mit Olivenol und Krautern', zh: '橄榄油香草炖蚕豆' }, emoji: '🫘', img: '/images/egypt/food-ful-medames.jpg' },
     { name: { en: 'Taameya', zh: '埃及炸豆丸子' }, desc: { en: 'Egyptian falafel made from fava beans', de: 'Agyptische Falafel aus Saubohnen', zh: '用蚕豆制作的埃及法拉费' }, emoji: '🧆', img: '' },
   ],
   festivals: [
@@ -28,9 +28,9 @@ export const egypt: Culture = {
     { name: { en: 'Eid al-Fitr', zh: '开斋节' }, desc: { en: 'Festival marking the end of Ramadan', de: 'Fest zum Ende des Ramadan', zh: '斋月结束的庆祝节日' }, emoji: '🎉', img: '' },
   ],
   landmarks: [
-    { name: { en: 'Pyramids of Giza', zh: '吉萨金字塔' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Pyramids_of_Giza.jpg/320px-Pyramids_of_Giza.jpg' },
-    { name: { en: 'Sphinx', zh: '狮身人面像' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Sphinx_Giza.jpg/320px-Sphinx_Giza.jpg' },
-    { name: { en: 'Valley of the Kings', zh: '国王谷' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Valley_of_the_Kings.jpg/320px-Valley_of_the_Kings.jpg' },
+    { name: { en: 'Pyramids of Giza', zh: '吉萨金字塔' }, img: '/images/egypt/landmark-pyramids-of-giza.jpg' },
+    { name: { en: 'Sphinx', zh: '狮身人面像' }, img: '/images/egypt/landmark-sphinx.jpg' },
+    { name: { en: 'Valley of the Kings', zh: '国王谷' }, img: '/images/egypt/landmark-valley-of-the-kings.jpg' },
   ],
   etiquette: [
     { emoji: '☕', tip: { en: 'Egyptians are very hospitable and often offer tea to guests', zh: '埃及人非常好客，经常给客人奉茶' } },

@@ -20,18 +20,18 @@ export const japan: Culture = {
     { native: 'お元気ですか？', romanization: 'Ogenki desu ka?', meaning: { en: 'How are you?', zh: '你好吗？' } },
   ],
   food: [
-    { name: { en: 'Sushi', zh: '寿司' }, desc: { en: 'Vinegared rice with seafood', zh: '配海鲜的醋饭' }, emoji: '🍣', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Sushi_platter.jpg/320px-Sushi_platter.jpg' },
-    { name: { en: 'Ramen', zh: '拉面' }, desc: { en: 'Japanese noodle soup', zh: '日式汤面' }, emoji: '🍜', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Ramen_in_Yokohama_China_Town.jpg/320px-Ramen_in_Yokohama_China_Town.jpg' },
-    { name: { en: 'Tempura', zh: '天妇罗' }, desc: { en: 'Battered and fried seafood/vegetables', zh: '裹面糊炸的海鲜蔬菜' }, emoji: '🍤', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Tempura.jpg/320px-Tempura.jpg' },
+    { name: { en: 'Sushi', zh: '寿司' }, desc: { en: 'Vinegared rice with seafood', zh: '配海鲜的醋饭' }, emoji: '🍣', img: '/images/japan/food-sushi.jpg' },
+    { name: { en: 'Ramen', zh: '拉面' }, desc: { en: 'Japanese noodle soup', zh: '日式汤面' }, emoji: '🍜', img: '/images/japan/food-ramen.jpg' },
+    { name: { en: 'Tempura', zh: '天妇罗' }, desc: { en: 'Battered and fried seafood/vegetables', zh: '裹面糊炸的海鲜蔬菜' }, emoji: '🍤', img: '/images/japan/food-tempura.jpg' },
   ],
   festivals: [
-    { name: { en: 'Cherry Blossom Festival', zh: '樱花节' }, desc: { en: 'Celebrating sakura blooms', zh: '庆祝樱花盛开' }, emoji: '🌸', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Sakura_in_full_bloom.jpg/320px-Sakura_in_full_bloom.jpg' },
-    { name: { en: 'Gion Matsuri', zh: '祇园祭' }, desc: { en: 'Famous festival in Kyoto', zh: '京都著名祭典' }, emoji: '🎪', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Gion_Matsuri_2012.jpg/320px-Gion_Matsuri_2012.jpg' },
+    { name: { en: 'Cherry Blossom Festival', zh: '樱花节' }, desc: { en: 'Celebrating sakura blooms', zh: '庆祝樱花盛开' }, emoji: '🌸', img: '/images/japan/festival-cherry-blossom-festival.jpg' },
+    { name: { en: 'Gion Matsuri', zh: '祇园祭' }, desc: { en: 'Famous festival in Kyoto', zh: '京都著名祭典' }, emoji: '🎪', img: '/images/japan/festival-gion-matsuri.jpg' },
   ],
   landmarks: [
-    { name: { en: 'Mount Fuji', zh: '富士山' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Fuji-san_red_cedar.JPG/320px-Fuji-san_red_cedar.JPG' },
-    { name: { en: 'Fushimi Inari Shrine', zh: '伏见稻荷大社' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Fushimi_Inari_Shrine_in_2017.jpg/320px-Fushimi_Inari_Shrine_in_2017.jpg' },
-    { name: { en: 'Tokyo Tower', zh: '东京塔' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Tokyo_Tower_2012.jpg/320px-Tokyo_Tower_2012.jpg' },
+    { name: { en: 'Mount Fuji', zh: '富士山' }, img: '/images/japan/landmark-mount-fuji.jpg' },
+    { name: { en: 'Fushimi Inari Shrine', zh: '伏见稻荷大社' }, img: '/images/japan/landmark-fushimi-inari-shrine.jpg' },
+    { name: { en: 'Tokyo Tower', zh: '东京塔' }, img: '/images/japan/landmark-tokyo-tower.jpg' },
   ],
   etiquette: [
     { emoji: '🙏', tip: { en: 'Bow when greeting', zh: '打招呼时要鞠躬' } },

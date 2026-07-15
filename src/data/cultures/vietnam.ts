@@ -19,15 +19,15 @@ export const vietnam: Culture = {
     { native: 'Bạn khỏe không?', meaning: { en: 'How are you?', zh: '你好吗？', de: 'Wie geht es Ihnen?' } },
   ],
   food: [
-    { name: { en: 'Pho', zh: '越南粉', de: 'Pho' }, desc: { en: 'Vietnamese noodle soup', zh: '越南牛肉汤粉', de: 'Vietnamesische Nudelsuppe' }, emoji: '🍜', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Pho.jpg/320px-Pho.jpg' },
-    { name: { en: 'Banh Mi', zh: '越南三明治', de: 'Banh Mi' }, desc: { en: 'Vietnamese sandwich', zh: '越南法式三明治', de: 'Vietnamesisches Sandwich' }, emoji: '🥖', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Banh_mi.jpg/320px-Banh_mi.jpg' },
+    { name: { en: 'Pho', zh: '越南粉', de: 'Pho' }, desc: { en: 'Vietnamese noodle soup', zh: '越南牛肉汤粉', de: 'Vietnamesische Nudelsuppe' }, emoji: '🍜', img: '/images/vietnam/food-pho.jpg' },
+    { name: { en: 'Banh Mi', zh: '越南三明治', de: 'Banh Mi' }, desc: { en: 'Vietnamese sandwich', zh: '越南法式三明治', de: 'Vietnamesisches Sandwich' }, emoji: '🥖', img: '/images/vietnam/food-banh-mi.jpg' },
   ],
   festivals: [
-    { name: { en: 'Tet Festival', zh: '春节', de: 'Tet-Fest' }, desc: { en: 'Vietnamese Lunar New Year', zh: '越南农历新年', de: 'Vietnamesisches Neujahrsfest' }, emoji: '🎊', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Tet_Festival_Vietnam.jpg/320px-Tet_Festival_Vietnam.jpg' },
+    { name: { en: 'Tet Festival', zh: '春节', de: 'Tet-Fest' }, desc: { en: 'Vietnamese Lunar New Year', zh: '越南农历新年', de: 'Vietnamesisches Neujahrsfest' }, emoji: '🎊', img: '/images/vietnam/festival-tet-festival.jpg' },
   ],
   landmarks: [
-    { name: { en: 'Ha Long Bay', zh: '下龙湾', de: 'Ha-Long-Bucht' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Ha_Long_Bay.jpg/320px-Ha_Long_Bay.jpg' },
-    { name: { en: 'Hoi An Ancient Town', zh: '会安古镇', de: 'Altstadt von Hoi An' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Hoi_An.jpg/320px-Hoi_An.jpg' },
+    { name: { en: 'Ha Long Bay', zh: '下龙湾', de: 'Ha-Long-Bucht' }, img: '/images/vietnam/landmark-ha-long-bay.jpg' },
+    { name: { en: 'Hoi An Ancient Town', zh: '会安古镇', de: 'Altstadt von Hoi An' }, img: '/images/vietnam/landmark-hoi-an-ancient-town.jpg' },
   ],
   etiquette: [
     { emoji: '🍽️', tip: { en: 'Use chopsticks properly', zh: '正确使用筷子', de: 'Essstäbchen richtig benutzen' } },

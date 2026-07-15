@@ -20,18 +20,18 @@ export const france: Culture = {
     { native: 'Comment allez-vous?', meaning: { en: 'How are you?', zh: '你好吗？' } },
   ],
   food: [
-    { name: { en: 'Croissant', zh: '牛角面包' }, desc: { en: 'Flaky crescent-shaped pastry', zh: '酥脆的月牙形糕点' }, emoji: '🥐', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Croissant.jpg/320px-Croissant.jpg' },
-    { name: { en: 'Escargot', zh: '蜗牛' }, desc: { en: 'Snails in garlic butter', zh: '蒜香黄油蜗牛' }, emoji: '🐌', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Escargot.jpg/320px-Escargot.jpg' },
-    { name: { en: 'Baguette', zh: '法式长棍面包' }, desc: { en: 'Long thin crusty bread', zh: '细长脆皮面包' }, emoji: '🥖', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Baguette.jpg/320px-Baguette.jpg' },
+    { name: { en: 'Croissant', zh: '牛角面包' }, desc: { en: 'Flaky crescent-shaped pastry', zh: '酥脆的月牙形糕点' }, emoji: '🥐', img: '/images/france/food-croissant.jpg' },
+    { name: { en: 'Escargot', zh: '蜗牛' }, desc: { en: 'Snails in garlic butter', zh: '蒜香黄油蜗牛' }, emoji: '🐌', img: '/images/france/food-escargot.jpg' },
+    { name: { en: 'Baguette', zh: '法式长棍面包' }, desc: { en: 'Long thin crusty bread', zh: '细长脆皮面包' }, emoji: '🥖', img: '/images/france/food-baguette.jpg' },
   ],
   festivals: [
-    { name: { en: 'Bastille Day', zh: '巴士底日' }, desc: { en: 'French National Day', zh: '法国国庆日' }, emoji: '🎆', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Bastille_Day.jpg/320px-Bastille_Day.jpg' },
-    { name: { en: 'Cannes Film Festival', zh: '戛纳电影节' }, desc: { en: 'Prestigious film festival', zh: '著名电影节' }, emoji: '🎬', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Cannes_Film_Festival.jpg/320px-Cannes_Film_Festival.jpg' },
+    { name: { en: 'Bastille Day', zh: '巴士底日' }, desc: { en: 'French National Day', zh: '法国国庆日' }, emoji: '🎆', img: '/images/france/festival-bastille-day.jpg' },
+    { name: { en: 'Cannes Film Festival', zh: '戛纳电影节' }, desc: { en: 'Prestigious film festival', zh: '著名电影节' }, emoji: '🎬', img: '/images/france/festival-cannes-film-festival.jpg' },
   ],
   landmarks: [
-    { name: { en: 'Eiffel Tower', zh: '埃菲尔铁塔' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Paris_Tour_Eiffel_Twilight_September_2018.jpg/320px-Paris_Tour_Eiffel_Twilight_September_2018.jpg' },
-    { name: { en: 'Louvre Museum', zh: '卢浮宫' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Louvre_Museum.jpg/320px-Louvre_Museum.jpg' },
-    { name: { en: 'Mont Saint-Michel', zh: '圣米歇尔山' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Mont_Saint-Michel.jpg/320px-Mont_Saint-Michel.jpg' },
+    { name: { en: 'Eiffel Tower', zh: '埃菲尔铁塔' }, img: '/images/france/landmark-eiffel-tower.jpg' },
+    { name: { en: 'Louvre Museum', zh: '卢浮宫' }, img: '/images/france/landmark-louvre-museum.jpg' },
+    { name: { en: 'Mont Saint-Michel', zh: '圣米歇尔山' }, img: '/images/france/landmark-mont-saint-michel.jpg' },
   ],
   etiquette: [
     { emoji: '💋', tip: { en: 'Faire la bise (cheek kiss) when greeting friends', zh: '和朋友打招呼时贴面吻' } },
