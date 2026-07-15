@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom'
+﻿import { useParams, Link } from 'react-router-dom'
 import { useI18n } from '../i18n/context'
 import { GAME_DEFS } from '../data/games'
 import { useProgressStore } from '../stores/progress-store'
@@ -40,6 +40,21 @@ const GREETING_QA = [
   { native: 'Привет', romanization: 'Privet', culture: 'Russia' },
 ]
 
+const GREETING_QA_EXTRA = [
+  { native: 'ٱلسَّلَامُ عَلَيْكُمْ', romanization: 'As-salamu alaykum', culture: 'UAE' },
+  { native: 'مرحبا', romanization: 'Marhaba', culture: 'Egypt' },
+  { native: 'Dumela', romanization: '', culture: 'South Africa' },
+  { native: 'Kia ora', romanization: '', culture: 'New Zealand' },
+  { native: 'Selamat pagi', romanization: '', culture: 'Indonesia' },
+  { native: 'Hej', romanization: '', culture: 'Sweden' },
+  { native: 'Dzień dobry', romanization: '', culture: 'Poland' },
+  { native: 'Χαίρετε', romanization: 'Chairete', culture: 'Greece' },
+  { native: 'Jambo', romanization: '', culture: 'Kenya' },
+  { native: 'Hei', romanization: '', culture: 'Finland' },
+  { native: 'Chào bạn', romanization: '', culture: 'Vietnam' },
+  { native: 'Shalom', romanization: '', culture: 'Israel' },
+]
+
 function GreetingGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
   const { t } = useI18n()
   const [q, setQ] = useState(0)
@@ -50,7 +65,8 @@ function GreetingGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
   const [startTime] = useState(Date.now())
 
   const questions = useMemo(() => {
-    const picked = shuffle(GREETING_QA).slice(0, 8)
+    const combined = [...GREETING_QA, ...GREETING_QA_EXTRA]
+    const picked = shuffle(combined).slice(0, 8)
     const allCultures = CULTURE_META.map((c) => c.name.en ?? c.id)
     return picked.map((item) => ({
       ...item,
@@ -99,6 +115,21 @@ const FOOD_QA = [
   { food: '🍜 Phở', culture: 'Vietnam' }, { food: '🍢 Satay', culture: 'Indonesia' }, { food: '🥟 Manti', culture: 'Turkey' },
 ]
 
+const FOOD_QA_EXTRA = [
+  { food: '🥟 Pierogi', culture: 'Poland' },
+  { food: '🫓 Injera', culture: 'Ethiopia' },
+  { food: '🥙 Shawarma', culture: 'Lebanon' },
+  { food: '🥬 Kimchi', culture: 'Korea' },
+  { food: '🍲 Feijoada', culture: 'Brazil' },
+  { food: '🥟 Empanada', culture: 'Argentina' },
+  { food: '🍛 Bunny Chow', culture: 'South Africa' },
+  { food: '🥖 Baguette', culture: 'France' },
+  { food: '🥣 Borscht', culture: 'Ukraine' },
+  { food: '🍚 Hainanese Chicken Rice', culture: 'Singapore' },
+  { food: '🥘 Couscous', culture: 'Morocco' },
+  { food: '🍰 Pavlova', culture: 'New Zealand' },
+]
+
 function FoodMatchGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
   const { t } = useI18n()
   const [q, setQ] = useState(0)
@@ -107,7 +138,8 @@ function FoodMatchGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
   const [startTime] = useState(Date.now())
 
   const questions = useMemo(() => {
-    const picked = shuffle(FOOD_QA).slice(0, 6)
+    const combined = [...FOOD_QA, ...FOOD_QA_EXTRA]
+    const picked = shuffle(combined).slice(0, 8)
     const allCultures = [...new Set(picked.map((p) => p.culture))]
     return picked.map((p) => ({ ...p, options: shuffle([p.culture, ...pickWrong(p.culture, allCultures, 2)]) }))
   }, [])
@@ -160,6 +192,21 @@ const BIAS_QA = [
   { statement: 'South Korea has the fastest internet in the world', answer: 'fact' },
 ]
 
+const BIAS_QA_EXTRA = [
+  { statement: 'All Africans live in huts', answer: 'myth' },
+  { statement: 'Nigeria has the largest film industry (Nollywood) in Africa', answer: 'fact' },
+  { statement: 'All Middle Eastern people are Arab', answer: 'myth' },
+  { statement: 'Iran and Saudi Arabia share no land border but are major cultural regions', answer: 'fact' },
+  { statement: 'All Russians drink vodka every day', answer: 'myth' },
+  { statement: 'Lake Baikal in Russia is the deepest lake in the world', answer: 'fact' },
+  { statement: 'All Canadians live in igloos', answer: 'myth' },
+  { statement: 'Canada has over 600 Indigenous First Nation communities', answer: 'fact' },
+  { statement: 'All Australians are surfers', answer: 'myth' },
+  { statement: 'Australia has over 250 Indigenous language groups', answer: 'fact' },
+  { statement: 'All Scandinavian countries use the same language', answer: 'myth' },
+  { statement: 'Norway has the world’s largest sovereign wealth fund', answer: 'fact' },
+]
+
 function BiasGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
   const { t } = useI18n()
   const [q, setQ] = useState(0)
@@ -169,7 +216,10 @@ function BiasGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
   const [selected, setSelected] = useState<string | null>(null)
   const [startTime] = useState(Date.now())
 
-  const questions = useMemo(() => shuffle(BIAS_QA).slice(0, 8), [])
+  const questions = useMemo(() => {
+    const combined = [...BIAS_QA, ...BIAS_QA_EXTRA]
+    return shuffle(combined).slice(0, 10)
+  }, [])
 
   const current = questions[q]; const isLast = q >= questions.length - 1
 
@@ -211,6 +261,21 @@ const FESTIVAL_QA = [
   { festival: '🥮 Mid-Autumn Festival', culture: 'China' }, { festival: '🐉 Dragon Boat Festival', culture: 'China' },
 ]
 
+const FESTIVAL_QA_EXTRA = [
+  { festival: '🎭 Carnival', culture: 'Brazil' },
+  { festival: '💧 Songkran Water Festival', culture: 'Thailand' },
+  { festival: '🎨 Holi (Festival of Colors)', culture: 'India' },
+  { festival: '🪷 Loy Krathong', culture: 'Thailand' },
+  { festival: '🇫🇷 Bastille Day', culture: 'France' },
+  { festival: '🐪 Eid al-Adha', culture: 'Saudi Arabia' },
+  { festival: '🎭 Mardi Gras', culture: 'USA' },
+  { festival: '🎎 Children’s Day', culture: 'Japan' },
+  { festival: '🏮 Lantern Festival', culture: 'China' },
+  { festival: '☘️ St. Patrick’s Day', culture: 'Ireland' },
+  { festival: '🕎 Hanukkah', culture: 'Israel' },
+  { festival: '🎆 Seollal (Korean New Year)', culture: 'Korea' },
+]
+
 function FestivalGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
   const { t } = useI18n()
   const [q, setQ] = useState(0)
@@ -219,7 +284,8 @@ function FestivalGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
   const [startTime] = useState(Date.now())
 
   const questions = useMemo(() => {
-    const picked = shuffle(FESTIVAL_QA).slice(0, 6)
+    const combined = [...FESTIVAL_QA, ...FESTIVAL_QA_EXTRA]
+    const picked = shuffle(combined).slice(0, 8)
     const allCultures = [...new Set(picked.map((p) => p.culture))]
     return picked.map((p) => ({ ...p, options: shuffle([p.culture, ...pickWrong(p.culture, allCultures, 3)]) }))
   }, [])
@@ -320,6 +386,24 @@ const MASTER_QA = [
   { q: 'Oktoberfest is held in which country?', a: 'Germany', opts: ['Austria', 'Switzerland', 'Germany', 'Czech Republic'] },
 ]
 
+const MASTER_QA_EXTRA = [
+  { q: 'Which country is home to the Amazon River?', a: 'Brazil', opts: ['Colombia', 'Brazil', 'Peru', 'Venezuela'] },
+  { q: 'Which country invented pizza?', a: 'Italy', opts: ['France', 'Spain', 'Italy', 'Greece'] },
+  { q: 'The Great Wall of China is visible from where?', a: 'Low Earth orbit', opts: ['The Moon', 'Low Earth orbit', 'Mars', 'Venus'] },
+  { q: 'Which country has the most UNESCO World Heritage Sites?', a: 'Italy', opts: ['China', 'France', 'Italy', 'Spain'] },
+  { q: 'Which country celebrates Nowruz (Persian New Year)?', a: 'Iran', opts: ['Turkey', 'Iraq', 'Iran', 'Pakistan'] },
+  { q: 'Which Nordic country has the most islands?', a: 'Sweden', opts: ['Norway', 'Finland', 'Sweden', 'Denmark'] },
+  { q: 'Which country is the largest archipelago in the world?', a: 'Indonesia', opts: ['Philippines', 'Japan', 'Indonesia', 'Malaysia'] },
+  { q: 'The Great Sphinx is located in which country?', a: 'Egypt', opts: ['Greece', 'Egypt', 'Jordan', 'Turkey'] },
+  { q: 'Which country is the origin of coffee?', a: 'Ethiopia', opts: ['Brazil', 'Colombia', 'Vietnam', 'Ethiopia'] },
+  { q: 'Machu Picchu is in which country?', a: 'Peru', opts: ['Bolivia', 'Peru', 'Chile', 'Ecuador'] },
+  { q: 'Which country has the largest population of Muslims?', a: 'Indonesia', opts: ['Saudi Arabia', 'Indonesia', 'Pakistan', 'India'] },
+  { q: 'Angkor Wat is located in which country?', a: 'Cambodia', opts: ['Thailand', 'Vietnam', 'Cambodia', 'Laos'] },
+  { q: 'Which country has the most official languages?', a: 'South Africa', opts: ['India', 'South Africa', 'Switzerland', 'Nigeria'] },
+  { q: 'The ancient city of Petra is in which country?', a: 'Jordan', opts: ['Egypt', 'Jordan', 'Israel', 'Saudi Arabia'] },
+  { q: 'Which country has the longest coastline in the world?', a: 'Canada', opts: ['Australia', 'Canada', 'Russia', 'Indonesia'] },
+]
+
 function CultureMasterGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
   const { t } = useI18n()
   const [q, setQ] = useState(0)
@@ -329,7 +413,10 @@ function CultureMasterGame({ onFinish }: { onFinish: (r: GameResult) => void }) 
   const [selected, setSelected] = useState<number | null>(null)
   const [startTime] = useState(Date.now())
 
-  const questions = useMemo(() => shuffle(MASTER_QA).slice(0, 10), [])
+  const questions = useMemo(() => {
+    const combined = [...MASTER_QA, ...MASTER_QA_EXTRA]
+    return shuffle(combined).slice(0, 10)
+  }, [])
 
   const current = questions[q]; const isLast = q >= questions.length - 1
 
@@ -376,7 +463,7 @@ function SpeedRound({ onFinish }: { onFinish: (r: GameResult) => void }) {
   const [finished, setFinished] = useState(false)
 
   const questions = useMemo(() => {
-    const all = CULTURE_META.map((c) => ({ q: `Which country has this flag? ${c.flag}`, a: c.name.en ?? c.id, opts: shuffle([c.name.en ?? c.id, ...pickWrong(c.name.en ?? c.id, CULTURE_META.map((x) => x.name.en ?? x.id), 3)]) }))
+    const all = CULTURE_META.map((c) => ({ q: 'Which country has this flag? ' + c.flag, a: c.name.en ?? c.id, opts: shuffle([c.name.en ?? c.id, ...pickWrong(c.name.en ?? c.id, CULTURE_META.map((x) => x.name.en ?? x.id), 3)]) }))
     return shuffle(all).slice(0, 10)
   }, [])
 
@@ -413,8 +500,8 @@ function SpeedRound({ onFinish }: { onFinish: (r: GameResult) => void }) {
 
   return (
     <div className="space-y-4">
-      <div className="flex justify-between text-sm"><span className="text-gray-400">{t('questionLabel')} {q + 1}/{questions.length}</span><span className={`font-bold ${timeLeft <= 10 ? 'text-red-500 animate-pulse' : 'text-coral-500'}`}>⏱ {timeLeft}s</span><span>{t('scoreLabel')}: {score}</span></div>
-      <div className="h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden"><div className={`h-full transition-all duration-1000 ${timeLeft <= 10 ? 'bg-red-500' : 'bg-coral-500'}`} style={{ width: `${(timeLeft / 30) * 100}%` }} /></div>
+      <div className="flex justify-between text-sm"><span className="text-gray-400">{t('questionLabel')} {q + 1}/{questions.length}</span><span className={'font-bold ' + (timeLeft <= 10 ? 'text-red-500 animate-pulse' : 'text-coral-500')}>⏱ {timeLeft}s</span><span>{t('scoreLabel')}: {score}</span></div>
+      <div className="h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden"><div className={'h-full transition-all duration-1000 ' + (timeLeft <= 10 ? 'bg-red-500' : 'bg-coral-500')} style={{ width: (timeLeft / 30) * 100 + '%' }} /></div>
       <div className="text-center py-6 card"><p className="text-lg font-semibold">{current.q}</p></div>
       <div className="grid grid-cols-2 gap-2">
         {current.opts.map((opt, i) => {
@@ -423,7 +510,76 @@ function SpeedRound({ onFinish }: { onFinish: (r: GameResult) => void }) {
             if (i === selected) cls = opt === current.a ? 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20' : 'bg-red-100 border-red-400 text-red-700 dark:bg-red-500/20 animate-shake'
             else if (opt === current.a) cls = 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20'
           }
-          return <button key={i} onClick={() => handle(i)} disabled={selected !== null || finished} className={`p-4 rounded-xl text-sm font-medium transition-all active:scale-95 ${cls}`}>{opt}</button>
+          return <button key={i} onClick={() => handle(i)} disabled={selected !== null || finished} className={'p-4 rounded-xl text-sm font-medium transition-all active:scale-95 ' + cls}>{opt}</button>
+        })}
+      </div>
+    </div>
+  )
+}
+
+// ── Landmark Match Game ─────────────────────────────────────
+const LANDMARK_QA = [
+  { landmark: '🏛️ Colosseum', culture: 'Italy' },
+  { landmark: '🗼 Eiffel Tower', culture: 'France' },
+  { landmark: '🕌 Taj Mahal', culture: 'India' },
+  { landmark: '🏯 Great Wall', culture: 'China' },
+  { landmark: '🏔️ Machu Picchu', culture: 'Peru' },
+  { landmark: '⛪ Christ the Redeemer', culture: 'Brazil' },
+  { landmark: '🏛️ Alhambra', culture: 'Spain' },
+  { landmark: '🏛️ Pyramids of Giza', culture: 'Egypt' },
+]
+
+const LANDMARK_QA_EXTRA = [
+  { landmark: '🏛️ Parthenon', culture: 'Greece' },
+  { landmark: '🕍 Angkor Wat', culture: 'Cambodia' },
+  { landmark: '🏯 Forbidden City', culture: 'China' },
+  { landmark: '🕌 Petra', culture: 'Jordan' },
+  { landmark: '🏰 Neuschwanstein Castle', culture: 'Germany' },
+  { landmark: '🕌 Hagia Sophia', culture: 'Turkey' },
+  { landmark: '🗿 Moai Statues', culture: 'Chile' },
+  { landmark: '🗿 Stonehenge', culture: 'United Kingdom' },
+]
+
+function LandmarkMatchGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
+  const { t } = useI18n()
+  const [q, setQ] = useState(0)
+  const [score, setScore] = useState(0)
+  const [selected, setSelected] = useState<number | null>(null)
+  const [startTime] = useState(Date.now())
+
+  const questions = useMemo(() => {
+    const combined = [...LANDMARK_QA, ...LANDMARK_QA_EXTRA]
+    const picked = shuffle(combined).slice(0, 8)
+    const allCultures = [...new Set(picked.map((p) => p.culture))]
+    return picked.map((p) => ({ ...p, options: shuffle([p.culture, ...pickWrong(p.culture, allCultures, 3)]) }))
+  }, [])
+
+  const current = questions[q]; const isLast = q >= questions.length - 1
+
+  const handle = useCallback((idx: number) => {
+    setSelected(idx)
+    const ok = current.options[idx] === current.culture
+    if (ok) setScore((s) => s + 1)
+    setTimeout(() => {
+      setSelected(null)
+      if (isLast) { const total = questions.length; const s = score + (ok ? 1 : 0); const acc = Math.round((s / total) * 100)
+        onFinish({ score: s, total, xp: s * 12 + (acc >= 100 ? 50 : 0), streak: 0, accuracy: acc, perfect: acc >= 100, timeMs: Date.now() - startTime }) }
+      else setQ((s) => s + 1)
+    }, 600)
+  }, [q, score, current, isLast, onFinish, questions.length, startTime])
+
+  return (
+    <div className="space-y-4">
+      <div className="flex justify-between text-sm text-gray-400"><span>{t('questionLabel')} {q + 1}/{questions.length}</span><span>{t('scoreLabel')}: {score}</span></div>
+      <div className="text-center py-6 card"><p className="text-6xl mb-3">{current.landmark}</p><p className="text-sm text-gray-500">{t('gameLandmarkDesc')}</p></div>
+      <div className="grid grid-cols-2 gap-2">
+        {current.options.map((opt, i) => {
+          let cls = 'bg-white dark:bg-cool-800 border border-gray-200 dark:border-gray-700'
+          if (selected !== null) {
+            if (i === selected) cls = opt === current.culture ? 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20' : 'bg-red-100 border-red-400 text-red-700 dark:bg-red-500/20 animate-shake'
+            else if (opt === current.culture) cls = 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20'
+          }
+          return <button key={i} onClick={() => handle(i)} disabled={selected !== null} className={'p-4 rounded-xl text-sm font-medium transition-all active:scale-95 ' + cls}>{opt}</button>
         })}
       </div>
     </div>
@@ -511,9 +667,7 @@ export function GamePlayScreen() {
             {gameId === 'flag-quiz' && <FlagQuiz onFinish={handleFinish} />}
             {gameId === 'culture-master' && <CultureMasterGame onFinish={handleFinish} />}
             {gameId === 'speed-round' && <SpeedRound onFinish={handleFinish} />}
-            {gameId === 'landmark-match' && (
-              <div className="text-center py-12 card"><span className="text-6xl">🏛️</span><p className="mt-4 text-gray-500">{t('loading')}</p><button onClick={() => handleFinish({ score: 5, total: 6, xp: 75, streak: 3, accuracy: 83, perfect: false })} className="mt-4 px-6 py-2 bg-coral-500 text-white rounded-full text-sm">{t('playAgain')}</button></div>
-            )}
+            {gameId === 'landmark-match' && <LandmarkMatchGame onFinish={handleFinish} />}
           </motion.div>
         )}
 
