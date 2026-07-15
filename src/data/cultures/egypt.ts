@@ -19,13 +19,13 @@ export const egypt: Culture = {
     { native: 'نعم', romanization: "Na’am", meaning: { en: 'Yes', zh: '是的' } },
   ],
   food: [
-    { name: { en: 'Koshari', zh: '埃及杂烩饭' }, desc: { en: 'Lentils, rice, and pasta mix with tomato sauce', zh: '扁豆、米饭、意面混合配番茄酱' }, emoji: '🍚', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Koshari.jpg/320px-Koshari.jpg' },
-    { name: { en: 'Ful Medames', zh: '炖蚕豆' }, desc: { en: 'Stewed fava beans with olive oil and herbs', zh: '橄榄油香草炖蚕豆' }, emoji: '🫘', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Ful_medames.jpg/320px-Ful_medames.jpg' },
-    { name: { en: 'Taameya', zh: '埃及炸豆丸子' }, desc: { en: 'Egyptian falafel made from fava beans', zh: '用蚕豆制作的埃及法拉费' }, emoji: '🧆', img: '' },
+    { name: { en: 'Koshari', zh: '埃及杂烩饭' }, desc: { en: 'Lentils, rice, and pasta mix with tomato sauce', de: 'Linsen, Reis und Nudeln mit Tomatensosse', zh: '扁豆、米饭、意面混合配番茄酱' }, emoji: '🍚', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Koshari.jpg/320px-Koshari.jpg' },
+    { name: { en: 'Ful Medames', zh: '炖蚕豆' }, desc: { en: 'Stewed fava beans with olive oil and herbs', de: 'Geschmorte Saubohnen mit Olivenol und Krautern', zh: '橄榄油香草炖蚕豆' }, emoji: '🫘', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Ful_medames.jpg/320px-Ful_medames.jpg' },
+    { name: { en: 'Taameya', zh: '埃及炸豆丸子' }, desc: { en: 'Egyptian falafel made from fava beans', de: 'Agyptische Falafel aus Saubohnen', zh: '用蚕豆制作的埃及法拉费' }, emoji: '🧆', img: '' },
   ],
   festivals: [
-    { name: { en: 'Ramadan', zh: '斋月' }, desc: { en: 'Islamic holy month of fasting from dawn to sunset', zh: '从黎明到日落的伊斯兰斋戒月' }, emoji: '🌙', img: '' },
-    { name: { en: 'Eid al-Fitr', zh: '开斋节' }, desc: { en: 'Festival marking the end of Ramadan', zh: '斋月结束的庆祝节日' }, emoji: '🎉', img: '' },
+    { name: { en: 'Ramadan', zh: '斋月' }, desc: { en: 'Islamic holy month of fasting from dawn to sunset', de: 'Islamischer Fastenmonat von Dammerung bis Sonnenuntergang', zh: '从黎明到日落的伊斯兰斋戒月' }, emoji: '🌙', img: '' },
+    { name: { en: 'Eid al-Fitr', zh: '开斋节' }, desc: { en: 'Festival marking the end of Ramadan', de: 'Fest zum Ende des Ramadan', zh: '斋月结束的庆祝节日' }, emoji: '🎉', img: '' },
   ],
   landmarks: [
     { name: { en: 'Pyramids of Giza', zh: '吉萨金字塔' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Pyramids_of_Giza.jpg/320px-Pyramids_of_Giza.jpg' },
@@ -38,16 +38,16 @@ export const egypt: Culture = {
     { emoji: '👟', tip: { en: 'Remove shoes before entering a mosque', zh: '进入清真寺前要脱鞋' } },
   ],
   funFacts: [
-    { en: 'Egypt has the longest history of any country, dating back over 5,000 years', zh: '埃及拥有所有国家中最长的历史，可追溯到5,000多年前' },
-    { en: 'The Nile is the worlds longest river, flowing 6,650 km through 11 countries', zh: '尼罗河是世界上最长的河流，流经11个国家，全长6,650公里' },
-    { en: 'Over 95% of Egyptians live within a few kilometers of the Nile River', zh: '超过95%的埃及人住在尼罗河附近几公里范围内' },
+    { en: 'Egypt has the longest history of any country, dating back over 5,000 years', de: 'Agypten hat die langste Geschichte aller Lander, die uber 5.000 Jahre zuruckreicht', zh: '埃及拥有所有国家中最长的历史，可追溯到5,000多年前' },
+    { en: 'The Nile is the worlds longest river, flowing 6,650 km through 11 countries', de: 'Der Nil ist der langste Fluss der Welt, er fliesst 6.650 km durch 11 Lander', zh: '尼罗河是世界上最长的河流，流经11个国家，全长6,650公里' },
+    { en: 'Over 95% of Egyptians live within a few kilometers of the Nile River', de: 'Uber 95% der Agypter leben innerhalb weniger Kilometer vom Nil', zh: '超过95%的埃及人住在尼罗河附近几公里范围内' },
   ],
   biases: [
-    { type: 'myth', statement: { en: 'All Egyptians live in deserts', zh: '所有埃及人都住在沙漠里' }, explanation: { en: 'Over 95% of Egyptians live near the fertile Nile River valley', zh: '超过95%的埃及人住在肥沃的尼罗河流域附近' } },
+    { type: 'myth', statement: { en: 'All Egyptians live in deserts', de: 'Alle Agypter leben in der Wuste', zh: '所有埃及人都住在沙漠里' }, explanation: { en: 'Over 95% of Egyptians live near the fertile Nile River valley', de: 'Uber 95% der Agypter leben im fruchtbaren Niltal', zh: '超过95%的埃及人住在肥沃的尼罗河流域附近' } },
     { type: 'fact', statement: { en: 'Egypt has the longest history of any country', zh: '埃及拥有所有国家中最长的历史' }, explanation: { en: 'Egyptian civilization dates back over 5,000 years', zh: '埃及文明可以追溯到5,000多年前' } },
-    { type: 'myth', statement: { en: 'All Egyptians ride camels', zh: '所有埃及人都骑骆驼' }, explanation: { en: 'Camels are mainly used in tourism and desert areas, not daily transport', zh: '骆驼主要用于旅游业和沙漠地区，不是日常交通工具' } },
+    { type: 'myth', statement: { en: 'All Egyptians ride camels', de: 'Alle Agypter reiten auf Kamelen', zh: '所有埃及人都骑骆驼' }, explanation: { en: 'Camels are mainly used in tourism and desert areas, not daily transport', de: 'Kamele werden hauptsachlich im Tourismus und in Wustengebieten genutzt', zh: '骆驼主要用于旅游业和沙漠地区，不是日常交通工具' } },
     { type: 'fact', statement: { en: 'The Nile is the worlds longest river', zh: '尼罗河是世界上最长的河流' }, explanation: { en: 'The Nile flows 6,650 km through 11 countries', zh: '尼罗河流经11个国家，全长6,650公里' } },
-    { type: 'myth', statement: { en: 'All Egyptians are poor', zh: '所有埃及人都很穷' }, explanation: { en: 'Egypt has a growing middle class and wealthy business owners', zh: '埃及有不断增长的中产阶级和富有的商业人士' } },
+    { type: 'myth', statement: { en: 'All Egyptians are poor', de: 'Alle Agypter sind arm', zh: '所有埃及人都很穷' }, explanation: { en: 'Egypt has a growing middle class and wealthy business owners', de: 'Agypten hat eine wachsende Mittelschicht und wohlhabende Geschaftsinhaber', zh: '埃及有不断增长的中产阶级和富有的商业人士' } },
   ],
   quickStats: [
     { label: { en: 'Population', zh: '人口' }, value: '~110 million', emoji: '👥' },
@@ -55,7 +55,7 @@ export const egypt: Culture = {
     { label: { en: 'Capital', zh: '首都' }, value: 'Cairo', emoji: '🏛️' },
   ],
   musicOrArt: [
-    { name: { en: 'Tarab', zh: '塔拉布' }, desc: { en: 'Traditional Arabic music style focused on emotional ecstasy', zh: '传统阿拉伯音乐风格，注重情感陶醉' }, emoji: '🎵' },
-    { name: { en: 'Belly Dance', zh: '肚皮舞' }, desc: { en: 'Traditional Egyptian dance with fluid hip movements', zh: '传统埃及舞蹈，以流畅的臀部动作为特点' }, emoji: '💃' },
+    { name: { en: 'Tarab', zh: '塔拉布' }, desc: { en: 'Traditional Arabic music style focused on emotional ecstasy', de: 'Traditionelle arabische Musik, die sich auf emotionale Ekstase konzentriert', zh: '传统阿拉伯音乐风格，注重情感陶醉' }, emoji: '🎵' },
+    { name: { en: 'Belly Dance', zh: '肚皮舞' }, desc: { en: 'Traditional Egyptian dance with fluid hip movements', de: 'Traditioneller agyptischer Tanz mit fliessenden Huftbewegungen', zh: '传统埃及舞蹈，以流畅的臀部动作为特点' }, emoji: '💃' },
   ],
 }

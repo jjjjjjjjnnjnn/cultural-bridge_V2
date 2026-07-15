@@ -20,13 +20,13 @@ export const turkey: Culture = {
     { native: 'Nasılsın?', meaning: { en: 'How are you?', zh: '你好吗？' } },
   ],
   food: [
-    { name: { en: 'Kebab', zh: '烤肉串' }, desc: { en: 'Grilled meat on skewer', zh: '烤制的肉串' }, emoji: '🥙', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Adana_kebap.jpg/320px-Adana_kebap.jpg' },
-    { name: { en: 'Baklava', zh: '果仁蜜饼' }, desc: { en: 'Sweet pastry with nuts', zh: '配坚果的甜酥皮点心' }, emoji: '🍯', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Baklava.jpg/320px-Baklava.jpg' },
-    { name: { en: 'Turkish Delight', zh: '土耳其软糖' }, desc: { en: 'Gelatinous sweet confection', zh: '胶状甜点' }, emoji: '🍬', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Turkish_delight.jpg/320px-Turkish_delight.jpg' },
+    { name: { en: 'Kebab', zh: '烤肉串' }, desc: { en: 'Grilled meat on skewer', de: 'Gegrilltes Fleisch am Spiess', zh: '烤制的肉串' }, emoji: '🥙', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Adana_kebap.jpg/320px-Adana_kebap.jpg' },
+    { name: { en: 'Baklava', zh: '果仁蜜饼' }, desc: { en: 'Sweet pastry with nuts', de: 'Susses Geback mit Nussen', zh: '配坚果的甜酥皮点心' }, emoji: '🍯', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Baklava.jpg/320px-Baklava.jpg' },
+    { name: { en: 'Turkish Delight', zh: '土耳其软糖' }, desc: { en: 'Gelatinous sweet confection', de: 'Gelatineartige Sussigkeit', zh: '胶状甜点' }, emoji: '🍬', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Turkish_delight.jpg/320px-Turkish_delight.jpg' },
   ],
   festivals: [
-    { name: { en: 'Ramadan Bayram', zh: '开斋节' }, desc: { en: 'Festival ending Ramadan', zh: '斋月结束的节日' }, emoji: '🎉', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ramadan_Bayram.jpg/320px-Ramadan_Bayram.jpg' },
-    { name: { en: 'Republic Day', zh: '共和国日' }, desc: { en: 'Turkish Republic founding', zh: '土耳其共和国成立日' }, emoji: '🇹🇷', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Turkey_Republic_Day.jpg/320px-Turkey_Republic_Day.jpg' },
+    { name: { en: 'Ramadan Bayram', zh: '开斋节' }, desc: { en: 'Festival ending Ramadan', de: 'Fest zum Ende des Ramadan', zh: '斋月结束的节日' }, emoji: '🎉', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ramadan_Bayram.jpg/320px-Ramadan_Bayram.jpg' },
+    { name: { en: 'Republic Day', zh: '共和国日' }, desc: { en: 'Turkish Republic founding', de: 'Grundung der Turkischen Republik', zh: '土耳其共和国成立日' }, emoji: '🇹🇷', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Turkey_Republic_Day.jpg/320px-Turkey_Republic_Day.jpg' },
   ],
   landmarks: [
     { name: { en: 'Hagia Sophia', zh: '圣索菲亚大教堂' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Hagia_Sophia_Mars_2013.jpg/320px-Hagia_Sophia_Mars_2013.jpg' },
@@ -38,22 +38,22 @@ export const turkey: Culture = {
     { emoji: '🍽️', tip: { en: 'Host usually pays for meals', zh: '主人通常付饭钱' } },
   ],
   funFacts: [
-    { en: 'Turkey has the longest coastline in the Mediterranean', zh: '土耳其拥有地中海最长的海岸线' },
-    { en: 'Istanbul is the only city spanning two continents', zh: '伊斯坦布尔是唯一横跨两大洲的城市' },
+    { en: 'Turkey has the longest coastline in the Mediterranean', de: 'Die Turkei hat die langste Mittelmeerkuste', zh: '土耳其拥有地中海最长的海岸线' },
+    { en: 'Istanbul is the only city spanning two continents', de: 'Istanbul ist die einzige Stadt auf zwei Kontinenten', zh: '伊斯坦布尔是唯一横跨两大洲的城市' },
   ],
   biases: [
-    { type: 'myth', statement: { en: 'All Turkish people drink tea all day', zh: '所有土耳其人整天喝茶' }, explanation: { en: 'Many also drink coffee, and tea is often served with meals', zh: '很多人也喝咖啡，茶通常随餐提供' } },
+    { type: 'myth', statement: { en: 'All Turkish people drink tea all day', de: 'Alle Turken trinken den ganzen Tag Tee', zh: '所有土耳其人整天喝茶' }, explanation: { en: 'Many also drink coffee, and tea is often served with meals', de: 'Viele trinken auch Kaffee, und Tee wird oft zu den Mahlzeiten serviert', zh: '很多人也喝咖啡，茶通常随餐提供' } },
     { type: 'fact', statement: { en: 'Turkey has the longest coastline in the Mediterranean', zh: '土耳其拥有地中海最长的海岸线' }, explanation: { en: 'Turkey’s Mediterranean coast is over 7,000 km long', zh: '土耳其的地中海海岸线超过7,000公里' } },
-    { type: 'myth', statement: { en: 'All Turkish people are conservative Muslims', zh: '所有土耳其人都是保守穆斯林' }, explanation: { en: 'Turkey is secular; many Turks are moderate or non-practicing', zh: '土耳其是世俗国家；很多土耳其人是温和或非实践的' } },
-    { type: 'fact', statement: { en: 'Istanbul is the only city spanning two continents', zh: '伊斯坦布尔是唯一横跨两大洲的城市' }, explanation: { en: 'Istanbul spans Europe and Asia across the Bosphorus Strait', zh: '伊斯坦布尔横跨博斯普鲁斯海峡连接欧洲和亚洲' } },
+    { type: 'myth', statement: { en: 'All Turkish people are conservative Muslims', de: 'Alle Turken sind konservative Muslime', zh: '所有土耳其人都是保守穆斯林' }, explanation: { en: 'Turkey is secular; many Turks are moderate or non-practicing', de: 'Die Turkei ist sakular; viele Turken sind gemassigt oder nicht praktizierend', zh: '土耳其是世俗国家；很多土耳其人是温和或非实践的' } },
+    { type: 'fact', statement: { en: 'Istanbul is the only city spanning two continents', zh: '伊斯坦布尔是唯一横跨两大洲的城市' }, explanation: { en: 'Istanbul spans Europe and Asia across the Bosphorus Strait', de: 'Istanbul erstreckt sich uber Europa und Asien entlang der Bosporusstrasse', zh: '伊斯坦布尔横跨博斯普鲁斯海峡连接欧洲和亚洲' } },
     { type: 'myth', statement: { en: 'Turkish people don’t eat pork because of religion', zh: '土耳其人因为宗教不吃猪肉' }, explanation: { en: 'While many don’t eat pork for religious reasons, some secular Turks do eat pork', zh: '虽然很多人因宗教原因不吃猪肉，但一些世俗土耳其人吃猪肉' } },
   ],
   quickStats: [
-    { label: { en: 'Population', zh: '人口' }, value: '85M+', emoji: '👥' },
-    { label: { en: 'Coastline', zh: '海岸线' }, value: '7,200km', emoji: '🌊' },
-    { label: { en: 'UNESCO Sites', zh: '世界遗产' }, value: '19', emoji: '🏛️' },
+    { label: { en: 'Population', de: 'Bevolkerung', zh: '人口' }, value: '85M+', emoji: '👥' },
+    { label: { en: 'Coastline', de: 'Kuste', zh: '海岸线' }, value: '7,200km', emoji: '🌊' },
+    { label: { en: 'UNESCO Sites', de: 'UNESCO-Statten', zh: '世界遗产' }, value: '19', emoji: '🏛️' },
   ],
   musicOrArt: [
-    { name: { en: 'Turkish Classical Music', zh: '土耳其古典音乐' }, desc: { en: 'Rich tradition blending Ottoman court music with folk influences', zh: '融合奥斯曼宫廷音乐与民间影响的丰富传统' }, emoji: '🎵' },
+    { name: { en: 'Turkish Classical Music', zh: '土耳其古典音乐' }, desc: { en: 'Rich tradition blending Ottoman court music with folk influences', de: 'Reiche Tradition, die osmanische Hofmusik mit folkloristischen Einflussen verbindet', zh: '融合奥斯曼宫廷音乐与民间影响的丰富传统' }, emoji: '🎵' },
   ],
 }
