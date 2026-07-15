@@ -7,8 +7,11 @@ import de from './translations/de'
 import fr from './translations/fr'
 import es from './translations/es'
 import tr from './translations/tr'
+import ar from './translations/ar'
+import pt from './translations/pt'
+import ja from './translations/ja'
 
-const translations: Partial<Record<Lang, TranslationKeys>> = { en, zh, de, fr, es, tr }
+const translations: Partial<Record<Lang, TranslationKeys>> = { en, zh, de, fr, es, tr, ar, pt, ja }
 
 interface I18nContextValue {
   lang: Lang

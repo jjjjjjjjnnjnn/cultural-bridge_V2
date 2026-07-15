@@ -54,8 +54,8 @@ export default function App() {
       {showLangSelect && <LanguageSelector onDone={handleLangSelected} />}
 
       {!showSplash && !showLangSelect && (
-        <AppShell>
-          <Routes>
+        <Routes>
+          <Route element={<AppShell />}>
             <Route path="/" element={<HomeScreen />} />
             <Route path="/cultures" element={<CulturesScreen />} />
             <Route path="/culture/:cultureId" element={<CultureDetailScreen />} />
@@ -64,8 +64,8 @@ export default function App() {
             <Route path="/achievements" element={<AchievementsScreen />} />
             <Route path="/profile" element={<ProfileScreen />} />
             <Route path="/about" element={<AboutScreen />} />
-          </Routes>
-        </AppShell>
+          </Route>
+        </Routes>
       )}
 
       <AchievementPopup />
