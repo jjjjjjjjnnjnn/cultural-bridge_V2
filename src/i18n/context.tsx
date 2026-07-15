@@ -4,9 +4,11 @@ import type { TranslationKeys } from './types'
 import en from './translations/en'
 import zh from './translations/zh'
 import de from './translations/de'
+import fr from './translations/fr'
+import es from './translations/es'
+import tr from './translations/tr'
 
-const translations: Partial<Record<Lang, TranslationKeys>> = { en, zh, de }
-// fr, es, tr, ar, pt, ja — to be added as translation files are completed
+const translations: Partial<Record<Lang, TranslationKeys>> = { en, zh, de, fr, es, tr }
 
 interface I18nContextValue {
   lang: Lang
