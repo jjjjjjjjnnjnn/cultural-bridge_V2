@@ -1,0 +1,58 @@
+import type { Culture } from '../../types/culture'
+
+export const uk: Culture = {
+  id: 'uk',
+  flag: '🇬🇧',
+  names: { en: 'United Kingdom', zh: '英国', de: 'Vereinigtes Königreich', fr: 'Royaume-Uni', es: 'Reino Unido', tr: 'Birleşik Krallık', ar: '', pt: '', ja: '' },
+  region: 'europe',
+  langCode: 'en-GB',
+  greetings: [
+    { native: 'Hello', meaning: { en: 'Hello', zh: '你好' } },
+    { native: 'Cheers', meaning: { en: 'Thanks/Goodbye', zh: '谢谢/再见' } },
+  ],
+  commonPhrases: [
+    { native: 'Hello', meaning: { en: 'Hello', zh: '你好' } },
+    { native: 'Cheers', meaning: { en: 'Thanks', zh: '谢谢' } },
+    { native: 'Goodbye', meaning: { en: 'Goodbye', zh: '再见' } },
+    { native: 'Please', meaning: { en: 'Please', zh: '请' } },
+    { native: 'Sorry', meaning: { en: 'Excuse me / Sorry', zh: '对不起' } },
+    { native: 'How are you?', meaning: { en: 'How are you?', zh: '你好吗？' } },
+  ],
+  food: [
+    { name: { en: 'Fish and Chips', zh: '炸鱼薯条' }, desc: { en: 'Fried fish with french fries', zh: '炸鱼配薯条' }, emoji: '🐟', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Fish_and_chips.jpg/320px-Fish_and_chips.jpg' },
+    { name: { en: 'Afternoon Tea', zh: '下午茶' }, desc: { en: 'Tea with sandwiches and cakes', zh: '茶配三明治和蛋糕' }, emoji: '🫖', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Afternoon_tea.jpg/320px-Afternoon_tea.jpg' },
+    { name: { en: 'Full Breakfast', zh: '全套早餐' }, desc: { en: 'Eggs, bacon, sausages, beans', zh: '鸡蛋、培根、香肠、豆子' }, emoji: '🍳', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Full_breakfast.jpg/320px-Full_breakfast.jpg' },
+  ],
+  festivals: [
+    { name: { en: 'Guy Fawkes Night', zh: '盖伊·福克斯之夜' }, desc: { en: 'Bonfire and fireworks night', zh: '篝火和烟花之夜' }, emoji: '🎆', img: '' },
+    { name: { en: 'Notting Hill Carnival', zh: '诺丁山嘉年华' }, desc: { en: 'Caribbean carnival in London', zh: '伦敦的加勒比嘉年华' }, emoji: '🎭', img: '' },
+  ],
+  landmarks: [
+    { name: { en: 'Big Ben', zh: '大本钟' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Big_Ben.jpg/320px-Big_Ben.jpg' },
+    { name: { en: 'Stonehenge', zh: '巨石阵' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Stonehenge.jpg/320px-Stonehenge.jpg' },
+    { name: { en: 'Tower Bridge', zh: '塔桥' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tower_Bridge_London.jpg/320px-Tower_Bridge_London.jpg' },
+  ],
+  etiquette: [
+    { emoji: '🙏', tip: { en: 'Queue properly (don’t cut in line)', zh: '好好排队（不要插队）' } },
+    { emoji: '☂️', tip: { en: 'Always carry an umbrella', zh: '总是带伞' } },
+  ],
+  funFacts: [
+    { en: 'The UK has the worlds oldest underground railway', zh: '英国拥有世界上最古老的地铁' },
+    { en: 'London has over 170 museums', zh: '伦敦有超过170个博物馆' },
+  ],
+  biases: [
+    { type: 'myth', statement: { en: 'All British people drink tea all day', zh: '所有英国人都整天喝茶' }, explanation: { en: 'Coffee consumption has risen; younger Brits prefer coffee', zh: '咖啡消费上升；年轻英国人更喜欢咖啡' } },
+    { type: 'fact', statement: { en: 'The UK has the worlds oldest underground railway', zh: '英国拥有世界上最古老的地铁' }, explanation: { en: 'The London Underground opened in 1863', zh: '伦敦地铁于1863年开通' } },
+    { type: 'myth', statement: { en: 'All British people have bad teeth', zh: '所有英国人的牙齿都不好' }, explanation: { en: 'This is an American myth; UK dental health is comparable to others', zh: '这是美国人的误解；英国牙齿健康与其他国家相当' } },
+    { type: 'fact', statement: { en: 'London has over 170 museums', zh: '伦敦有超过170个博物馆' }, explanation: { en: 'Many of them, like the British Museum, are free to enter', zh: '其中很多如大英博物馆是免费入场的' } },
+    { type: 'myth', statement: { en: 'It always rains in the UK', zh: '英国总是下雨' }, explanation: { en: 'Some parts of the UK are quite dry; London gets less rain than Rome', zh: '英国有些地区相当干燥；伦敦的降雨量比罗马少' } },
+  ],
+  quickStats: [
+    { label: { en: 'Population', zh: '人口' }, value: '67M+', emoji: '👥' },
+    { label: { en: 'Oldest Metro', zh: '最古老的地铁' }, value: '1863', emoji: '🚇' },
+    { label: { en: 'Museums in London', zh: '伦敦博物馆' }, value: '170+', emoji: '🏛️' },
+  ],
+  musicOrArt: [
+    { name: { en: 'The Beatles', zh: '披头士乐队' }, desc: { en: 'Influential rock band from Liverpool that shaped modern music', zh: '来自利物浦的具有影响力的摇滚乐队，塑造了现代音乐' }, emoji: '🎵' },
+  ],
+}

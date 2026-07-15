@@ -1,0 +1,55 @@
+import type { Culture } from '../../types/culture'
+
+export const vietnam: Culture = {
+  id: 'vietnam',
+  flag: '🇻🇳',
+  names: { en: 'Vietnam', zh: '越南', de: 'Vietnam', fr: 'Vietnam', es: 'Vietnam', tr: 'Vietnam', ar: '', pt: '', ja: '' },
+  region: 'southeastAsia',
+  langCode: 'vi-VN',
+  greetings: [
+    { native: 'Xin chào', meaning: { en: 'Hello', zh: '你好' } },
+    { native: 'Cảm ơn', meaning: { en: 'Thank you', zh: '谢谢' } },
+  ],
+  commonPhrases: [
+    { native: 'Xin chào', meaning: { en: 'Hello', zh: '你好' } },
+    { native: 'Cảm ơn', meaning: { en: 'Thank you', zh: '谢谢' } },
+    { native: 'Tạm biệt', meaning: { en: 'Goodbye', zh: '再见' } },
+    { native: 'Làm ơn', meaning: { en: 'Please', zh: '请' } },
+    { native: 'Xin lỗi', meaning: { en: 'Excuse me / Sorry', zh: '对不起' } },
+    { native: 'Bạn khỏe không?', meaning: { en: 'How are you?', zh: '你好吗？' } },
+  ],
+  food: [
+    { name: { en: 'Pho', zh: '越南粉' }, desc: { en: 'Vietnamese noodle soup', zh: '越南牛肉汤粉' }, emoji: '🍜', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Pho.jpg/320px-Pho.jpg' },
+    { name: { en: 'Banh Mi', zh: '越南三明治' }, desc: { en: 'Vietnamese sandwich', zh: '越南法式三明治' }, emoji: '🥖', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Banh_mi.jpg/320px-Banh_mi.jpg' },
+  ],
+  festivals: [
+    { name: { en: 'Tet Festival', zh: '春节' }, desc: { en: 'Vietnamese Lunar New Year', zh: '越南农历新年' }, emoji: '🎊', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Tet_Festival_Vietnam.jpg/320px-Tet_Festival_Vietnam.jpg' },
+  ],
+  landmarks: [
+    { name: { en: 'Ha Long Bay', zh: '下龙湾' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Ha_Long_Bay.jpg/320px-Ha_Long_Bay.jpg' },
+    { name: { en: 'Hoi An Ancient Town', zh: '会安古镇' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Hoi_An.jpg/320px-Hoi_An.jpg' },
+  ],
+  etiquette: [
+    { emoji: '🍽️', tip: { en: 'Use chopsticks properly', zh: '正确使用筷子' } },
+  ],
+  funFacts: [
+    { en: 'Vietnam is the world\'s second-largest coffee exporter', zh: '越南是世界第二大咖啡出口国' },
+    { en: 'Vietnam has over 3,000 km of coastline', zh: '越南有超过3,000公里的海岸线' },
+  ],
+  biases: [
+    { type: 'myth', statement: { en: 'All Vietnamese people eat pho every day', zh: '所有越南人每天都吃粉' }, explanation: { en: 'Pho is popular but not eaten daily by everyone', zh: '粉很受欢迎但不是每天都吃' } },
+    { type: 'fact', statement: { en: 'Vietnam is the world\'s second-largest coffee exporter', zh: '越南是世界第二大咖啡出口国' }, explanation: { en: 'Vietnam produces mostly Robusta coffee', zh: '越南主要生产罗布斯塔咖啡' } },
+    { type: 'myth', statement: { en: 'All Vietnamese people are poor', zh: '所有越南人都很穷' }, explanation: { en: 'Vietnam\'s economy is growing rapidly, with a rising middle class', zh: '越南经济快速增长，中产阶级正在崛起' } },
+    { type: 'fact', statement: { en: 'Vietnam has over 3,000 km of coastline', zh: '越南有超过3,000公里的海岸线' }, explanation: { en: 'This gives Vietnam rich seafood resources', zh: '这给越南带来了丰富的海鲜资源' } },
+    { type: 'myth', statement: { en: 'All Vietnamese people ride motorcycles', zh: '所有越南人都骑摩托车' }, explanation: { en: 'While motorcycles are common, cars and buses are also used', zh: '虽然摩托车很常见，但汽车和公交车也在使用' } },
+  ],
+  quickStats: [
+    { label: { en: 'Population', zh: '人口' }, value: '100 million', emoji: '👥' },
+    { label: { en: 'Land Area', zh: '国土面积' }, value: '331,000 km²', emoji: '🗺️' },
+    { label: { en: 'Coffee Export Rank', zh: '咖啡出口排名' }, value: '#2 in the world', emoji: '☕' },
+  ],
+  musicOrArt: [
+    { name: { en: 'Water Puppetry', zh: '水上木偶戏' }, desc: { en: 'Unique Vietnamese performance art with puppets on water accompanied by live music', zh: '独特的越南表演艺术，木偶在水面上表演并配有现场音乐' }, emoji: '🎭' },
+    { name: { en: 'Dan Bau', zh: '独弦琴' }, desc: { en: 'One-stringed Vietnamese zither with a distinctive melodic sound', zh: '音色独特的单弦越南古筝' }, emoji: '🎵' },
+  ],
+}

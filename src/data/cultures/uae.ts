@@ -1,0 +1,61 @@
+import type { Culture } from '../../types/culture'
+
+export const uae: Culture = {
+  id: 'uae',
+  flag: '🇦🇪',
+  names: { en: 'UAE', zh: '阿联酋', de: 'VAE', fr: 'Émirats arabes unis', es: 'EAU', tr: 'BAE' },
+  region: 'middleEast',
+  langCode: 'ar-AE',
+  greetings: [
+    { native: 'مرحبا', romanization: 'Marhaba', meaning: { en: 'Hello', zh: '你好' } },
+    { native: 'شكرا', romanization: 'Shukran', meaning: { en: 'Thank you', zh: '谢谢' } },
+  ],
+  commonPhrases: [
+    { native: 'مرحبا', romanization: 'Marhaba', meaning: { en: 'Hello', zh: '你好' } },
+    { native: 'كيف حالك؟', romanization: 'Kayfa halak?', meaning: { en: 'How are you?', zh: '你好吗？' } },
+    { native: 'بخير، شكرا', romanization: 'Bikhair, shukran', meaning: { en: 'Fine, thank you', zh: '很好，谢谢' } },
+    { native: 'مع السلامة', romanization: "Ma’a as-salama", meaning: { en: 'Goodbye', zh: '再见' } },
+    { native: 'من فضلك', romanization: 'Min fadlik', meaning: { en: 'Please', zh: '请' } },
+    { native: 'نعم', romanization: "Na’am", meaning: { en: 'Yes', zh: '是的' } },
+  ],
+  food: [
+    { name: { en: 'Machboos', zh: '香料肉饭' }, desc: { en: 'Spiced rice with meat, a UAE national dish', zh: '香料肉饭，阿联酋国菜' }, emoji: '🍚', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Machboos.jpg/320px-Machboos.jpg' },
+    { name: { en: 'Luqaimat', zh: '炸蜜球' }, desc: { en: 'Sweet fried dumplings drizzled with date syrup', zh: '淋上枣糖浆的甜炸面团' }, emoji: '🍩', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Luqaimat.jpg/320px-Luqaimat.jpg' },
+    { name: { en: 'Shawarma', zh: '沙威玛' }, desc: { en: 'Spiced meat wrapped in flatbread, popular street food', zh: '香料肉包裹在扁面包中，受欢迎的街头小吃' }, emoji: '🌯', img: '' },
+  ],
+  festivals: [
+    { name: { en: 'National Day', zh: '国庆日' }, desc: { en: 'December 2nd celebration of UAE formation in 1971', zh: '十二月二日庆祝阿联酋1971年成立' }, emoji: '🇦🇪', img: '' },
+    { name: { en: 'Dubai Shopping Festival', zh: '迪拜购物节' }, desc: { en: 'Major annual shopping event with discounts and entertainment', zh: '大型年度购物活动，有折扣和娱乐表演' }, emoji: '🛍️', img: '' },
+  ],
+  landmarks: [
+    { name: { en: 'Burj Khalifa', zh: '哈利法塔' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Burj_Khalifa.jpg/320px-Burj_Khalifa.jpg' },
+    { name: { en: 'Sheikh Zayed Mosque', zh: '谢赫扎耶德清真寺' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Sheikh_Zayed_Mosque.jpg/320px-Sheikh_Zayed_Mosque.jpg' },
+    { name: { en: 'Palm Jumeirah', zh: '朱美拉棕榈岛' }, img: '' },
+  ],
+  etiquette: [
+    { emoji: '👋', tip: { en: 'Use your right hand for greetings, eating, and passing items', zh: '用右手打招呼、吃饭和递东西' } },
+    { emoji: '☕', tip: { en: 'Accept Arabic coffee (gahwa) when offered — it is a sign of hospitality', zh: '接受阿拉伯咖啡是好客的象征' } },
+    { emoji: '👔', tip: { en: 'Dress modestly in public, especially in traditional areas', zh: '在公共场合穿着得体，尤其是在传统区域' } },
+  ],
+  funFacts: [
+    { en: 'The UAE is home to the worlds tallest building, the Burj Khalifa at 828 meters', zh: '阿联酋拥有世界上最高的建筑——高828米的哈利法塔' },
+    { en: 'Over 80% of the UAEs population are expatriates from over 200 countries', zh: '超过80%的阿联酋人口是来自200多个国家的外籍人士' },
+    { en: 'The UAE was founded in 1971 by uniting seven emirates', zh: '阿联酋于1971年由七个酋长国联合成立' },
+  ],
+  biases: [
+    { type: 'myth', statement: { en: 'Everyone in the UAE is extremely rich', zh: '阿联酋的每个人都很有钱' }, explanation: { en: 'Many expat workers earn modest incomes; wealth is concentrated among some citizens', zh: '很多外籍工人收入一般；财富集中在部分公民手中' } },
+    { type: 'fact', statement: { en: 'The UAE is home to the worlds tallest building', zh: '阿联酋拥有世界上最高的建筑' }, explanation: { en: 'Burj Khalifa is 828 meters tall with 163 floors', zh: '哈利法塔高828米，有163层' } },
+    { type: 'myth', statement: { en: 'All women in the UAE must wear a burqa', zh: '阿联酋所有女性必须穿罩袍' }, explanation: { en: 'Many women choose to wear an abaya, but it is not mandatory for non-citizens', zh: '很多女性选择穿阿巴亚，但对外籍人士不强制' } },
+    { type: 'fact', statement: { en: 'The UAE has a very diverse expat population', zh: '阿联酋有多元化的外籍人口' }, explanation: { en: 'Over 200 nationalities live and work in the UAE', zh: '超过200个国籍的人在阿联酋生活和工作' } },
+    { type: 'myth', statement: { en: 'The UAE has only modern buildings and no culture', zh: '阿联酋只有现代建筑，没有文化' }, explanation: { en: 'The UAE has deep Bedouin heritage, pearl diving history, and cultural festivals', zh: '阿联酋有深厚的贝都因遗产、采珠历史和文化节庆' } },
+  ],
+  quickStats: [
+    { label: { en: 'Population', zh: '人口' }, value: '~9.9 million', emoji: '👥' },
+    { label: { en: 'Area', zh: '面积' }, value: '83,600 km²', emoji: '🗺️' },
+    { label: { en: 'Capital', zh: '首都' }, value: 'Abu Dhabi', emoji: '🏛️' },
+  ],
+  musicOrArt: [
+    { name: { en: 'Al Ayyala', zh: '阿亚拉舞' }, desc: { en: 'Traditional Emirati dance performed at celebrations, symbolizing unity', zh: '在庆典上表演的传统阿联酋舞蹈，象征团结' }, emoji: '💃' },
+    { name: { en: 'Pearl Diving Songs', zh: '采珠歌' }, desc: { en: 'Traditional songs by pearl divers reflecting UAEs maritime heritage', zh: '采珠人演唱的传统歌曲，反映阿联酋的海洋遗产' }, emoji: '🎶' },
+  ],
+}

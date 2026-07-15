@@ -1,0 +1,55 @@
+import type { Culture } from '../../types/culture'
+
+export const philippines: Culture = {
+  id: 'philippines',
+  flag: '🇵🇭',
+  names: { en: 'Philippines', zh: '菲律宾', de: 'Philippinen', fr: 'Philippines', es: 'Filipinas', tr: 'Filipinler', ar: '', pt: '', ja: '' },
+  region: 'southeastAsia',
+  langCode: 'en-PH',
+  greetings: [
+    { native: 'Kumusta', meaning: { en: 'How are you?', zh: '你好吗?' } },
+    { native: 'Salamat', meaning: { en: 'Thank you', zh: '谢谢' } },
+  ],
+  commonPhrases: [
+    { native: 'Kumusta', meaning: { en: 'Hello / How are you?', zh: '你好' } },
+    { native: 'Salamat', meaning: { en: 'Thank you', zh: '谢谢' } },
+    { native: 'Paalam', meaning: { en: 'Goodbye', zh: '再见' } },
+    { native: 'Paki-', meaning: { en: 'Please', zh: '请' } },
+    { native: 'Pasensya na', meaning: { en: 'Excuse me / Sorry', zh: '对不起' } },
+    { native: 'Kamusta ka?', meaning: { en: 'How are you? (detailed)', zh: '你好吗？（详细）' } },
+  ],
+  food: [
+    { name: { en: 'Adobo', zh: '阿多波' }, desc: { en: 'Meat stewed in vinegar and soy', zh: '醋和酱油炖肉' }, emoji: '🍖', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Adobo.jpg/320px-Adobo.jpg' },
+    { name: { en: 'Lechon', zh: '烤乳猪' }, desc: { en: 'Roasted whole pig', zh: '烤全猪' }, emoji: '🐷', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Lechon.jpg/320px-Lechon.jpg' },
+  ],
+  festivals: [
+    { name: { en: 'Sinulog Festival', zh: '辛努洛节' }, desc: { en: 'Cultural dance festival', zh: '文化舞蹈节' }, emoji: '💃', img: '' },
+  ],
+  landmarks: [
+    { name: { en: 'Chocolate Hills', zh: '巧克力山' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Chocolate_Hills.jpg/320px-Chocolate_Hills.jpg' },
+    { name: { en: 'Banaue Rice Terraces', zh: '巴纳韦梯田' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Banaue_rice_terraces.jpg/320px-Banaue_rice_terraces.jpg' },
+  ],
+  etiquette: [
+    { emoji: '😊', tip: { en: 'Filipinos are very hospitable', zh: '菲律宾人非常好客' } },
+  ],
+  funFacts: [
+    { en: 'The Philippines has the world\'s longest Christmas season', zh: '菲律宾有世界上最长的圣诞季节' },
+    { en: 'The Philippines is made up of over 7,600 islands', zh: '菲律宾由7,600多个岛屿组成' },
+  ],
+  biases: [
+    { type: 'myth', statement: { en: 'All Filipinos work abroad', zh: '所有菲律宾人都在国外工作' }, explanation: { en: 'About 10% work abroad, but most live in the Philippines', zh: '约10%在国外工作，但大多数住在菲律宾' } },
+    { type: 'fact', statement: { en: 'The Philippines has the world\'s longest Christmas season', zh: '菲律宾有世界上最长的圣诞季节' }, explanation: { en: 'Christmas decorations go up in September and last until January', zh: '圣诞装饰从9月开始，一直持续到1月' } },
+    { type: 'myth', statement: { en: 'All Filipinos are maids or nurses abroad', zh: '所有菲律宾人在国外都做女佣或护士' }, explanation: { en: 'Filipinos work in diverse fields: engineering, IT, healthcare, etc.', zh: '菲律宾人在不同领域工作：工程、IT、医疗等' } },
+    { type: 'fact', statement: { en: 'The Philippines was a US colony for 48 years', zh: '菲律宾曾是美国殖民地48年' }, explanation: { en: 'From 1898 to 1946, which influenced Filipino English and culture', zh: '从1898年到1946年，这影响了菲律宾英语和文化' } },
+    { type: 'myth', statement: { en: 'All Filipinos speak perfect English', zh: '所有菲律宾人英语都讲得很好' }, explanation: { en: 'While English is taught, not everyone speaks it fluently', zh: '虽然教英语，但不是每个人都讲得流利' } },
+  ],
+  quickStats: [
+    { label: { en: 'Population', zh: '人口' }, value: '115 million', emoji: '👥' },
+    { label: { en: 'Total Islands', zh: '岛屿总数' }, value: '7,640+', emoji: '🏝️' },
+    { label: { en: 'Languages', zh: '语言' }, value: '180+ regional languages', emoji: '🗣️' },
+  ],
+  musicOrArt: [
+    { name: { en: 'Tinikling', zh: '竹竿舞' }, desc: { en: 'Traditional Filipino folk dance with bamboo poles rhythmically tapped together', zh: '传统菲律宾民间舞蹈，竹竿有节奏地敲击在一起' }, emoji: '💃' },
+    { name: { en: 'Kundiman', zh: '昆迪曼' }, desc: { en: 'Traditional Filipino love song genre with heartfelt lyrics and gentle melody', zh: '传统菲律宾情歌类型，歌词深情，旋律柔和' }, emoji: '🎵' },
+  ],
+}

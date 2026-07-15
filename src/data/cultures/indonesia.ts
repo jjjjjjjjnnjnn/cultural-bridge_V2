@@ -1,0 +1,55 @@
+import type { Culture } from '../../types/culture'
+
+export const indonesia: Culture = {
+  id: 'indonesia',
+  flag: '🇮🇩',
+  names: { en: 'Indonesia', zh: '印度尼西亚', de: 'Indonesien', fr: 'Indonésie', es: 'Indonesia', tr: 'Endonezya', ar: '', pt: '', ja: '' },
+  region: 'southeastAsia',
+  langCode: 'id-ID',
+  greetings: [
+    { native: 'Halo', meaning: { en: 'Hello', zh: '你好' } },
+    { native: 'Terima kasih', meaning: { en: 'Thank you', zh: '谢谢' } },
+  ],
+  commonPhrases: [
+    { native: 'Halo', meaning: { en: 'Hello', zh: '你好' } },
+    { native: 'Terima kasih', meaning: { en: 'Thank you', zh: '谢谢' } },
+    { native: 'Selamat tinggal', meaning: { en: 'Goodbye', zh: '再见' } },
+    { native: 'Tolong', meaning: { en: 'Please', zh: '请' } },
+    { native: 'Maaf', meaning: { en: 'Excuse me / Sorry', zh: '对不起' } },
+    { native: 'Apa kabar?', meaning: { en: 'How are you?', zh: '你好吗？' } },
+  ],
+  food: [
+    { name: { en: 'Nasi Goreng', zh: '印尼炒饭' }, desc: { en: 'Indonesian fried rice', zh: '印尼炒饭' }, emoji: '🍚', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Nasi_goreng.jpg/320px-Nasi_goreng.jpg' },
+    { name: { en: 'Satay', zh: '沙爹' }, desc: { en: 'Grilled skewered meat', zh: '烤串肉' }, emoji: '🍢', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Satay.jpg/320px-Satay.jpg' },
+  ],
+  festivals: [
+    { name: { en: 'Independence Day', zh: '独立日' }, desc: { en: 'August 17th celebration', zh: '八月十七日庆祝' }, emoji: '🇮🇩', img: '' },
+  ],
+  landmarks: [
+    { name: { en: 'Borobudur Temple', zh: '婆罗浮屠' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Borobudur.jpg/320px-Borobudur.jpg' },
+    { name: { en: 'Bali Rice Terraces', zh: '巴厘岛梯田' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Bali_rice_terraces.jpg/320px-Bali_rice_terraces.jpg' },
+  ],
+  etiquette: [
+    { emoji: '🤲', tip: { en: 'Use right hand for eating and greeting', zh: '用右手吃饭和打招呼' } },
+  ],
+  funFacts: [
+    { en: 'Indonesia is the world\'s largest island country', zh: '印度尼西亚是世界上最大的岛国' },
+    { en: 'Indonesia has over 17,000 islands', zh: '印尼有超过17000个岛屿' },
+  ],
+  biases: [
+    { type: 'myth', statement: { en: 'All Indonesians are Muslim extremists', zh: '所有印尼人都是穆斯林极端分子' }, explanation: { en: 'Indonesia is diverse and mostly moderate; it has 6 official religions', zh: '印尼多元化且大多温和；有6种官方宗教' } },
+    { type: 'fact', statement: { en: 'Indonesia is the world\'s largest island country', zh: '印度尼西亚是世界上最大的岛国' }, explanation: { en: 'Indonesia has over 17,000 islands, 6,000 inhabited', zh: '印尼有超过17,000个岛屿，6,000个有人居住' } },
+    { type: 'myth', statement: { en: 'All Indonesians are poor', zh: '所有印尼人都有钱' }, explanation: { en: 'Indonesia has a growing middle class and wealthy business people', zh: '印尼有不断增长的中产阶级和富有的商业人士' } },
+    { type: 'fact', statement: { en: 'Indonesia has over 17,000 islands', zh: '印尼有超过17,000个岛屿' }, explanation: { en: 'It stretches 5,150 km from east to west', zh: '它从东到西绵延5,150公里' } },
+    { type: 'myth', statement: { en: 'All Indonesians eat with their hands', zh: '所有印尼人都用手吃饭' }, explanation: { en: 'While some do, many use spoons, forks, or chopsticks', zh: '虽然有些人用手，但很多人用勺子、叉子或筷子' } },
+  ],
+  quickStats: [
+    { label: { en: 'Population', zh: '人口' }, value: '280 million', emoji: '👥' },
+    { label: { en: 'Total Islands', zh: '岛屿总数' }, value: '17,000+', emoji: '🏝️' },
+    { label: { en: 'Land Area', zh: '国土面积' }, value: '1.9 million km²', emoji: '🗺️' },
+  ],
+  musicOrArt: [
+    { name: { en: 'Angklung', zh: '安格隆竹筒琴' }, desc: { en: 'Traditional bamboo musical instrument from West Java played by shaking', zh: '西爪哇传统竹制乐器，通过摇晃演奏' }, emoji: '🎵' },
+    { name: { en: 'Batik', zh: '蜡染' }, desc: { en: 'Traditional wax-resist dyeing technique creating intricate fabric patterns', zh: '使用蜡防染技术创造精美织物图案的传统工艺' }, emoji: '👘' },
+  ],
+}

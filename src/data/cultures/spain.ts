@@ -1,0 +1,56 @@
+import type { Culture } from '../../types/culture'
+
+export const spain: Culture = {
+  id: 'spain',
+  flag: '🇪🇸',
+  names: { en: 'Spain', zh: '西班牙', de: 'Spanien', fr: 'Espagne', es: 'España', tr: 'İspanya', ar: '', pt: '', ja: '' },
+  region: 'europe',
+  langCode: 'es-ES',
+  greetings: [
+    { native: 'Hola', meaning: { en: 'Hello', zh: '你好' } },
+    { native: 'Gracias', meaning: { en: 'Thank you', zh: '谢谢' } },
+  ],
+  commonPhrases: [
+    { native: 'Hola', meaning: { en: 'Hello', zh: '你好' } },
+    { native: 'Gracias', meaning: { en: 'Thank you', zh: '谢谢' } },
+    { native: 'Adiós', meaning: { en: 'Goodbye', zh: '再见' } },
+    { native: 'Por favor', meaning: { en: 'Please', zh: '请' } },
+    { native: 'Perdón', meaning: { en: 'Excuse me', zh: '打扰一下' } },
+    { native: '¿Cómo estás?', meaning: { en: 'How are you?', zh: '你好吗？' } },
+  ],
+  food: [
+    { name: { en: 'Paella', zh: '西班牙海鲜饭' }, desc: { en: 'Saffron rice with seafood', zh: '藏红花配海鲜饭' }, emoji: '🥘', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Paella.jpg/320px-Paella.jpg' },
+    { name: { en: 'Tapas', zh: '西班牙小食' }, desc: { en: 'Small savory dishes', zh: '小型咸味菜肴' }, emoji: '🍢', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tapas.jpg/320px-Tapas.jpg' },
+    { name: { en: 'Churros', zh: '吉事果' }, desc: { en: 'Fried dough pastry', zh: '炸面团糕点' }, emoji: '🍩', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Churros.jpg/320px-Churros.jpg' },
+  ],
+  festivals: [
+    { name: { en: 'La Tomatina', zh: '番茄大战' }, desc: { en: 'World’s biggest food fight', zh: '世界上最大的食物大战' }, emoji: '🍅', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/La_Tomatina.jpg/320px-La_Tomatina.jpg' },
+    { name: { en: 'Running of the Bulls', zh: '奔牛节' }, desc: { en: 'Festival with bull running', zh: '奔牛节' }, emoji: '🐂', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Running_of_the_Bulls.jpg/320px-Running_of_the_Bulls.jpg' },
+  ],
+  landmarks: [
+    { name: { en: 'Sagrada Familia', zh: '圣家族大教堂' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Sagrada_Familia.jpg/320px-Sagrada_Familia.jpg' },
+    { name: { en: 'Alhambra', zh: '阿尔罕布拉宫' }, img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Alhambra.jpg/320px-Alhambra.jpg' },
+  ],
+  etiquette: [
+    { emoji: '😴', tip: { en: 'Siesta time (2-5pm) is sacred', zh: '午休时间（下午2-5点）是神圣的' } },
+  ],
+  funFacts: [
+    { en: 'Spain was the first global empire', zh: '西班牙是第一个全球性帝国' },
+    { en: 'Spanish is the second most spoken native language', zh: '西班牙语是第二大母语' },
+  ],
+  biases: [
+    { type: 'myth', statement: { en: 'All Spanish people are lazy (siesta stereotype)', zh: '所有西班牙人都很懒（午休刻板印象）' }, explanation: { en: 'Siesta is less common in cities; its a cultural tradition, not laziness', zh: '午休在城市中不常见；这是文化传统，不是懒惰' } },
+    { type: 'fact', statement: { en: 'Spain was the first global empire', zh: '西班牙是第一个全球性帝国' }, explanation: { en: 'The Spanish Empire was the first to span all continents', zh: '西班牙帝国是第一个横跨所有大陆的帝国' } },
+    { type: 'myth', statement: { en: 'All Spanish people dance flamenco', zh: '所有西班牙人都跳弗拉明戈' }, explanation: { en: 'Flamenco is mainly from Andalusia, not all of Spain', zh: '弗拉明戈主要来自安达卢西亚，不是整个西班牙' } },
+    { type: 'fact', statement: { en: 'Spanish is the second most spoken native language', zh: '西班牙语是第二大母语' }, explanation: { en: 'Over 480 million people speak Spanish as their first language', zh: '超过4.8亿人以西语为母语' } },
+    { type: 'myth', statement: { en: 'Everyone in Spain is late for everything', zh: '西班牙所有人做什么都迟到' }, explanation: { en: 'While social events may start late, business culture is punctual', zh: '虽然社交活动可能开始得晚，但商业文化很准时' } },
+  ],
+  quickStats: [
+    { label: { en: 'Population', zh: '人口' }, value: '47M+', emoji: '👥' },
+    { label: { en: 'Native Speakers (Spanish)', zh: '母语使用者（西班牙语）' }, value: '480M+', emoji: '🗣️' },
+    { label: { en: 'UNESCO Sites', zh: '世界遗产' }, value: '49', emoji: '🏛️' },
+  ],
+  musicOrArt: [
+    { name: { en: 'Flamenco', zh: '弗拉明戈' }, desc: { en: 'Passionate Spanish art form combining guitar, song, and dance', zh: '融合吉他、歌唱和舞蹈的充满激情的西班牙艺术形式' }, emoji: '🎵' },
+  ],
+}
