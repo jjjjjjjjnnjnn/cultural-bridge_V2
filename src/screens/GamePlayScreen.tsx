@@ -8,6 +8,14 @@ import { useState, useCallback, useEffect, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import confetti from 'canvas-confetti'
 
+// Helper: get localized culture name
+function cName(id: string | undefined, lang: string): string {
+  if (!id) return ''
+  const meta = CULTURE_META.find(c => c.id === id)
+  return meta?.name?.[lang] ?? meta?.name?.en ?? id
+}
+
+
 
 // ── Shared types ────────────────────────────────────────────
 interface GameResult {
@@ -20,43 +28,43 @@ type GamePhase = 'intro' | 'playing' | 'result'
 // ── Question generators (client-side, from CULTURE_META) ───
 function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] } return a }
 
-function pickWrong(correct: string, pool: string[], n: number): string[] {
-  return shuffle(pool.filter((x) => x !== correct)).slice(0, n)
+function pickWrong(correct: string | undefined, pool: (string | undefined)[], n: number): string[] {
+  return shuffle(pool.filter((x): x is string => x !== undefined && x !== correct)).slice(0, n)
 }
 
 // ── Greeting Game ───────────────────────────────────────────
 const GREETING_QA = [
-  { native: '你好', romanization: 'Nǐ hǎo', culture: 'China' },
-  { native: 'こんにちは', romanization: 'Konnichiwa', culture: 'Japan' },
-  { native: '안녕하세요', romanization: 'Annyeonghaseyo', culture: 'Korea' },
-  { native: 'Hallo', romanization: '', culture: 'Germany' },
-  { native: 'Bonjour', romanization: '', culture: 'France' },
-  { native: 'สวัสดี', romanization: 'Sawasdee', culture: 'Thailand' },
-  { native: 'Ciao', romanization: '', culture: 'Italy' },
-  { native: 'Merhaba', romanization: '', culture: 'Turkey' },
-  { native: 'Hola', romanization: '', culture: 'Spain' },
-  { native: 'Olá', romanization: '', culture: 'Brazil' },
-  { native: 'नमस्ते', romanization: 'Namaste', culture: 'India' },
-  { native: 'Привет', romanization: 'Privet', culture: 'Russia' },
+  { native: '你好', romanization: 'Nǐ hǎo', cultureId: 'china' },
+  { native: 'こんにちは', romanization: 'Konnichiwa', cultureId: 'japan' },
+  { native: '안녕하세요', romanization: 'Annyeonghaseyo', cultureId: 'korea' },
+  { native: 'Hallo', romanization: '', cultureId: 'germany' },
+  { native: 'Bonjour', romanization: '', cultureId: 'france' },
+  { native: 'สวัสดี', romanization: 'Sawasdee', cultureId: 'thailand' },
+  { native: 'Ciao', romanization: '', cultureId: 'italy' },
+  { native: 'Merhaba', romanization: '', cultureId: 'turkey' },
+  { native: 'Hola', romanization: '', cultureId: 'spain' },
+  { native: 'Olá', romanization: '', cultureId: 'brazil' },
+  { native: 'नमस्ते', romanization: 'Namaste', cultureId: 'india' },
+  { native: 'Привет', romanization: 'Privet', cultureId: 'russia' },
 ]
 
 const GREETING_QA_EXTRA = [
-  { native: 'ٱلسَّلَامُ عَلَيْكُمْ', romanization: 'As-salamu alaykum', culture: 'UAE' },
-  { native: 'مرحبا', romanization: 'Marhaba', culture: 'Egypt' },
-  { native: 'Dumela', romanization: '', culture: 'South Africa' },
-  { native: 'Kia ora', romanization: '', culture: 'New Zealand' },
-  { native: 'Selamat pagi', romanization: '', culture: 'Indonesia' },
-  { native: 'Hej', romanization: '', culture: 'Sweden' },
-  { native: 'Dzień dobry', romanization: '', culture: 'Poland' },
-  { native: 'Χαίρετε', romanization: 'Chairete', culture: 'Greece' },
-  { native: 'Jambo', romanization: '', culture: 'Kenya' },
-  { native: 'Hei', romanization: '', culture: 'Finland' },
-  { native: 'Chào bạn', romanization: '', culture: 'Vietnam' },
-  { native: 'Shalom', romanization: '', culture: 'Israel' },
+  { native: 'ٱلسَّلَامُ عَلَيْكُمْ', romanization: 'As-salamu alaykum', cultureId: 'uae' },
+  { native: 'مرحبا', romanization: 'Marhaba', cultureId: 'egypt' },
+  { native: 'Dumela', romanization: '', cultureId: 'southafrica' },
+  { native: 'Kia ora', romanization: '', cultureId: 'newzealand' },
+  { native: 'Selamat pagi', romanization: '', cultureId: 'indonesia' },
+  { native: 'Hej', romanization: '', cultureId: 'sweden' },
+  { native: 'Dzień dobry', romanization: '', cultureId: 'poland' },
+  { native: 'Χαίρετε', romanization: 'Chairete', cultureId: 'greece' },
+  { native: 'Jambo', romanization: '', cultureId: 'kenya' },
+  { native: 'Hei', romanization: '', cultureId: 'finland' },
+  { native: 'Chào bạn', romanization: '', cultureId: 'vietnam' },
+  { native: 'Shalom', romanization: '', cultureId: 'israel' },
 ]
 
 function GreetingGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
-  const { t } = useI18n()
+  const { t, lang } = useI18n()
   const [q, setQ] = useState(0)
   const [score, setScore] = useState(0)
   const [streak, setStreak] = useState(0)
@@ -67,10 +75,10 @@ function GreetingGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
   const questions = useMemo(() => {
     const combined = [...GREETING_QA, ...GREETING_QA_EXTRA]
     const picked = shuffle(combined).slice(0, 8)
-    const allCultures = CULTURE_META.map((c) => c.name.en ?? c.id)
+    const allCultures = CULTURE_META.map((c: any) => c.id).filter(Boolean)
     return picked.map((item) => ({
       ...item,
-      options: shuffle([item.culture, ...pickWrong(item.culture, allCultures, 3)]),
+      options: shuffle([item.cultureId, ...pickWrong(item.cultureId, allCultures, 3)]),
     }))
   }, [])
 
@@ -78,7 +86,7 @@ function GreetingGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
 
   const handle = useCallback((idx: number) => {
     setSelected(idx)
-    const ok = current.options[idx] === current.culture
+    const ok = current.options[idx] === current.cultureId
     if (ok) { const ns = streak + 1; setScore((s) => s + 1); setStreak(ns); setBestStreak((b) => Math.max(b, ns)) }
     else setStreak(0)
     setTimeout(() => {
@@ -97,10 +105,10 @@ function GreetingGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
         {current.options.map((opt, i) => {
           let cls = 'bg-white dark:bg-cool-800 border border-gray-200 dark:border-gray-700'
           if (selected !== null) {
-            if (i === selected) cls = opt === current.culture ? 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20' : 'bg-red-100 border-red-400 text-red-700 dark:bg-red-500/20 animate-shake'
-            else if (opt === current.culture) cls = 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20'
+            if (i === selected) cls = opt === current.cultureId ? 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20' : 'bg-red-100 border-red-400 text-red-700 dark:bg-red-500/20 animate-shake'
+            else if (opt === current.cultureId) cls = 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20'
           }
-          return <button key={i} onClick={() => handle(i)} disabled={selected !== null} className={`p-4 rounded-xl text-sm font-medium transition-all active:scale-95 ${cls}`}>{opt}</button>
+          return <button key={i} onClick={() => handle(i)} disabled={selected !== null} className={`p-4 rounded-xl text-sm font-medium transition-all active:scale-95 ${cls}`}>{cName(opt, lang)}</button>
         })}
       </div>
     </div>
@@ -109,25 +117,25 @@ function GreetingGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
 
 // ── Food Match Game ─────────────────────────────────────────
 const FOOD_QA = [
-  { food: '🥟 Dumplings', culture: 'China' }, { food: '🍣 Sushi', culture: 'Japan' }, { food: '🥨 Pretzel', culture: 'Germany' },
-  { food: '🥐 Croissant', culture: 'France' }, { food: '🍝 Spaghetti', culture: 'Italy' }, { food: '🥘 Paella', culture: 'Spain' },
-  { food: '🍛 Curry', culture: 'India' }, { food: '🌮 Tacos', culture: 'Mexico' }, { food: '🥩 Barbecue', culture: 'USA' },
-  { food: '🍜 Phở', culture: 'Vietnam' }, { food: '🍢 Satay', culture: 'Indonesia' }, { food: '🥟 Manti', culture: 'Turkey' },
+  { food: '🥟 Dumplings', cultureId: 'china' }, { food: '🍣 Sushi', cultureId: 'japan' }, { food: '🥨 Pretzel', cultureId: 'germany' },
+  { food: '🥐 Croissant', cultureId: 'france' }, { food: '🍝 Spaghetti', cultureId: 'italy' }, { food: '🥘 Paella', cultureId: 'spain' },
+  { food: '🍛 Curry', cultureId: 'india' }, { food: '🌮 Tacos', cultureId: 'mexico' }, { food: '🥩 Barbecue', cultureId: 'usa' },
+  { food: '🍜 Phở', cultureId: 'vietnam' }, { food: '🍢 Satay', cultureId: 'indonesia' }, { food: '🥟 Manti', cultureId: 'turkey' },
 ]
 
 const FOOD_QA_EXTRA = [
-  { food: '🥟 Pierogi', culture: 'Poland' },
-  { food: '🫓 Injera', culture: 'Ethiopia' },
-  { food: '🥙 Shawarma', culture: 'Lebanon' },
-  { food: '🥬 Kimchi', culture: 'Korea' },
-  { food: '🍲 Feijoada', culture: 'Brazil' },
-  { food: '🥟 Empanada', culture: 'Argentina' },
-  { food: '🍛 Bunny Chow', culture: 'South Africa' },
-  { food: '🥖 Baguette', culture: 'France' },
-  { food: '🥣 Borscht', culture: 'Ukraine' },
+  { food: '🥟 Pierogi', cultureId: 'poland' },
+  { food: '🫓 Injera', cultureId: 'ethiopia' },
+  { food: '🥙 Shawarma', cultureId: 'lebanon' },
+  { food: '🥬 Kimchi', cultureId: 'korea' },
+  { food: '🍲 Feijoada', cultureId: 'brazil' },
+  { food: '🥟 Empanada', cultureId: 'argentina' },
+  { food: '🍛 Bunny Chow', cultureId: 'southafrica' },
+  { food: '🥖 Baguette', cultureId: 'france' },
+  { food: '🥣 Borscht', cultureId: 'ukraine' },
   { food: '🍚 Hainanese Chicken Rice', culture: 'Singapore' },
-  { food: '🥘 Couscous', culture: 'Morocco' },
-  { food: '🍰 Pavlova', culture: 'New Zealand' },
+  { food: '🥘 Couscous', cultureId: 'morocco' },
+  { food: '🍰 Pavlova', cultureId: 'newzealand' },
 ]
 
 function FoodMatchGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
@@ -140,15 +148,15 @@ function FoodMatchGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
   const questions = useMemo(() => {
     const combined = [...FOOD_QA, ...FOOD_QA_EXTRA]
     const picked = shuffle(combined).slice(0, 8)
-    const allCultures = [...new Set(picked.map((p) => p.culture))]
-    return picked.map((p) => ({ ...p, options: shuffle([p.culture, ...pickWrong(p.culture, allCultures, 2)]) }))
+    const allCultures = [...new Set(picked.map((p) => p.cultureId))].filter(Boolean) as string[]
+    return picked.map((p) => ({ ...p, options: shuffle([p.cultureId, ...pickWrong(p.cultureId, allCultures, 2)]) }))
   }, [])
 
   const current = questions[q]; const isLast = q >= questions.length - 1
 
   const handle = useCallback((idx: number) => {
     setSelected(idx)
-    const ok = current.options[idx] === current.culture
+    const ok = current.options[idx] === current.cultureId
     if (ok) setScore((s) => s + 1)
     setTimeout(() => {
       setSelected(null)
@@ -166,8 +174,8 @@ function FoodMatchGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
         {current.options.map((opt, i) => {
           let cls = 'bg-white dark:bg-cool-800 border border-gray-200 dark:border-gray-700'
           if (selected !== null) {
-            if (i === selected) cls = opt === current.culture ? 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20' : 'bg-red-100 border-red-400 text-red-700 dark:bg-red-500/20 animate-shake'
-            else if (opt === current.culture) cls = 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20'
+            if (i === selected) cls = opt === current.cultureId ? 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20' : 'bg-red-100 border-red-400 text-red-700 dark:bg-red-500/20 animate-shake'
+            else if (opt === current.cultureId) cls = 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20'
           }
           return <button key={i} onClick={() => handle(i)} disabled={selected !== null} className={`p-3 rounded-xl text-sm font-medium transition-all active:scale-95 ${cls}`}>{opt}</button>
         })}
@@ -253,31 +261,31 @@ function BiasGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
 
 // ── Festival Game ───────────────────────────────────────────
 const FESTIVAL_QA = [
-  { festival: '🧧 Chinese New Year', culture: 'China' }, { festival: '🌸 Cherry Blossom Festival', culture: 'Japan' },
-  { festival: '🎪 Oktoberfest', culture: 'Germany' }, { festival: '🎬 Cannes Film Festival', culture: 'France' },
-  { festival: '🎭 Carnival of Venice', culture: 'Italy' }, { festival: '🍅 La Tomatina', culture: 'Spain' },
-  { festival: '🪔 Diwali', culture: 'India' }, { festival: '🎄 Christmas Markets', culture: 'Germany' },
-  { festival: '💀 Día de los Muertos', culture: 'Mexico' }, { festival: '🦃 Thanksgiving', culture: 'USA' },
-  { festival: '🥮 Mid-Autumn Festival', culture: 'China' }, { festival: '🐉 Dragon Boat Festival', culture: 'China' },
+  { festival: '🧧 Chinese New Year', cultureId: 'china' }, { festival: '🌸 Cherry Blossom Festival', cultureId: 'japan' },
+  { festival: '🎪 Oktoberfest', cultureId: 'germany' }, { festival: '🎬 Cannes Film Festival', cultureId: 'france' },
+  { festival: '🎭 Carnival of Venice', cultureId: 'italy' }, { festival: '🍅 La Tomatina', cultureId: 'spain' },
+  { festival: '🪔 Diwali', cultureId: 'india' }, { festival: '🎄 Christmas Markets', cultureId: 'germany' },
+  { festival: '💀 Día de los Muertos', cultureId: 'mexico' }, { festival: '🦃 Thanksgiving', cultureId: 'usa' },
+  { festival: '🥮 Mid-Autumn Festival', cultureId: 'china' }, { festival: '🐉 Dragon Boat Festival', cultureId: 'china' },
 ]
 
 const FESTIVAL_QA_EXTRA = [
-  { festival: '🎭 Carnival', culture: 'Brazil' },
-  { festival: '💧 Songkran Water Festival', culture: 'Thailand' },
-  { festival: '🎨 Holi (Festival of Colors)', culture: 'India' },
-  { festival: '🪷 Loy Krathong', culture: 'Thailand' },
-  { festival: '🇫🇷 Bastille Day', culture: 'France' },
-  { festival: '🐪 Eid al-Adha', culture: 'Saudi Arabia' },
-  { festival: '🎭 Mardi Gras', culture: 'USA' },
-  { festival: '🎎 Children’s Day', culture: 'Japan' },
-  { festival: '🏮 Lantern Festival', culture: 'China' },
-  { festival: '☘️ St. Patrick’s Day', culture: 'Ireland' },
-  { festival: '🕎 Hanukkah', culture: 'Israel' },
-  { festival: '🎆 Seollal (Korean New Year)', culture: 'Korea' },
+  { festival: '🎭 Carnival', cultureId: 'brazil' },
+  { festival: '💧 Songkran Water Festival', cultureId: 'thailand' },
+  { festival: '🎨 Holi (Festival of Colors)', cultureId: 'india' },
+  { festival: '🪷 Loy Krathong', cultureId: 'thailand' },
+  { festival: '🇫🇷 Bastille Day', cultureId: 'france' },
+  { festival: '🐪 Eid al-Adha', cultureId: 'saudiarabia' },
+  { festival: '🎭 Mardi Gras', cultureId: 'usa' },
+  { festival: '🎎 Children’s Day', cultureId: 'japan' },
+  { festival: '🏮 Lantern Festival', cultureId: 'china' },
+  { festival: '☘️ St. Patrick’s Day', cultureId: 'ireland' },
+  { festival: '🕎 Hanukkah', cultureId: 'israel' },
+  { festival: '🎆 Seollal (Korean New Year)', cultureId: 'korea' },
 ]
 
 function FestivalGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
-  const { t } = useI18n()
+  const { t, lang } = useI18n()
   const [q, setQ] = useState(0)
   const [score, setScore] = useState(0)
   const [selected, setSelected] = useState<number | null>(null)
@@ -286,15 +294,15 @@ function FestivalGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
   const questions = useMemo(() => {
     const combined = [...FESTIVAL_QA, ...FESTIVAL_QA_EXTRA]
     const picked = shuffle(combined).slice(0, 8)
-    const allCultures = [...new Set(picked.map((p) => p.culture))]
-    return picked.map((p) => ({ ...p, options: shuffle([p.culture, ...pickWrong(p.culture, allCultures, 3)]) }))
+    const allCultures = [...new Set(picked.map((p) => p.cultureId as string))] as string[]
+    return picked.map((p) => ({ ...p, options: shuffle([p.cultureId, ...pickWrong(p.cultureId, allCultures, 3)]) }))
   }, [])
 
   const current = questions[q]; const isLast = q >= questions.length - 1
 
   const handle = useCallback((idx: number) => {
     setSelected(idx)
-    const ok = current.options[idx] === current.culture
+    const ok = current.options[idx] === current.cultureId
     if (ok) setScore((s) => s + 1)
     setTimeout(() => {
       setSelected(null)
@@ -312,10 +320,10 @@ function FestivalGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
         {current.options.map((opt, i) => {
           let cls = 'bg-white dark:bg-cool-800 border border-gray-200 dark:border-gray-700'
           if (selected !== null) {
-            if (i === selected) cls = opt === current.culture ? 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20' : 'bg-red-100 border-red-400 text-red-700 dark:bg-red-500/20 animate-shake'
-            else if (opt === current.culture) cls = 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20'
+            if (i === selected) cls = opt === current.cultureId ? 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20' : 'bg-red-100 border-red-400 text-red-700 dark:bg-red-500/20 animate-shake'
+            else if (opt === current.cultureId) cls = 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20'
           }
-          return <button key={i} onClick={() => handle(i)} disabled={selected !== null} className={`p-4 rounded-xl text-sm font-medium transition-all active:scale-95 ${cls}`}>{opt}</button>
+          return <button key={i} onClick={() => handle(i)} disabled={selected !== null} className={`p-4 rounded-xl text-sm font-medium transition-all active:scale-95 ${cls}`}>{cName(opt, lang)}</button>
         })}
       </div>
     </div>
@@ -519,25 +527,25 @@ function SpeedRound({ onFinish }: { onFinish: (r: GameResult) => void }) {
 
 // ── Landmark Match Game ─────────────────────────────────────
 const LANDMARK_QA = [
-  { landmark: '🏛️ Colosseum', culture: 'Italy' },
-  { landmark: '🗼 Eiffel Tower', culture: 'France' },
-  { landmark: '🕌 Taj Mahal', culture: 'India' },
-  { landmark: '🏯 Great Wall', culture: 'China' },
-  { landmark: '🏔️ Machu Picchu', culture: 'Peru' },
-  { landmark: '⛪ Christ the Redeemer', culture: 'Brazil' },
-  { landmark: '🏛️ Alhambra', culture: 'Spain' },
-  { landmark: '🏛️ Pyramids of Giza', culture: 'Egypt' },
+  { landmark: '🏛️ Colosseum', cultureId: 'italy' },
+  { landmark: '🗼 Eiffel Tower', cultureId: 'france' },
+  { landmark: '🕌 Taj Mahal', cultureId: 'india' },
+  { landmark: '🏯 Great Wall', cultureId: 'china' },
+  { landmark: '🏔️ Machu Picchu', cultureId: 'peru' },
+  { landmark: '⛪ Christ the Redeemer', cultureId: 'brazil' },
+  { landmark: '🏛️ Alhambra', cultureId: 'spain' },
+  { landmark: '🏛️ Pyramids of Giza', cultureId: 'egypt' },
 ]
 
 const LANDMARK_QA_EXTRA = [
-  { landmark: '🏛️ Parthenon', culture: 'Greece' },
-  { landmark: '🕍 Angkor Wat', culture: 'Cambodia' },
-  { landmark: '🏯 Forbidden City', culture: 'China' },
-  { landmark: '🕌 Petra', culture: 'Jordan' },
-  { landmark: '🏰 Neuschwanstein Castle', culture: 'Germany' },
-  { landmark: '🕌 Hagia Sophia', culture: 'Turkey' },
-  { landmark: '🗿 Moai Statues', culture: 'Chile' },
-  { landmark: '🗿 Stonehenge', culture: 'United Kingdom' },
+  { landmark: '🏛️ Parthenon', cultureId: 'greece' },
+  { landmark: '🕍 Angkor Wat', cultureId: 'cambodia' },
+  { landmark: '🏯 Forbidden City', cultureId: 'china' },
+  { landmark: '🕌 Petra', cultureId: 'jordan' },
+  { landmark: '🏰 Neuschwanstein Castle', cultureId: 'germany' },
+  { landmark: '🕌 Hagia Sophia', cultureId: 'turkey' },
+  { landmark: '🗿 Moai Statues', cultureId: 'chile' },
+  { landmark: '🗿 Stonehenge', cultureId: 'uk' },
 ]
 
 function LandmarkMatchGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
@@ -550,15 +558,15 @@ function LandmarkMatchGame({ onFinish }: { onFinish: (r: GameResult) => void }) 
   const questions = useMemo(() => {
     const combined = [...LANDMARK_QA, ...LANDMARK_QA_EXTRA]
     const picked = shuffle(combined).slice(0, 8)
-    const allCultures = [...new Set(picked.map((p) => p.culture))]
-    return picked.map((p) => ({ ...p, options: shuffle([p.culture, ...pickWrong(p.culture, allCultures, 3)]) }))
+    const allCultures = [...new Set(picked.map((p) => p.cultureId as string))] as string[]
+    return picked.map((p) => ({ ...p, options: shuffle([p.cultureId, ...pickWrong(p.cultureId, allCultures, 3)]) }))
   }, [])
 
   const current = questions[q]; const isLast = q >= questions.length - 1
 
   const handle = useCallback((idx: number) => {
     setSelected(idx)
-    const ok = current.options[idx] === current.culture
+    const ok = current.options[idx] === current.cultureId
     if (ok) setScore((s) => s + 1)
     setTimeout(() => {
       setSelected(null)
@@ -576,8 +584,8 @@ function LandmarkMatchGame({ onFinish }: { onFinish: (r: GameResult) => void }) 
         {current.options.map((opt, i) => {
           let cls = 'bg-white dark:bg-cool-800 border border-gray-200 dark:border-gray-700'
           if (selected !== null) {
-            if (i === selected) cls = opt === current.culture ? 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20' : 'bg-red-100 border-red-400 text-red-700 dark:bg-red-500/20 animate-shake'
-            else if (opt === current.culture) cls = 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20'
+            if (i === selected) cls = opt === current.cultureId ? 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20' : 'bg-red-100 border-red-400 text-red-700 dark:bg-red-500/20 animate-shake'
+            else if (opt === current.cultureId) cls = 'bg-green-100 border-green-400 text-green-700 dark:bg-green-500/20'
           }
           return <button key={i} onClick={() => handle(i)} disabled={selected !== null} className={'p-4 rounded-xl text-sm font-medium transition-all active:scale-95 ' + cls}>{opt}</button>
         })}

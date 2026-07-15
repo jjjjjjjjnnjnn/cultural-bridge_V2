@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom'
-import { useI18n, getLocalized } from '../i18n/context'
+import { useI18n } from '../i18n/context'
 import { useProgressStore } from '../stores/progress-store'
 import { useAchievementStore } from '../stores/achievement-store'
 import {
@@ -10,15 +10,8 @@ import {
 import type { Culture } from '../types/culture'
 import { useEffect, useState } from 'react'
 
-// Dynamic culture loader
-async function loadCulture(id: string): Promise<Culture | null> {
-  try {
-    const mod = await import(`../data/cultures/${id}.ts`)
-    return mod[id] as Culture
-  } catch {
-    return null
-  }
-}
+// Pre-register all culture imports so Vite/Rolldown can tree-shake properly
+const cultureModules = import.meta.glob<Record<string, Culture>>('../data/cultures/*.ts', { eager: false })
 
 export function CultureDetailScreen() {
   const { cultureId } = useParams<{ cultureId: string }>()
@@ -31,29 +24,50 @@ export function CultureDetailScreen() {
 
   const [culture, setCulture] = useState<Culture | null>(null)
   const [error, setError] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     if (!cultureId) return
-    loadCulture(cultureId).then((c) => {
+    setLoading(true)
+    setError(false)
+
+    // Find the matching glob key
+    const key = Object.keys(cultureModules).find(k => k.includes(`/${cultureId}.ts`))
+    if (!key) {
+      setError(true)
+      setLoading(false)
+      return
+    }
+
+    cultureModules[key]().then((mod) => {
+      const c = mod[cultureId] as Culture | undefined
       if (c) {
         setCulture(c)
         recordVisit(c.id)
         addXP(10)
-        if (culturesVisited.length >= 4 && !unlocked.includes('explorer')) unlock('explorer')
-        if (culturesVisited.length >= 14 && !unlocked.includes('scholar')) unlock('scholar')
+        setTimeout(() => {
+          if (culturesVisited.length >= 4 && !unlocked.includes('explorer')) unlock('explorer')
+          if (culturesVisited.length >= 14 && !unlocked.includes('scholar')) unlock('scholar')
+        }, 100)
       } else {
         setError(true)
       }
+    }).catch(() => {
+      setError(true)
+    }).finally(() => {
+      setLoading(false)
     })
   }, [cultureId])
 
-  if (error || !culture) {
+  if (loading || error || !culture) {
     return (
-      <div className="py-6 animate-fade-in">
+      <div className="py-6 animate-fade-in px-4">
         <Link to="/cultures" className="text-coral-500 text-sm">{t('backBtn')}</Link>
-        <div className="text-center py-12">
-          <span className="text-6xl">🔍</span>
-          <h1 className="text-xl font-bold mt-4">{error ? t('errorGeneric') : t('loading')}</h1>
+        <div className="text-center py-20">
+          <span className="text-6xl">{loading ? '🌍' : '🔍'}</span>
+          <h1 className="text-xl font-bold font-fredoka mt-4 text-gray-700 dark:text-gray-200">
+            {loading ? t('loading') : t('errorGeneric')}
+          </h1>
         </div>
       </div>
     )
@@ -65,42 +79,22 @@ export function CultureDetailScreen() {
       <div className="text-center py-4">
         <Link to="/cultures" className="text-coral-500 text-sm float-left">{t('backBtn')}</Link>
         <span className="text-6xl block">{culture.flag}</span>
-        <h1 className="text-3xl font-bold font-fredoka mt-2">
-          {getLocalized(culture.names, lang)}
+        <h1 className="text-3xl font-bold font-fredoka mt-2 text-gray-800 dark:text-gray-100">
+          {culture.names[lang] ?? culture.names.en}
         </h1>
-        <p className="text-gray-400 text-sm">{culture.region}</p>
       </div>
 
-      {/* Greetings */}
       <GreetingSection greetings={culture.greetings} langCode={culture.langCode} lang={lang} />
-
-      {/* Common Phrases */}
       {culture.commonPhrases?.length > 0 && (
         <CommonPhrasesSection phrases={culture.commonPhrases} langCode={culture.langCode} lang={lang} />
       )}
-
-      {/* Quick Stats */}
       <QuickStatsSection stats={culture.quickStats} lang={lang} />
-
-      {/* Food */}
       {culture.food?.length > 0 && <FoodSection food={culture.food} lang={lang} />}
-
-      {/* Festivals */}
       {culture.festivals?.length > 0 && <FestivalSection festivals={culture.festivals} lang={lang} />}
-
-      {/* Landmarks */}
       {culture.landmarks?.length > 0 && <LandmarkSection landmarks={culture.landmarks} lang={lang} />}
-
-      {/* Music & Art */}
       <MusicArtSection items={culture.musicOrArt} lang={lang} />
-
-      {/* Etiquette */}
       {culture.etiquette?.length > 0 && <EtiquetteSection etiquette={culture.etiquette} lang={lang} />}
-
-      {/* Fun Facts */}
       {culture.funFacts?.length > 0 && <FunFactsSection funFacts={culture.funFacts} lang={lang} />}
-
-      {/* Bias */}
       <BiasSection biases={culture.biases} lang={lang} />
     </div>
   )
