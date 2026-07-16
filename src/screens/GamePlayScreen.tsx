@@ -2,6 +2,7 @@
 import { useI18n } from '../i18n/context'
 import { GAME_DEFS } from '../data/games'
 import { useProgressStore } from '../stores/progress-store'
+import { useSettingsStore } from '../stores/settings-store'
 import { useAchievementStore } from '../stores/achievement-store'
 import { CULTURE_META } from '../data/cultures/index'
 import { useState, useCallback, useEffect, useMemo } from 'react'
@@ -645,6 +646,7 @@ export function GamePlayScreen() {
   const addXP = useProgressStore((s) => s.addXP)
   const recordGame = useProgressStore((s) => s.recordGamePlayed)
   const unlock = useAchievementStore((s) => s.unlock)
+  const expertMode = useSettingsStore((s) => s.expertMode)
 
   const [phase, setPhase] = useState<GamePhase>('intro')
   const [result, setResult] = useState<GameResult | null>(null)
@@ -653,7 +655,7 @@ export function GamePlayScreen() {
 
   const handleFinish = useCallback((r: GameResult) => {
     setResult(r); setPhase('result')
-    addXP(r.xp); recordGame()
+    addXP(expertMode ? r.xp * 2 : r.xp); recordGame()
     if (gameId === 'culture-master' && r.perfect) setTimeout(() => unlock('quiz_master'), 500)
     if (gameId === 'bias' && r.score === r.total) setTimeout(() => unlock('bias_buster'), 500)
     if (gameId === 'speed-round' && r.accuracy >= 80) setTimeout(() => unlock('speed_demon'), 500)
