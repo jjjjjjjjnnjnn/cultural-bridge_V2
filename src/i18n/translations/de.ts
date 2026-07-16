@@ -227,4 +227,6 @@ const de: TranslationKeys = {
   masterQ25: "Welches Land hat den Verkauf von Kaugummi verboten?",
 }
 
+}
+
 export default de

@@ -110,6 +110,7 @@ export function AppShell() {
             { to: '/', icon: '🏠', label: t('navHome'), color: '#FF6B6B' },
             { to: '/cultures', icon: '🌍', label: t('navCultures'), color: '#58CC02' },
             { to: '/games', icon: '🎮', label: t('navGames'), color: '#FF9600' },
+            { to: '/achievements', icon: '🏆', label: t('navAchievements'), color: '#A78BFA' },
             { to: '/profile', icon: '👤', label: t('navProfile'), color: '#CE82FF' },
           ].map(({ to, icon, label, color }) => {
             const isActive = activeTab === to || window.location.hash === `#${to}`

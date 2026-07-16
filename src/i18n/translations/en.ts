@@ -228,4 +228,16 @@ const en: TranslationKeys = {
   masterQ25: "Which country banned the sale of chewing gum?",
 }
 
+  masterQ26: "Which country has the world’s longest fence?",
+  masterQ27: "Which country invented instant noodles?",
+  masterQ28: "The Parthenon is in which country?",
+  masterQ29: "Which country is the birthplace of reggae music?",
+  masterQ30: "Which country has the most biodiversity?",
+  masterQ31: "Which country has the highest mountain in the world?",
+  masterQ32: "Which country consumes the most chocolate per person?",
+  masterQ33: "Which country has the most active volcanoes?",
+  masterQ34: "Which country drinks the most coffee per person?",
+  masterQ35: "Which country has the longest beach in the world?",
+}
+
 export default en

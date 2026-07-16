@@ -207,4 +207,14 @@ export interface TranslationKeys {
   masterQ19: string; masterQ20: string; masterQ21: string
   masterQ22: string; masterQ23: string; masterQ24: string
   masterQ25: string
+  masterQ26: string
+  masterQ27: string
+  masterQ28: string
+  masterQ29: string
+  masterQ30: string
+  masterQ31: string
+  masterQ32: string
+  masterQ33: string
+  masterQ34: string
+  masterQ35: string
 }

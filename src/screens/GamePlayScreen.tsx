@@ -412,6 +412,20 @@ const MASTER_QA_EXTRA = [
   { q: 'Which country has the longest coastline in the world?', a: 'Canada', opts: ['Australia', 'Canada', 'Russia', 'Indonesia'] },
 ]
 
+
+const MASTER_QA_EXTRA_2 = [
+  { qKey: 'masterQ26', q: '🦘 Which country has the world\u2019s longest fence?', a: 'Australia', opts: ['USA', 'Canada', 'Australia', 'China'] },
+  { qKey: 'masterQ27', q: '🍜 Which country invented instant noodles?', a: 'Japan', opts: ['China', 'Japan', 'South Korea', 'Thailand'] },
+  { qKey: 'masterQ28', q: '🏛️ The Parthenon is in which country?', a: 'Greece', opts: ['Italy', 'Greece', 'Turkey', 'Egypt'] },
+  { qKey: 'masterQ29', q: '🎵 Which country is the birthplace of reggae music?', a: 'Jamaica', opts: ['Brazil', 'Cuba', 'Jamaica', 'Nigeria'] },
+  { qKey: 'masterQ30', q: '🌿 Which country has the most biodiversity?', a: 'Brazil', opts: ['Indonesia', 'Brazil', 'Australia', 'Costa Rica'] },
+  { qKey: 'masterQ31', q: '🏔️ Which country has the highest mountain in the world?', a: 'Nepal', opts: ['India', 'Nepal', 'China', 'Pakistan'] },
+  { qKey: 'masterQ32', q: '🏠 Which country consumes the most chocolate per person?', a: 'Switzerland', opts: ['Belgium', 'Switzerland', 'Germany', 'USA'] },
+  { qKey: 'masterQ33', q: '🌋 Which country has the most active volcanoes?', a: 'Indonesia', opts: ['Japan', 'Indonesia', 'Iceland', 'USA'] },
+  { qKey: 'masterQ34', q: '☕ Which country drinks the most coffee per person?', a: 'Finland', opts: ['Italy', 'Brazil', 'Finland', 'Ethiopia'] },
+  { qKey: 'masterQ35', q: '🏊 Which country has the longest beach in the world?', a: 'Brazil', opts: ['Australia', 'Brazil', 'USA', 'Spain'] },
+]
+
 function CultureMasterGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
   const { t } = useI18n()
   const [q, setQ] = useState(0)
@@ -422,7 +436,7 @@ function CultureMasterGame({ onFinish }: { onFinish: (r: GameResult) => void }) 
   const [startTime] = useState(Date.now())
 
   const questions = useMemo(() => {
-    const combined = [...MASTER_QA, ...MASTER_QA_EXTRA]
+    const combined = [...MASTER_QA, ...MASTER_QA_EXTRA, ...MASTER_QA_EXTRA_2]
     return shuffle(combined).slice(0, 10)
   }, [])
 

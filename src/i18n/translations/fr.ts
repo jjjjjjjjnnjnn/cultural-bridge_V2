@@ -227,4 +227,6 @@ const fr: TranslationKeys = {
   masterQ25: "Which country banned the sale of chewing gum?"
 }
 
+}
+
 export default fr
