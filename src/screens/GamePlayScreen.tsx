@@ -247,7 +247,7 @@ function BiasGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
   return (
     <div className="space-y-4">
       <div className="flex justify-between text-sm text-gray-400"><span>{t('questionLabel')} {q + 1}/{questions.length}</span><span>{t('scoreLabel')}: {score}</span><span className="text-coral-500">🔥 {streak}</span></div>
-      <div className="text-center py-8 card"><p className="text-lg font-semibold">'{current.statement}'</p><p className="text-sm text-gray-500 mt-3">{t('gameMythFactDesc')}</p></div>
+      <div className="text-center py-8 card"><p className="text-lg font-semibold">"{(t as any)(current.statementKey) || current.statement}"</p><p className="text-sm text-gray-500 mt-3">{t('gameMythFactDesc')}</p></div>
       <div className="grid grid-cols-2 gap-3">
         {['myth', 'fact'].map((ans) => {
           let cls = 'bg-white dark:bg-cool-800 border-2 border-gray-200 dark:border-gray-700'
