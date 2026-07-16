@@ -228,6 +228,4 @@ const tr: TranslationKeys = {
 
 }
 
-}
-
 export default tr

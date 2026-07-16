@@ -1,4 +1,4 @@
-﻿import { useParams, Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useI18n } from '../i18n/context'
 import { GAME_DEFS } from '../data/games'
 import { useProgressStore } from '../stores/progress-store'
@@ -118,10 +118,18 @@ function GreetingGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
 
 // ── Food Match Game ─────────────────────────────────────────
 const FOOD_QA = [
-  { food: '🥟 Dumplings', cultureId: 'china' }, { food: '🍣 Sushi', cultureId: 'japan' }, { food: '🥨 Pretzel', cultureId: 'germany' },
-  { food: '🥐 Croissant', cultureId: 'france' }, { food: '🍝 Spaghetti', cultureId: 'italy' }, { food: '🥘 Paella', cultureId: 'spain' },
-  { food: '🍛 Curry', cultureId: 'india' }, { food: '🌮 Tacos', cultureId: 'mexico' }, { food: '🥩 Barbecue', cultureId: 'usa' },
-  { food: '🍜 Phở', cultureId: 'vietnam' }, { food: '🍢 Satay', cultureId: 'indonesia' }, { food: '🥟 Manti', cultureId: 'turkey' },
+  { food: '🥟 Dumplings', cultureId: 'china', img: '/images/games/food/food-dumplings.jpg' },
+  { food: '🍣 Sushi', cultureId: 'japan', img: '/images/games/food/food-sushi.jpg' },
+  { food: '🥨 Pretzel', cultureId: 'germany', img: '/images/games/food/food-pretzel.jpg' },
+  { food: '🥐 Croissant', cultureId: 'france', img: '/images/games/food/food-croissant.jpg' },
+  { food: '🍝 Spaghetti', cultureId: 'italy' },
+  { food: '🥘 Paella', cultureId: 'spain', img: '/images/games/food/food-paella.jpg' },
+  { food: '🍛 Curry', cultureId: 'india', img: '/images/games/food/food-curry.jpg' },
+  { food: '🌮 Tacos', cultureId: 'mexico', img: '/images/games/food/food-tacos.jpg' },
+  { food: '🥩 Barbecue', cultureId: 'usa', img: '/images/games/food/food-barbecue.jpg' },
+  { food: '🍜 Phở', cultureId: 'vietnam', img: '/images/games/food/food-pho.jpg' },
+  { food: '🍢 Satay', cultureId: 'indonesia', img: '/images/games/food/food-satay.jpg' },
+  { food: '🥟 Manti', cultureId: 'turkey', img: '/images/games/food/food-manti.jpg' },
 ]
 
 const FOOD_QA_EXTRA = [
@@ -170,7 +178,14 @@ function FoodMatchGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
   return (
     <div className="space-y-4">
       <div className="flex justify-between text-sm text-gray-400"><span>{t('questionLabel')} {q + 1}/{questions.length}</span><span>{t('scoreLabel')}: {score}</span></div>
-      <div className="text-center py-6 card"><p className="text-6xl mb-3">{current.food}</p><p className="text-sm text-gray-500">{t('gameFoodMatchDesc')}</p></div>
+      <div className="text-center py-6 card">
+        {current.img ? (
+          <img src={current.img} alt={current.food} className="w-40 h-40 object-cover rounded-2xl mx-auto mb-3 shadow-lg" />
+        ) : (
+          <p className="text-6xl mb-3">{current.food}</p>
+        )}
+        <p className="text-sm text-gray-500">{t('gameFoodMatchDesc')}</p>
+      </div>
       <div className="grid grid-cols-3 gap-2">
         {current.options.map((opt, i) => {
           let cls = 'bg-white dark:bg-cool-800 border border-gray-200 dark:border-gray-700'
@@ -542,14 +557,14 @@ function SpeedRound({ onFinish }: { onFinish: (r: GameResult) => void }) {
 
 // ── Landmark Match Game ─────────────────────────────────────
 const LANDMARK_QA = [
-  { landmark: '🏛️ Colosseum', cultureId: 'italy' },
-  { landmark: '🗼 Eiffel Tower', cultureId: 'france' },
-  { landmark: '🕌 Taj Mahal', cultureId: 'india' },
-  { landmark: '🏯 Great Wall', cultureId: 'china' },
-  { landmark: '🏔️ Machu Picchu', cultureId: 'peru' },
-  { landmark: '⛪ Christ the Redeemer', cultureId: 'brazil' },
-  { landmark: '🏛️ Alhambra', cultureId: 'spain' },
-  { landmark: '🏛️ Pyramids of Giza', cultureId: 'egypt' },
+  { landmark: '🏛️ Colosseum', cultureId: 'italy', img: '/images/games/landmarks/landmark-colosseum.jpg' },
+  { landmark: '🗼 Eiffel Tower', cultureId: 'france', img: '/images/games/landmarks/landmark-eiffel.jpg' },
+  { landmark: '🕌 Taj Mahal', cultureId: 'india', img: '/images/games/landmarks/landmark-taj-mahal.jpg' },
+  { landmark: '🏯 Great Wall', cultureId: 'china', img: '/images/games/landmarks/landmark-great-wall.jpg' },
+  { landmark: '🏔️ Machu Picchu', cultureId: 'peru', img: '/images/games/landmarks/landmark-machu-picchu.jpg' },
+  { landmark: '⛪ Christ the Redeemer', cultureId: 'brazil', img: '/images/games/landmarks/landmark-christ.jpg' },
+  { landmark: '🏛️ Alhambra', cultureId: 'spain', img: '/images/games/landmarks/landmark-alhambra.jpg' },
+  { landmark: '🏛️ Pyramids of Giza', cultureId: 'egypt', img: '/images/games/landmarks/landmark-pyramids.jpg' },
 ]
 
 const LANDMARK_QA_EXTRA = [
@@ -594,7 +609,14 @@ function LandmarkMatchGame({ onFinish }: { onFinish: (r: GameResult) => void }) 
   return (
     <div className="space-y-4">
       <div className="flex justify-between text-sm text-gray-400"><span>{t('questionLabel')} {q + 1}/{questions.length}</span><span>{t('scoreLabel')}: {score}</span></div>
-      <div className="text-center py-6 card"><p className="text-6xl mb-3">{current.landmark}</p><p className="text-sm text-gray-500">{t('gameLandmarkDesc')}</p></div>
+      <div className="text-center py-6 card">
+        {current.img ? (
+          <img src={current.img} alt={current.landmark} className="w-40 h-40 object-cover rounded-2xl mx-auto mb-3 shadow-lg" />
+        ) : (
+          <p className="text-6xl mb-3">{current.landmark}</p>
+        )}
+        <p className="text-sm text-gray-500">{t('gameLandmarkDesc')}</p>
+      </div>
       <div className="grid grid-cols-2 gap-2">
         {current.options.map((opt, i) => {
           let cls = 'bg-white dark:bg-cool-800 border border-gray-200 dark:border-gray-700'

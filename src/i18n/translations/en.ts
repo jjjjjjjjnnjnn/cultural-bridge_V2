@@ -226,7 +226,6 @@ const en: TranslationKeys = {
   masterQ23: "Which country is home to Machu Picchu?",
   masterQ24: "Angkor Wat is located in which country?",
   masterQ25: "Which country banned the sale of chewing gum?",
-}
 
   masterQ26: "Which country has the world’s longest fence?",
   masterQ27: "Which country invented instant noodles?",

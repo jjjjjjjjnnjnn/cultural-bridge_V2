@@ -1,6 +1,6 @@
 import type { TranslationKeys } from '../types'
 
-const en: TranslationKeys = {
+const zh: TranslationKeys = {
   navHome: '首页',
   navCultures: '文化',
   navGames: '游戏',
@@ -226,18 +226,17 @@ const en: TranslationKeys = {
   masterQ23: "Which country is home to Machu Picchu?",
   masterQ24: "Angkor Wat is located in which country?",
   masterQ25: "Which country banned the sale of chewing gum?",
+
+  masterQ26: "哪个国家拥有世界上最长的栅栏？",
+  masterQ27: "哪个国家发明了方便面？",
+  masterQ28: "帕特农神庙在哪个国家？",
+  masterQ29: "哪个国家是雷鬼音乐的发源地？",
+  masterQ30: "哪个国家拥有最大的生物多样性？",
+  masterQ31: "哪个国家拥有世界最高峰？",
+  masterQ32: "哪个国家人均巧克力消费量最大？",
+  masterQ33: "哪个国家拥有最多的活火山？",
+  masterQ34: "哪个国家人均咖啡消费量最大？",
+  masterQ35: "哪个国家拥有世界上最长的海滩？",
 }
 
-  masterQ26: "Which country has the world’s longest fence?",
-  masterQ27: "Which country invented instant noodles?",
-  masterQ28: "The Parthenon is in which country?",
-  masterQ29: "Which country is the birthplace of reggae music?",
-  masterQ30: "Which country has the most biodiversity?",
-  masterQ31: "Which country has the highest mountain in the world?",
-  masterQ32: "Which country consumes the most chocolate per person?",
-  masterQ33: "Which country has the most active volcanoes?",
-  masterQ34: "Which country drinks the most coffee per person?",
-  masterQ35: "Which country has the longest beach in the world?",
-}
-
-export default en
+export default zh
