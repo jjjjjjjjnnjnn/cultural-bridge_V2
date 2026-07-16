@@ -8,12 +8,18 @@ interface SettingsState {
   lang: Lang
   theme: ThemeMode
   soundEnabled: boolean
-  hasVisited: boolean           // Has completed first-visit language selection
+  hasVisited: boolean
+  selectedAvatar: string
+  unlockedAvatars: string[]
+  expertMode: boolean
 
   setLang: (lang: Lang) => void
   setTheme: (theme: ThemeMode) => void
   toggleSound: () => void
   markVisited: () => void
+  buyAvatar: (id: string) => void
+  selectAvatar: (id: string) => void
+  toggleExpertMode: () => void
   reset: () => void
 }
 
@@ -22,6 +28,9 @@ const initialSettings = {
   theme: 'system' as ThemeMode,
   soundEnabled: true,
   hasVisited: false,
+  selectedAvatar: 'default',
+  unlockedAvatars: ['default'],
+  expertMode: false,
 }
 
 export const useSettingsStore = create<SettingsState>()(
@@ -43,6 +52,16 @@ export const useSettingsStore = create<SettingsState>()(
       toggleSound: () => set((s) => ({ soundEnabled: !s.soundEnabled })),
 
       markVisited: () => set({ hasVisited: true }),
+
+      buyAvatar: (id) =>
+        set((s) => {
+          if (s.unlockedAvatars.includes(id)) return s
+          return { unlockedAvatars: [...s.unlockedAvatars, id] }
+        }),
+
+      selectAvatar: (id) => set({ selectedAvatar: id }),
+
+      toggleExpertMode: () => set((s) => ({ expertMode: !s.expertMode })),
 
       reset: () => set({ ...initialSettings }),
     }),
