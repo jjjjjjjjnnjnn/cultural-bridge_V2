@@ -16,6 +16,12 @@ function cName(id: string | undefined, lang: string): string {
   return meta?.name?.[lang] ?? meta?.name?.en ?? id
 }
 
+const BASE = (import.meta as any).env?.BASE_URL || './'
+function imgPath(src: string | undefined): string {
+  if (!src || src.startsWith('http') || src.startsWith('.')) return src ?? ''
+  return src.startsWith('/') ? BASE + src.slice(1) : BASE + src
+}
+
 
 
 // ── Shared types ────────────────────────────────────────────
@@ -180,7 +186,7 @@ function FoodMatchGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
       <div className="flex justify-between text-sm text-gray-400"><span>{t('questionLabel')} {q + 1}/{questions.length}</span><span>{t('scoreLabel')}: {score}</span></div>
       <div className="text-center py-6 card">
         {current.img ? (
-          <img src={current.img} alt={current.food} className="w-40 h-40 object-cover rounded-2xl mx-auto mb-3 shadow-lg" />
+          <img src={imgPath(current.img)} alt={current.food} className="w-40 h-40 object-cover rounded-2xl mx-auto mb-3 shadow-lg" />
         ) : (
           <p className="text-6xl mb-3">{current.food}</p>
         )}
@@ -611,7 +617,7 @@ function LandmarkMatchGame({ onFinish }: { onFinish: (r: GameResult) => void }) 
       <div className="flex justify-between text-sm text-gray-400"><span>{t('questionLabel')} {q + 1}/{questions.length}</span><span>{t('scoreLabel')}: {score}</span></div>
       <div className="text-center py-6 card">
         {current.img ? (
-          <img src={current.img} alt={current.landmark} className="w-40 h-40 object-cover rounded-2xl mx-auto mb-3 shadow-lg" />
+          <img src={imgPath(current.img)} alt={current.landmark} className="w-40 h-40 object-cover rounded-2xl mx-auto mb-3 shadow-lg" />
         ) : (
           <p className="text-6xl mb-3">{current.landmark}</p>
         )}

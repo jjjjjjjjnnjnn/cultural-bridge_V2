@@ -6,12 +6,18 @@ function local(text: Record<string, string>, lang: Lang, fallback = ''): string 
   return text[lang] ?? text.en ?? fallback
 }
 
+function imgPath(src: string): string {
+  if (src.startsWith('http') || src.startsWith('.')) return src
+  const base = import.meta.env.BASE_URL ?? './'
+  return src.startsWith('/') ? `${base}${src.slice(1)}` : `${base}${src}`
+}
+
 // ── Image with emoji fallback ───────────────────────────────
 function ImageWithFallback({ src, emoji, alt, className }: { src: string; emoji: string; alt: string; className?: string }) {
   return (
     <div className={`relative overflow-hidden rounded-xl bg-gray-100 dark:bg-cool-800 ${className ?? ''}`}>
       <img
-        src={src}
+        src={imgPath(src)}
         alt={alt}
         loading="lazy"
         className="w-full h-full object-cover"
