@@ -192,6 +192,13 @@ export interface TranslationKeys {
   confirm: string
   offlineBanner: string
   installPrompt: string
+  achievementUnlocked: string
+  unlockedDate: string
+  xpAbbreviation: string
+  gamesPlayedCount: string
+  startLabel: string
+  bossLabel: string
+  flagQuestion: string
 
   // ── Audio ──────────────────────────────────────────────
   listenPronunciation: string
@@ -206,6 +213,7 @@ export interface TranslationKeys {
   biasQ16: string; biasQ17: string; biasQ18: string
   biasQ19: string; biasQ20: string; biasQ21: string
   biasQ22: string; biasQ23: string; biasQ24: string
+  biasQ25: string
   masterQ1: string; masterQ2: string; masterQ3: string
   masterQ4: string; masterQ5: string; masterQ6: string
   masterQ7: string; masterQ8: string; masterQ9: string
@@ -225,4 +233,6 @@ export interface TranslationKeys {
   masterQ33: string
   masterQ34: string
   masterQ35: string
+  masterQ36: string
+  masterQ37: string
 }

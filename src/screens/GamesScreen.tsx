@@ -12,7 +12,7 @@ export function GamesScreen() {
       <h1 className="text-2xl font-bold font-fredoka">{t('gamesTitle')}</h1>
       <p className="text-gray-500 dark:text-gray-400 text-sm -mt-2">
         {t('gamesDesc')}{' '}
-        <span className="text-coral-500 font-semibold">{totalGamesPlayed} played</span>
+        <span className="text-coral-500 font-semibold">{t('gamesPlayedCount').replace('{count}', String(totalGamesPlayed))}</span>
       </p>
 
       {/* Duolingo-style path */}
@@ -49,8 +49,8 @@ export function GamesScreen() {
                 </div>
                 <div className="flex flex-col items-center shrink-0">
                   <span className="text-lg text-gray-300 dark:text-gray-600 group-hover:text-coral-500 transition-colors">→</span>
-                  {idx === 0 && <span className="text-[10px] text-coral-500 font-semibold">START</span>}
-                  {idx === GAME_DEFS.length - 1 && <span className="text-[10px] text-purple-500 font-semibold">BOSS</span>}
+                  {idx === 0 && <span className="text-[10px] text-coral-500 font-semibold">{t('startLabel')}</span>}
+                  {idx === GAME_DEFS.length - 1 && <span className="text-[10px] text-purple-500 font-semibold">{t('bossLabel')}</span>}
                 </div>
               </div>
             </Link>

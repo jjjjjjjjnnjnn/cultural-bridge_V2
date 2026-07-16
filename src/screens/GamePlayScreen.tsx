@@ -139,18 +139,18 @@ const FOOD_QA = [
 ]
 
 const FOOD_QA_EXTRA = [
-  { food: '🥟 Pierogi', cultureId: 'poland' },
-  { food: '🫓 Injera', cultureId: 'ethiopia' },
-  { food: '🥙 Shawarma', cultureId: 'lebanon' },
-  { food: '🥬 Kimchi', cultureId: 'korea' },
-  { food: '🍲 Feijoada', cultureId: 'brazil' },
-  { food: '🥟 Empanada', cultureId: 'argentina' },
-  { food: '🍛 Bunny Chow', cultureId: 'southafrica' },
-  { food: '🥖 Baguette', cultureId: 'france' },
-  { food: '🥣 Borscht', cultureId: 'ukraine' },
-  { food: '🍚 Hainanese Chicken Rice', culture: 'Singapore' },
-  { food: '🥘 Couscous', cultureId: 'morocco' },
-  { food: '🍰 Pavlova', cultureId: 'newzealand' },
+  { food: '🥟 Pierogi', cultureId: 'poland', img: '/images/games/food/food-pierogi.jpg' },
+  { food: '🫓 Injera', cultureId: 'ethiopia', img: '/images/games/food/food-injera.jpg' },
+  { food: '🥙 Shawarma', cultureId: 'lebanon', img: '/images/games/food/food-shawarma.jpg' },
+  { food: '🥬 Kimchi', cultureId: 'korea', img: '/images/games/food/food-kimchi.jpg' },
+  { food: '🍲 Feijoada', cultureId: 'brazil', img: '/images/games/food/food-feijoada.jpg' },
+  { food: '🥟 Empanada', cultureId: 'argentina', img: '/images/games/food/food-empanada.jpg' },
+  { food: '🍛 Bunny Chow', cultureId: 'southafrica', img: '/images/games/food/food-bunny-chow.jpg' },
+  { food: '🥖 Baguette', cultureId: 'france', img: '/images/games/food/food-baguette.jpg' },
+  { food: '🥣 Borscht', cultureId: 'ukraine', img: '/images/games/food/food-borscht.jpg' },
+  { food: '🍚 Hainanese Chicken Rice', culture: 'Singapore', img: '/images/games/food/food-hainanese-rice.jpg' },
+  { food: '🥘 Couscous', cultureId: 'morocco', img: '/images/games/food/food-couscous.jpg' },
+  { food: '🍰 Pavlova', cultureId: 'newzealand', img: '/images/games/food/food-pavlova.jpg' },
 ]
 
 function FoodMatchGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
@@ -232,7 +232,7 @@ const BIAS_QA_EXTRA = [
   { statementKey: 'biasQ16', statement: 'All Canadians live in igloos', answer: 'myth' },
   { statementKey: 'biasQ23', emoji: '🍁', statement: 'Canada has over 600 Indigenous First Nation communities', answer: 'fact' },
   { statementKey: 'biasQ17', statement: 'All Australians are surfers', answer: 'myth' },
-  { statement: 'Australia has over 250 Indigenous language groups', answer: 'fact' },
+  { statementKey: 'biasQ25', emoji: '🦘', statement: 'Australia has over 250 Indigenous language groups', answer: 'fact' },
   { statementKey: 'biasQ18', statement: 'All Scandinavian countries use the same language', answer: 'myth' },
   { statementKey: 'biasQ24', emoji: '💰', statement: 'Norway has the world’s largest sovereign wealth fund', answer: 'fact' },
 ]
@@ -422,16 +422,16 @@ const MASTER_QA_EXTRA = [
   { qKey: 'masterQ13', q: '📷 The Great Wall of China is visible from where?', a: 'Low Earth orbit', opts: ['The Moon', 'Low Earth orbit', 'Mars', 'Venus'] },
   { qKey: 'masterQ14', q: '🏛 Which country has the most UNESCO World Heritage Sites?', a: 'Italy', opts: ['China', 'France', 'Italy', 'Spain'] },
   { qKey: 'masterQ15', q: '🎉 Which country celebrates Nowruz (Persian New Year)?', a: 'Iran', opts: ['Turkey', 'Iraq', 'Iran', 'Pakistan'] },
-  { q: 'Which Nordic country has the most islands?', a: 'Sweden', opts: ['Norway', 'Finland', 'Sweden', 'Denmark'] },
-  { q: 'Which country is the largest archipelago in the world?', a: 'Indonesia', opts: ['Philippines', 'Japan', 'Indonesia', 'Malaysia'] },
+  { qKey: 'masterQ36', q: 'Which Nordic country has the most islands?', a: 'Sweden', opts: ['Norway', 'Finland', 'Sweden', 'Denmark'] },
+  { qKey: 'masterQ16', q: 'Which country is the largest archipelago in the world?', a: 'Indonesia', opts: ['Philippines', 'Japan', 'Indonesia', 'Malaysia'] },
   { qKey: 'masterQ17', q: '🦠 The Great Sphinx is located in which country?', a: 'Egypt', opts: ['Greece', 'Egypt', 'Jordan', 'Turkey'] },
   { qKey: 'masterQ18', q: '☕ Which country is the origin of coffee?', a: 'Ethiopia', opts: ['Brazil', 'Colombia', 'Vietnam', 'Ethiopia'] },
-  { q: 'Machu Picchu is in which country?', a: 'Peru', opts: ['Bolivia', 'Peru', 'Chile', 'Ecuador'] },
-  { q: 'Which country has the largest population of Muslims?', a: 'Indonesia', opts: ['Saudi Arabia', 'Indonesia', 'Pakistan', 'India'] },
+  { qKey: 'masterQ37', q: 'Machu Picchu is in which country?', a: 'Peru', opts: ['Bolivia', 'Peru', 'Chile', 'Ecuador'] },
+  { qKey: 'masterQ19', q: 'Which country has the largest population of Muslims?', a: 'Indonesia', opts: ['Saudi Arabia', 'Indonesia', 'Pakistan', 'India'] },
   { qKey: 'masterQ24', q: '🌍 Angkor Wat is located in which country?', a: 'Cambodia', opts: ['Thailand', 'Vietnam', 'Cambodia', 'Laos'] },
   { qKey: 'masterQ20', q: '🌍 Which country has the most official languages?', a: 'South Africa', opts: ['India', 'South Africa', 'Switzerland', 'Nigeria'] },
   { qKey: 'masterQ21', q: '🏛 The ancient city of Petra is in which country?', a: 'Jordan', opts: ['Egypt', 'Jordan', 'Israel', 'Saudi Arabia'] },
-  { q: 'Which country has the longest coastline in the world?', a: 'Canada', opts: ['Australia', 'Canada', 'Russia', 'Indonesia'] },
+  { qKey: 'masterQ22', q: 'Which country has the longest coastline in the world?', a: 'Canada', opts: ['Australia', 'Canada', 'Russia', 'Indonesia'] },
 ]
 
 
@@ -507,7 +507,7 @@ function SpeedRound({ onFinish }: { onFinish: (r: GameResult) => void }) {
   const [finished, setFinished] = useState(false)
 
   const questions = useMemo(() => {
-    const all = CULTURE_META.map((c) => ({ q: 'Which country has this flag? ' + c.flag, a: c.name.en ?? c.id, opts: shuffle([c.name.en ?? c.id, ...pickWrong(c.name.en ?? c.id, CULTURE_META.map((x) => x.name.en ?? x.id), 3)]) }))
+    const all = CULTURE_META.map((c) => ({ q: t('flagQuestion') + ' ' + c.flag, a: c.name.en ?? c.id, opts: shuffle([c.name.en ?? c.id, ...pickWrong(c.name.en ?? c.id, CULTURE_META.map((x) => x.name.en ?? x.id), 3)]) }))
     return shuffle(all).slice(0, 10)
   }, [])
 
@@ -574,14 +574,14 @@ const LANDMARK_QA = [
 ]
 
 const LANDMARK_QA_EXTRA = [
-  { landmark: '🏛️ Parthenon', cultureId: 'greece' },
-  { landmark: '🕍 Angkor Wat', cultureId: 'cambodia' },
-  { landmark: '🏯 Forbidden City', cultureId: 'china' },
-  { landmark: '🕌 Petra', cultureId: 'jordan' },
-  { landmark: '🏰 Neuschwanstein Castle', cultureId: 'germany' },
-  { landmark: '🕌 Hagia Sophia', cultureId: 'turkey' },
-  { landmark: '🗿 Moai Statues', cultureId: 'chile' },
-  { landmark: '🗿 Stonehenge', cultureId: 'uk' },
+  { landmark: '🏛️ Parthenon', cultureId: 'greece', img: '/images/games/landmarks/landmark-parthenon.jpg' },
+  { landmark: '🕍 Angkor Wat', cultureId: 'cambodia', img: '/images/games/landmarks/landmark-angkor-wat.jpg' },
+  { landmark: '🏯 Forbidden City', cultureId: 'china', img: '/images/games/landmarks/landmark-forbidden-city.jpg' },
+  { landmark: '🕌 Petra', cultureId: 'jordan', img: '/images/games/landmarks/landmark-petra.jpg' },
+  { landmark: '🏰 Neuschwanstein Castle', cultureId: 'germany', img: '/images/games/landmarks/landmark-neuschwanstein.jpg' },
+  { landmark: '🕌 Hagia Sophia', cultureId: 'turkey', img: '/images/games/landmarks/landmark-hagia-sophia.jpg' },
+  { landmark: '🗿 Moai Statues', cultureId: 'chile', img: '/images/games/landmarks/landmark-moai.jpg' },
+  { landmark: '🗿 Stonehenge', cultureId: 'uk', img: '/images/games/landmarks/landmark-stonehenge.jpg' },
 ]
 
 function LandmarkMatchGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
@@ -655,7 +655,7 @@ function ResultScreen({ result, onReplay }: { result: GameResult; gameId: string
       <div className="grid grid-cols-3 gap-3 mt-4">
         <div className="p-3"><p className="text-3xl font-bold gradient-text">{result.score}/{result.total}</p><p className="text-xs text-gray-400 mt-1">{t('scoreLabel')}</p></div>
         <div className="p-3"><p className="text-3xl font-bold text-teal-500">{result.accuracy}%</p><p className="text-xs text-gray-400 mt-1">{t('resultAccuracy')}</p></div>
-        <div className="p-3"><p className="text-3xl font-bold text-purple-500">+{result.xp}</p><p className="text-xs text-gray-400 mt-1">XP</p></div>
+        <div className="p-3"><p className="text-3xl font-bold text-purple-500">+{result.xp}</p><p className="text-xs text-gray-400 mt-1">{t('xpAbbreviation')}</p></div>
       </div>
       {result.timeMs && <p className="text-sm text-gray-400">⏱ {(result.timeMs / 1000).toFixed(1)}s</p>}
       {result.streak > 2 && <p className="text-sm text-coral-500">🔥 {t('resultStreak')}: {result.streak}</p>}

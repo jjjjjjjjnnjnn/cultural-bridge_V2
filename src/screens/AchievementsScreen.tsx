@@ -35,7 +35,7 @@ export function AchievementsScreen() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
           />
         </div>
-        <p className="text-xs text-gray-400 mt-2 text-center">Level {level} · {xp} XP</p>
+        <p className="text-xs text-gray-400 mt-2 text-center">{t('profileLevel')} {level} · {xp} {t('xpAbbreviation')}</p>
       </div>
 
       {/* Achievement grid */}
@@ -68,7 +68,7 @@ export function AchievementsScreen() {
                   </p>
                   {dateStr && (
                     <p className="text-[10px] text-coral-400 mt-1">
-                      Unlocked {dateStr}
+                      {t('unlockedDate').replace('{date}', dateStr)}
                     </p>
                   )}
                 </div>
