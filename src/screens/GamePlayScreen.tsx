@@ -202,17 +202,17 @@ const BIAS_QA = [
 
 const BIAS_QA_EXTRA = [
   { statementKey: 'biasQ13', statement: 'All Africans live in huts', answer: 'myth' },
-  { statement: 'Nigeria has the largest film industry (Nollywood) in Africa', answer: 'fact' },
-  { statement: 'All Middle Eastern people are Arab', answer: 'myth' },
-  { statement: 'Iran and Saudi Arabia share no land border but are major cultural regions', answer: 'fact' },
+  { statementKey: 'biasQ19', emoji: '🎬', statement: 'Nigeria has the largest film industry (Nollywood) in Africa', answer: 'fact' },
+  { statementKey: 'biasQ20', emoji: '🌍', statement: 'All Middle Eastern people are Arab', answer: 'myth' },
+  { statementKey: 'biasQ21', emoji: '🗺️', statement: 'Iran and Saudi Arabia share no land border but are major cultural regions', answer: 'fact' },
   { statementKey: 'biasQ15', statement: 'All Russians drink vodka every day', answer: 'myth' },
-  { statement: 'Lake Baikal in Russia is the deepest lake in the world', answer: 'fact' },
+  { statementKey: 'biasQ22', emoji: '🌊', statement: 'Lake Baikal in Russia is the deepest lake in the world', answer: 'fact' },
   { statementKey: 'biasQ16', statement: 'All Canadians live in igloos', answer: 'myth' },
-  { statement: 'Canada has over 600 Indigenous First Nation communities', answer: 'fact' },
+  { statementKey: 'biasQ23', emoji: '🍁', statement: 'Canada has over 600 Indigenous First Nation communities', answer: 'fact' },
   { statementKey: 'biasQ17', statement: 'All Australians are surfers', answer: 'myth' },
   { statement: 'Australia has over 250 Indigenous language groups', answer: 'fact' },
   { statementKey: 'biasQ18', statement: 'All Scandinavian countries use the same language', answer: 'myth' },
-  { statement: 'Norway has the world’s largest sovereign wealth fund', answer: 'fact' },
+  { statementKey: 'biasQ24', emoji: '💰', statement: 'Norway has the world’s largest sovereign wealth fund', answer: 'fact' },
 ]
 
 function BiasGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
@@ -382,33 +382,33 @@ function FlagQuiz({ onFinish }: { onFinish: (r: GameResult) => void }) {
 
 // ── Culture Master (mixed quiz) ─────────────────────────────
 const MASTER_QA = [
-  { qKey: 'masterQ1', q: 'Which country has over 1.4 billion people?', a: 'China', opts: ['India', 'China', 'USA', 'Russia'] },
-  { qKey: 'masterQ2', q: 'Which country invented paper and gunpowder?', a: 'China', opts: ['Japan', 'China', 'Germany', 'Italy'] },
-  { qKey: 'masterQ3', q: 'Mount Fuji is in which country?', a: 'Japan', opts: ['South Korea', 'Japan', 'China', 'Thailand'] },
-  { qKey: 'masterQ4', q: 'Which country has the Eiffel Tower?', a: 'France', opts: ['UK', 'Italy', 'France', 'Spain'] },
-  { qKey: 'masterQ5', q: 'The Colosseum is in which country?', a: 'Italy', opts: ['Greece', 'Italy', 'Spain', 'Turkey'] },
-  { qKey: 'masterQ6', q: 'Taj Mahal is in which country?', a: 'India', opts: ['Pakistan', 'India', 'UAE', 'Egypt'] },
-  { qKey: 'masterQ7', q: 'Which country is known for tango?', a: 'Argentina', opts: ['Brazil', 'Spain', 'Argentina', 'Mexico'] },
-  { qKey: 'masterQ8', q: 'Kangaroos are native to which country?', a: 'Australia', opts: ['New Zealand', 'Australia', 'South Africa', 'USA'] },
-  { qKey: 'masterQ9', q: 'Which country has the most pyramids?', a: 'Egypt', opts: ['Mexico', 'Egypt', 'Peru', 'India'] },
-  { qKey: 'masterQ10', q: 'Oktoberfest is held in which country?', a: 'Germany', opts: ['Austria', 'Switzerland', 'Germany', 'Czech Republic'] },
+  { qKey: 'masterQ1', q: '👥 Which country has over 1.4 billion people?', a: 'China', opts: ['India', 'China', 'USA', 'Russia'] },
+  { qKey: 'masterQ2', q: '📖 Which country invented paper and gunpowder?', a: 'China', opts: ['Japan', 'China', 'Germany', 'Italy'] },
+  { qKey: 'masterQ3', q: '⛰ Mount Fuji is in which country?', a: 'Japan', opts: ['South Korea', 'Japan', 'China', 'Thailand'] },
+  { qKey: 'masterQ4', q: '💯 Which country has the Eiffel Tower?', a: 'France', opts: ['UK', 'Italy', 'France', 'Spain'] },
+  { qKey: 'masterQ5', q: '🏛 The Colosseum is in which country?', a: 'Italy', opts: ['Greece', 'Italy', 'Spain', 'Turkey'] },
+  { qKey: 'masterQ6', q: '👑 Taj Mahal is in which country?', a: 'India', opts: ['Pakistan', 'India', 'UAE', 'Egypt'] },
+  { qKey: 'masterQ7', q: '🕺 Which country is known for tango?', a: 'Argentina', opts: ['Brazil', 'Spain', 'Argentina', 'Mexico'] },
+  { qKey: 'masterQ8', q: '🦇 Kangaroos are native to which country?', a: 'Australia', opts: ['New Zealand', 'Australia', 'South Africa', 'USA'] },
+  { qKey: 'masterQ9', q: '⭐ Which country has the most pyramids?', a: 'Egypt', opts: ['Mexico', 'Egypt', 'Peru', 'India'] },
+  { qKey: 'masterQ10', q: '🍺 Oktoberfest is held in which country?', a: 'Germany', opts: ['Austria', 'Switzerland', 'Germany', 'Czech Republic'] },
 ]
 
 const MASTER_QA_EXTRA = [
-  { qKey: 'masterQ11', q: 'Which country is home to the Amazon River?', a: 'Brazil', opts: ['Colombia', 'Brazil', 'Peru', 'Venezuela'] },
-  { qKey: 'masterQ12', q: 'Which country invented pizza?', a: 'Italy', opts: ['France', 'Spain', 'Italy', 'Greece'] },
-  { qKey: 'masterQ13', q: 'The Great Wall of China is visible from where?', a: 'Low Earth orbit', opts: ['The Moon', 'Low Earth orbit', 'Mars', 'Venus'] },
-  { qKey: 'masterQ14', q: 'Which country has the most UNESCO World Heritage Sites?', a: 'Italy', opts: ['China', 'France', 'Italy', 'Spain'] },
-  { qKey: 'masterQ15', q: 'Which country celebrates Nowruz (Persian New Year)?', a: 'Iran', opts: ['Turkey', 'Iraq', 'Iran', 'Pakistan'] },
+  { qKey: 'masterQ11', q: '🌊 Which country is home to the Amazon River?', a: 'Brazil', opts: ['Colombia', 'Brazil', 'Peru', 'Venezuela'] },
+  { qKey: 'masterQ12', q: '🍕 Which country invented pizza?', a: 'Italy', opts: ['France', 'Spain', 'Italy', 'Greece'] },
+  { qKey: 'masterQ13', q: '📷 The Great Wall of China is visible from where?', a: 'Low Earth orbit', opts: ['The Moon', 'Low Earth orbit', 'Mars', 'Venus'] },
+  { qKey: 'masterQ14', q: '🏛 Which country has the most UNESCO World Heritage Sites?', a: 'Italy', opts: ['China', 'France', 'Italy', 'Spain'] },
+  { qKey: 'masterQ15', q: '🎉 Which country celebrates Nowruz (Persian New Year)?', a: 'Iran', opts: ['Turkey', 'Iraq', 'Iran', 'Pakistan'] },
   { q: 'Which Nordic country has the most islands?', a: 'Sweden', opts: ['Norway', 'Finland', 'Sweden', 'Denmark'] },
   { q: 'Which country is the largest archipelago in the world?', a: 'Indonesia', opts: ['Philippines', 'Japan', 'Indonesia', 'Malaysia'] },
-  { qKey: 'masterQ17', q: 'The Great Sphinx is located in which country?', a: 'Egypt', opts: ['Greece', 'Egypt', 'Jordan', 'Turkey'] },
-  { qKey: 'masterQ18', q: 'Which country is the origin of coffee?', a: 'Ethiopia', opts: ['Brazil', 'Colombia', 'Vietnam', 'Ethiopia'] },
+  { qKey: 'masterQ17', q: '🦠 The Great Sphinx is located in which country?', a: 'Egypt', opts: ['Greece', 'Egypt', 'Jordan', 'Turkey'] },
+  { qKey: 'masterQ18', q: '☕ Which country is the origin of coffee?', a: 'Ethiopia', opts: ['Brazil', 'Colombia', 'Vietnam', 'Ethiopia'] },
   { q: 'Machu Picchu is in which country?', a: 'Peru', opts: ['Bolivia', 'Peru', 'Chile', 'Ecuador'] },
   { q: 'Which country has the largest population of Muslims?', a: 'Indonesia', opts: ['Saudi Arabia', 'Indonesia', 'Pakistan', 'India'] },
-  { qKey: 'masterQ24', q: 'Angkor Wat is located in which country?', a: 'Cambodia', opts: ['Thailand', 'Vietnam', 'Cambodia', 'Laos'] },
-  { qKey: 'masterQ20', q: 'Which country has the most official languages?', a: 'South Africa', opts: ['India', 'South Africa', 'Switzerland', 'Nigeria'] },
-  { qKey: 'masterQ21', q: 'The ancient city of Petra is in which country?', a: 'Jordan', opts: ['Egypt', 'Jordan', 'Israel', 'Saudi Arabia'] },
+  { qKey: 'masterQ24', q: '🌍 Angkor Wat is located in which country?', a: 'Cambodia', opts: ['Thailand', 'Vietnam', 'Cambodia', 'Laos'] },
+  { qKey: 'masterQ20', q: '🌍 Which country has the most official languages?', a: 'South Africa', opts: ['India', 'South Africa', 'Switzerland', 'Nigeria'] },
+  { qKey: 'masterQ21', q: '🏛 The ancient city of Petra is in which country?', a: 'Jordan', opts: ['Egypt', 'Jordan', 'Israel', 'Saudi Arabia'] },
   { q: 'Which country has the longest coastline in the world?', a: 'Canada', opts: ['Australia', 'Canada', 'Russia', 'Indonesia'] },
 ]
 

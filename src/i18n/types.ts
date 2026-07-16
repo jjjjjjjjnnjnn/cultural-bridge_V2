@@ -196,6 +196,8 @@ export interface TranslationKeys {
   biasQ10: string; biasQ11: string; biasQ12: string
   biasQ13: string; biasQ14: string; biasQ15: string
   biasQ16: string; biasQ17: string; biasQ18: string
+  biasQ19: string; biasQ20: string; biasQ21: string
+  biasQ22: string; biasQ23: string; biasQ24: string
   masterQ1: string; masterQ2: string; masterQ3: string
   masterQ4: string; masterQ5: string; masterQ6: string
   masterQ7: string; masterQ8: string; masterQ9: string
