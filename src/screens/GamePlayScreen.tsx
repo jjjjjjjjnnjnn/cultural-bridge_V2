@@ -186,32 +186,32 @@ function FoodMatchGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
 
 // ── Myth/Fact Game ──────────────────────────────────────────
 const BIAS_QA = [
-  { statement: 'All Chinese people know kung fu', answer: 'myth' },
-  { statement: 'China has 56 officially recognized ethnic groups', answer: 'fact' },
-  { statement: 'All Germans drink beer every day', answer: 'myth' },
-  { statement: 'Germany has over 1,500 types of sausage', answer: 'fact' },
-  { statement: 'Everyone in Spain takes a siesta every afternoon', answer: 'myth' },
-  { statement: 'France is the most visited country in the world', answer: 'fact' },
-  { statement: 'All Italians speak with their hands', answer: 'myth' },
-  { statement: 'India has 22 official languages', answer: 'fact' },
-  { statement: 'All Brazilians play soccer', answer: 'myth' },
-  { statement: 'Turkey is on two continents', answer: 'fact' },
-  { statement: 'All Japanese people bow to greet', answer: 'myth' },
-  { statement: 'South Korea has the fastest internet in the world', answer: 'fact' },
+  { statementKey: 'biasQ1', statement: 'All Chinese people know kung fu', answer: 'myth' },
+  { statementKey: 'biasQ2', statement: 'China has 56 officially recognized ethnic groups', answer: 'fact' },
+  { statementKey: 'biasQ3', statement: 'All Germans drink beer every day', answer: 'myth' },
+  { statementKey: 'biasQ4', statement: 'Germany has over 1,500 types of sausage', answer: 'fact' },
+  { statementKey: 'biasQ5', statement: 'Everyone in Spain takes a siesta every afternoon', answer: 'myth' },
+  { statementKey: 'biasQ6', statement: 'France is the most visited country in the world', answer: 'fact' },
+  { statementKey: 'biasQ7', statement: 'All Italians speak with their hands', answer: 'myth' },
+  { statementKey: 'biasQ8', statement: 'India has 22 official languages', answer: 'fact' },
+  { statementKey: 'biasQ9', statement: 'All Brazilians play soccer', answer: 'myth' },
+  { statementKey: 'biasQ10', statement: 'Turkey is on two continents', answer: 'fact' },
+  { statementKey: 'biasQ11', statement: 'All Japanese people bow to greet', answer: 'myth' },
+  { statementKey: 'biasQ12', statement: 'South Korea has the fastest internet in the world', answer: 'fact' },
 ]
 
 const BIAS_QA_EXTRA = [
-  { statement: 'All Africans live in huts', answer: 'myth' },
+  { statementKey: 'biasQ13', statement: 'All Africans live in huts', answer: 'myth' },
   { statement: 'Nigeria has the largest film industry (Nollywood) in Africa', answer: 'fact' },
   { statement: 'All Middle Eastern people are Arab', answer: 'myth' },
   { statement: 'Iran and Saudi Arabia share no land border but are major cultural regions', answer: 'fact' },
-  { statement: 'All Russians drink vodka every day', answer: 'myth' },
+  { statementKey: 'biasQ15', statement: 'All Russians drink vodka every day', answer: 'myth' },
   { statement: 'Lake Baikal in Russia is the deepest lake in the world', answer: 'fact' },
-  { statement: 'All Canadians live in igloos', answer: 'myth' },
+  { statementKey: 'biasQ16', statement: 'All Canadians live in igloos', answer: 'myth' },
   { statement: 'Canada has over 600 Indigenous First Nation communities', answer: 'fact' },
-  { statement: 'All Australians are surfers', answer: 'myth' },
+  { statementKey: 'biasQ17', statement: 'All Australians are surfers', answer: 'myth' },
   { statement: 'Australia has over 250 Indigenous language groups', answer: 'fact' },
-  { statement: 'All Scandinavian countries use the same language', answer: 'myth' },
+  { statementKey: 'biasQ18', statement: 'All Scandinavian countries use the same language', answer: 'myth' },
   { statement: 'Norway has the world’s largest sovereign wealth fund', answer: 'fact' },
 ]
 
@@ -247,7 +247,7 @@ function BiasGame({ onFinish }: { onFinish: (r: GameResult) => void }) {
   return (
     <div className="space-y-4">
       <div className="flex justify-between text-sm text-gray-400"><span>{t('questionLabel')} {q + 1}/{questions.length}</span><span>{t('scoreLabel')}: {score}</span><span className="text-coral-500">🔥 {streak}</span></div>
-      <div className="text-center py-8 card"><p className="text-lg font-semibold">"{current.statement}"</p><p className="text-sm text-gray-500 mt-3">{t('gameMythFactDesc')}</p></div>
+      <div className="text-center py-8 card"><p className="text-lg font-semibold">'{current.statement}'</p><p className="text-sm text-gray-500 mt-3">{t('gameMythFactDesc')}</p></div>
       <div className="grid grid-cols-2 gap-3">
         {['myth', 'fact'].map((ans) => {
           let cls = 'bg-white dark:bg-cool-800 border-2 border-gray-200 dark:border-gray-700'
@@ -382,33 +382,33 @@ function FlagQuiz({ onFinish }: { onFinish: (r: GameResult) => void }) {
 
 // ── Culture Master (mixed quiz) ─────────────────────────────
 const MASTER_QA = [
-  { q: 'Which country has over 1.4 billion people?', a: 'China', opts: ['India', 'China', 'USA', 'Russia'] },
-  { q: 'Which country invented paper and gunpowder?', a: 'China', opts: ['Japan', 'China', 'Germany', 'Italy'] },
-  { q: 'Mount Fuji is in which country?', a: 'Japan', opts: ['South Korea', 'Japan', 'China', 'Thailand'] },
-  { q: 'Which country has the Eiffel Tower?', a: 'France', opts: ['UK', 'Italy', 'France', 'Spain'] },
-  { q: 'The Colosseum is in which country?', a: 'Italy', opts: ['Greece', 'Italy', 'Spain', 'Turkey'] },
-  { q: 'Taj Mahal is in which country?', a: 'India', opts: ['Pakistan', 'India', 'UAE', 'Egypt'] },
-  { q: 'Which country is known for tango?', a: 'Argentina', opts: ['Brazil', 'Spain', 'Argentina', 'Mexico'] },
-  { q: 'Kangaroos are native to which country?', a: 'Australia', opts: ['New Zealand', 'Australia', 'South Africa', 'USA'] },
-  { q: 'Which country has the most pyramids?', a: 'Egypt', opts: ['Mexico', 'Egypt', 'Peru', 'India'] },
-  { q: 'Oktoberfest is held in which country?', a: 'Germany', opts: ['Austria', 'Switzerland', 'Germany', 'Czech Republic'] },
+  { qKey: 'masterQ1', q: 'Which country has over 1.4 billion people?', a: 'China', opts: ['India', 'China', 'USA', 'Russia'] },
+  { qKey: 'masterQ2', q: 'Which country invented paper and gunpowder?', a: 'China', opts: ['Japan', 'China', 'Germany', 'Italy'] },
+  { qKey: 'masterQ3', q: 'Mount Fuji is in which country?', a: 'Japan', opts: ['South Korea', 'Japan', 'China', 'Thailand'] },
+  { qKey: 'masterQ4', q: 'Which country has the Eiffel Tower?', a: 'France', opts: ['UK', 'Italy', 'France', 'Spain'] },
+  { qKey: 'masterQ5', q: 'The Colosseum is in which country?', a: 'Italy', opts: ['Greece', 'Italy', 'Spain', 'Turkey'] },
+  { qKey: 'masterQ6', q: 'Taj Mahal is in which country?', a: 'India', opts: ['Pakistan', 'India', 'UAE', 'Egypt'] },
+  { qKey: 'masterQ7', q: 'Which country is known for tango?', a: 'Argentina', opts: ['Brazil', 'Spain', 'Argentina', 'Mexico'] },
+  { qKey: 'masterQ8', q: 'Kangaroos are native to which country?', a: 'Australia', opts: ['New Zealand', 'Australia', 'South Africa', 'USA'] },
+  { qKey: 'masterQ9', q: 'Which country has the most pyramids?', a: 'Egypt', opts: ['Mexico', 'Egypt', 'Peru', 'India'] },
+  { qKey: 'masterQ10', q: 'Oktoberfest is held in which country?', a: 'Germany', opts: ['Austria', 'Switzerland', 'Germany', 'Czech Republic'] },
 ]
 
 const MASTER_QA_EXTRA = [
-  { q: 'Which country is home to the Amazon River?', a: 'Brazil', opts: ['Colombia', 'Brazil', 'Peru', 'Venezuela'] },
-  { q: 'Which country invented pizza?', a: 'Italy', opts: ['France', 'Spain', 'Italy', 'Greece'] },
-  { q: 'The Great Wall of China is visible from where?', a: 'Low Earth orbit', opts: ['The Moon', 'Low Earth orbit', 'Mars', 'Venus'] },
-  { q: 'Which country has the most UNESCO World Heritage Sites?', a: 'Italy', opts: ['China', 'France', 'Italy', 'Spain'] },
-  { q: 'Which country celebrates Nowruz (Persian New Year)?', a: 'Iran', opts: ['Turkey', 'Iraq', 'Iran', 'Pakistan'] },
+  { qKey: 'masterQ11', q: 'Which country is home to the Amazon River?', a: 'Brazil', opts: ['Colombia', 'Brazil', 'Peru', 'Venezuela'] },
+  { qKey: 'masterQ12', q: 'Which country invented pizza?', a: 'Italy', opts: ['France', 'Spain', 'Italy', 'Greece'] },
+  { qKey: 'masterQ13', q: 'The Great Wall of China is visible from where?', a: 'Low Earth orbit', opts: ['The Moon', 'Low Earth orbit', 'Mars', 'Venus'] },
+  { qKey: 'masterQ14', q: 'Which country has the most UNESCO World Heritage Sites?', a: 'Italy', opts: ['China', 'France', 'Italy', 'Spain'] },
+  { qKey: 'masterQ15', q: 'Which country celebrates Nowruz (Persian New Year)?', a: 'Iran', opts: ['Turkey', 'Iraq', 'Iran', 'Pakistan'] },
   { q: 'Which Nordic country has the most islands?', a: 'Sweden', opts: ['Norway', 'Finland', 'Sweden', 'Denmark'] },
   { q: 'Which country is the largest archipelago in the world?', a: 'Indonesia', opts: ['Philippines', 'Japan', 'Indonesia', 'Malaysia'] },
-  { q: 'The Great Sphinx is located in which country?', a: 'Egypt', opts: ['Greece', 'Egypt', 'Jordan', 'Turkey'] },
-  { q: 'Which country is the origin of coffee?', a: 'Ethiopia', opts: ['Brazil', 'Colombia', 'Vietnam', 'Ethiopia'] },
+  { qKey: 'masterQ17', q: 'The Great Sphinx is located in which country?', a: 'Egypt', opts: ['Greece', 'Egypt', 'Jordan', 'Turkey'] },
+  { qKey: 'masterQ18', q: 'Which country is the origin of coffee?', a: 'Ethiopia', opts: ['Brazil', 'Colombia', 'Vietnam', 'Ethiopia'] },
   { q: 'Machu Picchu is in which country?', a: 'Peru', opts: ['Bolivia', 'Peru', 'Chile', 'Ecuador'] },
   { q: 'Which country has the largest population of Muslims?', a: 'Indonesia', opts: ['Saudi Arabia', 'Indonesia', 'Pakistan', 'India'] },
-  { q: 'Angkor Wat is located in which country?', a: 'Cambodia', opts: ['Thailand', 'Vietnam', 'Cambodia', 'Laos'] },
-  { q: 'Which country has the most official languages?', a: 'South Africa', opts: ['India', 'South Africa', 'Switzerland', 'Nigeria'] },
-  { q: 'The ancient city of Petra is in which country?', a: 'Jordan', opts: ['Egypt', 'Jordan', 'Israel', 'Saudi Arabia'] },
+  { qKey: 'masterQ24', q: 'Angkor Wat is located in which country?', a: 'Cambodia', opts: ['Thailand', 'Vietnam', 'Cambodia', 'Laos'] },
+  { qKey: 'masterQ20', q: 'Which country has the most official languages?', a: 'South Africa', opts: ['India', 'South Africa', 'Switzerland', 'Nigeria'] },
+  { qKey: 'masterQ21', q: 'The ancient city of Petra is in which country?', a: 'Jordan', opts: ['Egypt', 'Jordan', 'Israel', 'Saudi Arabia'] },
   { q: 'Which country has the longest coastline in the world?', a: 'Canada', opts: ['Australia', 'Canada', 'Russia', 'Indonesia'] },
 ]
 
@@ -445,7 +445,7 @@ function CultureMasterGame({ onFinish }: { onFinish: (r: GameResult) => void }) 
     <div className="space-y-4">
       <div className="flex justify-between text-sm text-gray-400"><span>{t('questionLabel')} {q + 1}/{questions.length}</span><span>{t('scoreLabel')}: {score}</span><span className="text-coral-500">🔥 {streak}</span></div>
       <div className="progress-bar h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden"><div className="h-full bg-gradient-to-r from-coral-500 to-purple-500 transition-all duration-500" style={{ width: `${((q + 1) / questions.length) * 100}%` }} /></div>
-      <div className="text-center py-6 card"><p className="text-lg font-semibold">{current.q}</p></div>
+      <div className="text-center py-6 card"><p className="text-lg font-semibold">{(t as any)(current.qKey)}</p></div>
       <div className="grid grid-cols-2 gap-2">
         {current.opts.map((opt, i) => {
           let cls = 'bg-white dark:bg-cool-800 border border-gray-200 dark:border-gray-700'

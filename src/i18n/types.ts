@@ -188,4 +188,21 @@ export interface TranslationKeys {
   // ── Audio ──────────────────────────────────────────────
   listenPronunciation: string
   audioNotSupported: string
+
+  // ── Game Questions ──────────────────────────────────────
+  biasQ1: string; biasQ2: string; biasQ3: string
+  biasQ4: string; biasQ5: string; biasQ6: string
+  biasQ7: string; biasQ8: string; biasQ9: string
+  biasQ10: string; biasQ11: string; biasQ12: string
+  biasQ13: string; biasQ14: string; biasQ15: string
+  biasQ16: string; biasQ17: string; biasQ18: string
+  masterQ1: string; masterQ2: string; masterQ3: string
+  masterQ4: string; masterQ5: string; masterQ6: string
+  masterQ7: string; masterQ8: string; masterQ9: string
+  masterQ10: string; masterQ11: string; masterQ12: string
+  masterQ13: string; masterQ14: string; masterQ15: string
+  masterQ16: string; masterQ17: string; masterQ18: string
+  masterQ19: string; masterQ20: string; masterQ21: string
+  masterQ22: string; masterQ23: string; masterQ24: string
+  masterQ25: string
 }
