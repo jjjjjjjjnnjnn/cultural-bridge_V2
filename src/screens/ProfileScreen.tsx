@@ -1,11 +1,10 @@
 import { useI18n } from '../i18n/context'
-import { useProgressStore, getLevelProgress } from '../stores/progress-store'
+import { useProgressStore } from '../stores/progress-store'
 import { useAchievementStore } from '../stores/achievement-store'
 import { useSettingsStore } from '../stores/settings-store'
 import { ACHIEVEMENT_DEFS } from '../data/achievements'
 import { calcLevel, getBadgeForLevel, AVATARS } from '../data/levels'
 import { useMemo } from 'react'
-import type { Lang } from '../types/culture'
 
 export function ProfileScreen() {
   const { t, lang } = useI18n()
@@ -17,13 +16,14 @@ export function ProfileScreen() {
   const unlocked = useAchievementStore((s) => s.unlocked)
   const resetProgress = useProgressStore((s) => s.resetProgress)
   const resetAchievements = useAchievementStore((s) => s.reset)
-
+  const selectAvatar = useSettingsStore((s) => s.selectAvatar)
+  const buyAvatar = useSettingsStore((s) => s.buyAvatar)
   const selectedAvatar = useSettingsStore((s) => s.selectedAvatar)
   const unlockedAvatars = useSettingsStore((s) => s.unlockedAvatars)
-  const buyAvatar = useSettingsStore((s) => s.buyAvatar)
-  const selectAvatar = useSettingsStore((s) => s.selectAvatar)
   const expertMode = useSettingsStore((s) => s.expertMode)
   const toggleExpertMode = useSettingsStore((s) => s.toggleExpertMode)
+  const soundEnabled = useSettingsStore((s) => s.soundEnabled)
+  const toggleSound = useSettingsStore((s) => s.toggleSound)
 
   const level = calcLevel(xp)
   const badge = getBadgeForLevel(level)
@@ -53,12 +53,10 @@ export function ProfileScreen() {
         </div>
         <h1 className="text-lg font-bold font-fredoka mt-2 gradient-text">{badge.title[lang] ?? badge.title.en}</h1>
         <p className="text-xs text-gray-400 mt-1">{xp} XP</p>
-
-        {/* XP bar */}
         <div className="mt-3 max-w-xs mx-auto">
           <div className="flex justify-between text-[10px] text-gray-400 mb-1">
-            <span>Level {level}</span>
-            <span>{xp - levelXp}/{nextLevelXp - levelXp} XP to Level {level + 1}</span>
+            <span>{t('profileLevel')} {level}</span>
+            <span>{xp - levelXp}/{nextLevelXp - levelXp} XP → {t('profileLevel')} {level + 1}</span>
           </div>
           <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
             <div className="h-full bg-gradient-to-r from-coral-500 to-purple-500 rounded-full transition-all duration-500" style={{ width: `${pct}%` }} />
@@ -68,34 +66,24 @@ export function ProfileScreen() {
 
       {/* Stats Grid */}
       <div className="grid grid-cols-2 gap-3">
-        {[
-          { emoji: '🎮', label: t('profileGamesPlayed'), value: totalGamesPlayed },
-          { emoji: '🌍', label: t('profileCulturesVisited'), value: culturesVisited.length },
-          { emoji: '🏆', label: t('profileAchievements'), value: `${unlocked.length}/${ACHIEVEMENT_DEFS.length}` },
-          { emoji: '🔥', label: t('profileBestStreak'), value: bestStreak },
-          { emoji: '💡', label: t('profileBiasesLearned'), value: totalBiasesViewed },
-          { emoji: '⭐', label: 'Next Badge', value: `${nextBadge.icon} ${nextBadge.title[lang] ?? nextBadge.title.en}` },
-        ].map((s, i) => (
-          <div key={i} className="card p-3 flex items-center gap-3">
-            <span className="text-2xl">{s.emoji}</span>
-            <div>
-              <p className="text-lg font-bold text-gray-800 dark:text-gray-100">{s.value}</p>
-              <p className="text-[10px] text-gray-400 uppercase">{s.label}</p>
-            </div>
-          </div>
-        ))}
+        <Stat emoji="🎮" label={t('profileGamesPlayed')} value={totalGamesPlayed} />
+        <Stat emoji="🌍" label={t('profileCulturesVisited')} value={culturesVisited.length} />
+        <Stat emoji="🏆" label={t('profileAchievements')} value={`${unlocked.length}/${ACHIEVEMENT_DEFS.length}`} />
+        <Stat emoji="🔥" label={t('profileBestStreak')} value={bestStreak} />
+        <Stat emoji="💡" label={t('profileBiasesLearned')} value={totalBiasesViewed} />
+        <Stat emoji="⭐" label={t('profileNextBadge')} value={`${nextBadge.icon} ${nextBadge.title[lang] ?? nextBadge.title.en}`} />
       </div>
 
       {/* Avatar Shop */}
       <section className="card">
         <h2 className="text-base font-bold font-fredoka flex items-center gap-2 mb-3">
-          🛍️ Avatar Shop
-          <span className="text-xs font-normal text-gray-400">({xp} XP available)</span>
+          🛍️ {t('profileAvatarShop')}
+          <span className="text-xs font-normal text-gray-400">({xp} XP)</span>
         </h2>
         <div className="flex items-center gap-3 mb-3 p-3 rounded-xl bg-purple-50 dark:bg-purple-500/10">
           <span className="text-3xl">{AVATARS.find(a => a.id === selectedAvatar)?.emoji ?? '🌍'}</span>
           <div>
-            <p className="text-sm font-bold text-gray-700 dark:text-gray-200">Current Avatar</p>
+            <p className="text-sm font-bold text-gray-700 dark:text-gray-200">{t('profileCurrentAvatar')}</p>
             <p className="text-xs text-gray-400">{AVATARS.find(a => a.id === selectedAvatar)?.name[lang] ?? AVATARS.find(a => a.id === selectedAvatar)?.name.en}</p>
           </div>
         </div>
@@ -108,20 +96,17 @@ export function ProfileScreen() {
                 key={a.id}
                 onClick={() => {
                   if (owned) selectAvatar(a.id)
-                  else if (canBuy && confirm(`Buy "${a.name[lang] ?? a.name.en}" for ${a.cost} XP?`)) {
-                    buyAvatar(a.id)
-                    selectAvatar(a.id)
+                  else if (canBuy && confirm(`${t('profileBuyConfirm')} "${a.name[lang] ?? a.name.en}" ${a.cost} XP?`)) {
+                    buyAvatar(a.id); selectAvatar(a.id)
                   }
                 }}
                 disabled={!owned && !canBuy}
                 className={`p-2 rounded-xl text-center transition-all ${
                   selectedAvatar === a.id
                     ? 'bg-coral-100 dark:bg-coral-500/20 ring-2 ring-coral-400 scale-110'
-                    : owned
-                      ? 'bg-gray-50 dark:bg-cool-800 hover:bg-coral-50'
-                      : canBuy
-                        ? 'bg-gray-50 dark:bg-cool-800 opacity-70'
-                        : 'bg-gray-100 dark:bg-cool-900 opacity-30'
+                    : owned ? 'bg-gray-50 dark:bg-cool-800 hover:bg-coral-50'
+                    : canBuy ? 'bg-gray-50 dark:bg-cool-800 opacity-70'
+                    : 'bg-gray-100 dark:bg-cool-900 opacity-30'
                 }`}
                 title={`${a.name[lang] ?? a.name.en}${!owned ? ` — ${a.cost} XP` : ''}`}
               >
@@ -135,39 +120,47 @@ export function ProfileScreen() {
       </section>
 
       {/* Expert Mode */}
-      <section className="card flex items-center justify-between">
-        <div>
-          <h2 className="text-base font-bold font-fredoka">⚡ Expert Mode</h2>
-          <p className="text-xs text-gray-400 mt-0.5">
-            {level >= 5
-              ? 'Harder questions, 2x XP rewards'
-              : `Unlocks at Level 5 (${500 - xp > 0 ? `${500 - xp} XP to go` : 'available now!'})`}
-          </p>
+      <section className="card" style={{ opacity: level < 5 ? 0.6 : 1 }}>
+        <div className="flex items-center justify-between mb-1">
+          <h2 className="text-base font-bold font-fredoka">⚡ {t('profileExpertMode')}</h2>
+          <button
+            onClick={level >= 5 ? toggleExpertMode : undefined}
+            className={`w-14 h-7 rounded-full transition-colors relative ${level >= 5 ? (expertMode ? 'bg-purple-500' : 'bg-gray-300') : 'bg-gray-200'}`}
+          >
+            <div className={`w-6 h-6 bg-white rounded-full absolute top-0.5 shadow transition-transform ${expertMode ? 'translate-x-7' : 'translate-x-0.5'}`} />
+          </button>
         </div>
-        <button
-          onClick={level >= 5 ? toggleExpertMode : undefined}
-          className={`w-14 h-7 rounded-full transition-colors relative ${level >= 5 ? (expertMode ? 'bg-purple-500' : 'bg-gray-300') : 'bg-gray-200 cursor-not-allowed'}`}
-        >
-          <div className={`w-6 h-6 bg-white rounded-full absolute top-0.5 shadow transition-transform ${expertMode ? 'translate-x-7' : 'translate-x-0.5'}`} />
-        </button>
+        <p className="text-xs text-gray-400">
+          {level >= 5 ? t('profileExpertDesc') : `${t('profileExpertLock')} (${500 - xp > 0 ? `500 XP` : t('profileExpertReady')})`}
+        </p>
       </section>
 
       {/* Settings */}
       <section className="card space-y-3">
         <h2 className="text-base font-bold font-fredoka">{t('settingsTitle')}</h2>
-
         <div className="flex items-center justify-between">
           <span className="text-sm">{t('soundLabel')}</span>
-          <button onClick={useSettingsStore.getState().toggleSound} className={`w-12 h-6 rounded-full transition-colors relative ${useSettingsStore.getState().soundEnabled ? 'bg-coral-500' : 'bg-gray-300'}`}>
-            <div className={`w-5 h-5 bg-white rounded-full absolute top-0.5 transition-transform ${useSettingsStore.getState().soundEnabled ? 'translate-x-6' : 'translate-x-0.5'}`} />
+          <button onClick={toggleSound} className={`w-12 h-6 rounded-full transition-colors relative ${soundEnabled ? 'bg-coral-500' : 'bg-gray-300'}`}>
+            <div className={`w-5 h-5 bg-white rounded-full absolute top-0.5 transition-transform ${soundEnabled ? 'translate-x-6' : 'translate-x-0.5'}`} />
           </button>
         </div>
       </section>
 
-      {/* Reset */}
       <button onClick={handleReset} className="w-full py-3 text-sm text-red-400 border border-red-200 dark:border-red-500/30 rounded-xl active:bg-red-50 transition-colors">
         {t('resetProgress')}
       </button>
+    </div>
+  )
+}
+
+function Stat({ emoji, label, value }: { emoji: string; label: string; value: string | number }) {
+  return (
+    <div className="card p-3 flex items-center gap-3">
+      <span className="text-2xl">{emoji}</span>
+      <div>
+        <p className="text-lg font-bold text-gray-800 dark:text-gray-100">{value}</p>
+        <p className="text-[10px] text-gray-400 uppercase">{label}</p>
+      </div>
     </div>
   )
 }

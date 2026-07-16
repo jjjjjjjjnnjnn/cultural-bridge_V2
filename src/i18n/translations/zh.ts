@@ -237,6 +237,14 @@ const zh: TranslationKeys = {
   masterQ33: "哪个国家拥有最多的活火山？",
   masterQ34: "哪个国家人均咖啡消费量最大？",
   masterQ35: "哪个国家拥有世界上最长的海滩？",
+  profileNextBadge: '下一徽章',
+  profileAvatarShop: '头像商店',
+  profileCurrentAvatar: '当前头像',
+  profileBuyConfirm: '购买',
+  profileExpertMode: '专家模式',
+  profileExpertDesc: '更难的题目，2 倍 XP 奖励',
+  profileExpertLock: '等级 5 解锁',
+  profileExpertReady: '已可用！',
 }
 
 export default zh

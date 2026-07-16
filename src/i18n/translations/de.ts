@@ -225,6 +225,14 @@ const de: TranslationKeys = {
   masterQ23: "In welchem Land liegt Machu Picchu?",
   masterQ24: "In welchem Land liegt Angkor Wat?",
   masterQ25: "Welches Land hat den Verkauf von Kaugummi verboten?",
+  profileNextBadge: 'Nächstes Abzeichen',
+  profileAvatarShop: 'Avatar-Shop',
+  profileCurrentAvatar: 'Aktueller Avatar',
+  profileBuyConfirm: 'Kaufen',
+  profileExpertMode: 'Expertenmodus',
+  profileExpertDesc: 'Schwierigere Fragen, 2x XP Belohnung',
+  profileExpertLock: 'Ab Level 5 freischaltbar',
+  profileExpertReady: 'Jetzt verfügbar!',
 }
 
 export default de

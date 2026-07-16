@@ -237,6 +237,14 @@ const en: TranslationKeys = {
   masterQ33: "Which country has the most active volcanoes?",
   masterQ34: "Which country drinks the most coffee per person?",
   masterQ35: "Which country has the longest beach in the world?",
+  profileNextBadge: 'Next Badge',
+  profileAvatarShop: 'Avatar Shop',
+  profileCurrentAvatar: 'Current Avatar',
+  profileBuyConfirm: 'Buy',
+  profileExpertMode: 'Expert Mode',
+  profileExpertDesc: 'Harder questions, 2x XP rewards',
+  profileExpertLock: 'Unlocks at Level 5',
+  profileExpertReady: 'Available now!',
 }
 
 export default en

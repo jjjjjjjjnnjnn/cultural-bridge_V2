@@ -145,6 +145,14 @@ export interface TranslationKeys {
   profileBestStreak: string
   profileBiasesLearned: string
   profileLearningTime: string
+  profileNextBadge: string
+  profileAvatarShop: string
+  profileCurrentAvatar: string
+  profileBuyConfirm: string
+  profileExpertMode: string
+  profileExpertDesc: string
+  profileExpertLock: string
+  profileExpertReady: string
   levelTraveler: string
   levelExplorer: string
   levelAmbassador: string
